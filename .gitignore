@@ -5,6 +5,7 @@
 .Ruserdata
 .Rprofile
 .Rapp.history
+/src/dados_brutos/*.RData
 
 # R package build artifacts
 .Rbuildignore
