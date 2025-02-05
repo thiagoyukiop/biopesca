@@ -40,7 +40,7 @@ ui <- dashboardPage(
       light_blue = "#5E81AC"
     ),
     adminlte_sidebar(
-      width = "250px",
+      width = "280px",
       dark_bg = "#D8DEE9",
       dark_hover_bg = "#81A1C1",
       dark_color = "#2E3440",
@@ -212,187 +212,196 @@ ui <- dashboardPage(
     ),
     tabItems(
       tabItem(
-        tabName = "projeto",
-        fluidRow(
-          column(
-            offset = 1,
-            width = 5,
-            infoBox(
-              title = tags$div(
-                h6(i18n$t("tubaroes_medidos")),
-                style = "display: block; text-align: center;"
-              ),
-              fill = TRUE,
-              width = 12,
-              color = "light-blue",
-              value = tags$div(
-                style = "display: block; text-align: center;",
-                h1(strong("28954"), style = "margin: 0px;")
-              ),
-              icon = icon("fish")
-            )
-          ),
-          column(
-            width = 5,
-            infoBox(
-              title = tags$div(
-                h6(i18n$t("entrevista_desembarque")),
-                style = "display: block; text-align: center;"
-              ),
-              fill = TRUE,
-              width = 12,
-              color = "light-blue",
-              value = tags$div(
-                style = "display: block; text-align: center;",
-                h1(strong("731"), style = "margin: 0px;")
-              ),
-              icon = icon("paste")
-            )
-          )
-        ),
-        fluidRow(
-          column(
-            offset = 1,
-            width = 5,
-            infoBox(
-              title = tags$div(
-                h6(i18n$t("cadernos_bordo")),
-                style = "display: block; text-align: center;"
-              ),
-              fill = TRUE,
-              width = 12,
-              color = "light-blue",
-              value = tags$div(
-                style = "display: block; text-align: center;",
-                h1(strong("465"), style = "margin: 0px;")
-              ),
-              icon = icon("book-open")
-            )
-          ),
-          column(
-            width = 5,
-            infoBox(
-              title = tags$div(
-                h6(i18n$t("embarcacoes_monitoradas")),
-                style = "display: block; text-align: center;"
-              ),
-              fill = TRUE,
-              width = 12,
-              color = "light-blue",
-              value = tags$div(
-                style = "display: block; text-align: center;",
-                h1(strong("92"), style = "margin: 0px;")
-              ),
-              icon = icon("ship")
-            )
-          )
-        ),
-        # fluidRow(
-        #   column(
-        #     width = 8,
-        #     offset = 2,
-        #     div(
-        #       style = "text-align: center;",
-        #       imageOutput("LogoPTA", height = "100%")
-        #     )
-        #   )
-        # ),
-        fluidRow(
-          column(
-            width = 8,
-            offset = 2,
-            tags$div(
-              h3(tagList(i18n$t("projeto_texto_1"))),
-              style = "text-align:center;"
-            ),
-            br(),
-            tags$div(
-              style = "text-align:center;",
-              h4(tagList(i18n$t("projeto_texto_2")))
-            ),
-            tags$div(
-              style = "text-align:justify;",
-              p(
-                tagList(i18n$t("projeto_texto_3")),
-                tags$em("Prionace glauca", .noWS = "after"),
-                tagList(i18n$t("projeto_texto_4"))
-              ),
-              p(tagList(i18n$t("projeto_texto_5"))),
-              p(tagList(i18n$t("projeto_texto_6"))),
-              p(strong(tagList(i18n$t("projeto_texto_7")))),
-              p(strong(tagList(i18n$t("projeto_texto_8")))),
-              p(strong(tagList(i18n$t("projeto_texto_9")))),
-              p(strong(tagList(i18n$t("projeto_texto_10")))),
-              p(tagList(i18n$t("projeto_texto_11"))),
-              br()
-            ),
-            tags$div(
-              style = "text-align:center;",
-              h4(tagList(i18n$t("projeto_texto_12")))
-            ),
-            tags$div(
-              style = "text-align:justify;",
-              p(tagList(i18n$t("projeto_texto_13")))
-            ),
-            tags$div(
-              style = "text-align:justify;",
-              p(tagList(i18n$t("projeto_texto_14"))),
-              br()
-            ),
-            tags$div(
-              style = "text-align:center;",
-              h4(tagList(i18n$t("projeto_texto_15")))
-            )#,
-            # div(
-            #   style = "text-align: center;",
-            #   imageOutput("FluxogramaTubAzul", height = "100%")
-            # )
-          )
-        )
+        tabName = "projeto"
       ),
       tabItem(
-        tabName = "leia_me",
-        fluidRow(
-          column(
-            width = 10,
-            offset = 1,
-            tags$head(
-              tags$style(
-                HTML("
-                  #boxWithoutHeader .box-header {
-                    display: none;
-                  }
-                ")
-              )
-            ),
-            box(
-              id = "boxWithoutHeader",
-              title = NULL,
-              width = 12,
-              headerBorder = FALSE,
-              background = "gray",
-              uiOutput("leiameMarkdown")
-            )
-          )
-        )
+        tabName = "leia_me"
       ),
       tabItem(
-        tabName = "sobre",
-        fluidRow(
-          column(
-            width = 10,
-            offset = 1,
-            box(
-              id = "boxWithoutHeader",
-              title = NULL,
-              width = 12,
-              headerBorder = FALSE,
-              background = "gray",
-              uiOutput("sobreMarkdown")
-            )
-          )
-        )
+        tabName = "sobre"
       ),
+      # tabItem(
+      #   tabName = "projeto",
+      #   fluidRow(
+      #     column(
+      #       offset = 1,
+      #       width = 5,
+      #       infoBox(
+      #         title = tags$div(
+      #           h6(i18n$t("tubaroes_medidos")),
+      #           style = "display: block; text-align: center;"
+      #         ),
+      #         fill = TRUE,
+      #         width = 12,
+      #         color = "light-blue",
+      #         value = tags$div(
+      #           style = "display: block; text-align: center;",
+      #           h1(strong("28954"), style = "margin: 0px;")
+      #         ),
+      #         icon = icon("fish")
+      #       )
+      #     ),
+      #     column(
+      #       width = 5,
+      #       infoBox(
+      #         title = tags$div(
+      #           h6(i18n$t("entrevista_desembarque")),
+      #           style = "display: block; text-align: center;"
+      #         ),
+      #         fill = TRUE,
+      #         width = 12,
+      #         color = "light-blue",
+      #         value = tags$div(
+      #           style = "display: block; text-align: center;",
+      #           h1(strong("731"), style = "margin: 0px;")
+      #         ),
+      #         icon = icon("paste")
+      #       )
+      #     )
+      #   ),
+      #   fluidRow(
+      #     column(
+      #       offset = 1,
+      #       width = 5,
+      #       infoBox(
+      #         title = tags$div(
+      #           h6(i18n$t("cadernos_bordo")),
+      #           style = "display: block; text-align: center;"
+      #         ),
+      #         fill = TRUE,
+      #         width = 12,
+      #         color = "light-blue",
+      #         value = tags$div(
+      #           style = "display: block; text-align: center;",
+      #           h1(strong("465"), style = "margin: 0px;")
+      #         ),
+      #         icon = icon("book-open")
+      #       )
+      #     ),
+      #     column(
+      #       width = 5,
+      #       infoBox(
+      #         title = tags$div(
+      #           h6(i18n$t("embarcacoes_monitoradas")),
+      #           style = "display: block; text-align: center;"
+      #         ),
+      #         fill = TRUE,
+      #         width = 12,
+      #         color = "light-blue",
+      #         value = tags$div(
+      #           style = "display: block; text-align: center;",
+      #           h1(strong("92"), style = "margin: 0px;")
+      #         ),
+      #         icon = icon("ship")
+      #       )
+      #     )
+      #   ),
+      #   # fluidRow(
+      #   #   column(
+      #   #     width = 8,
+      #   #     offset = 2,
+      #   #     div(
+      #   #       style = "text-align: center;",
+      #   #       imageOutput("LogoPTA", height = "100%")
+      #   #     )
+      #   #   )
+      #   # ),
+      #   fluidRow(
+      #     column(
+      #       width = 8,
+      #       offset = 2,
+      #       tags$div(
+      #         h3(tagList(i18n$t("projeto_texto_1"))),
+      #         style = "text-align:center;"
+      #       ),
+      #       br(),
+      #       tags$div(
+      #         style = "text-align:center;",
+      #         h4(tagList(i18n$t("projeto_texto_2")))
+      #       ),
+      #       tags$div(
+      #         style = "text-align:justify;",
+      #         p(
+      #           tagList(i18n$t("projeto_texto_3")),
+      #           tags$em("Prionace glauca", .noWS = "after"),
+      #           tagList(i18n$t("projeto_texto_4"))
+      #         ),
+      #         p(tagList(i18n$t("projeto_texto_5"))),
+      #         p(tagList(i18n$t("projeto_texto_6"))),
+      #         p(strong(tagList(i18n$t("projeto_texto_7")))),
+      #         p(strong(tagList(i18n$t("projeto_texto_8")))),
+      #         p(strong(tagList(i18n$t("projeto_texto_9")))),
+      #         p(strong(tagList(i18n$t("projeto_texto_10")))),
+      #         p(tagList(i18n$t("projeto_texto_11"))),
+      #         br()
+      #       ),
+      #       tags$div(
+      #         style = "text-align:center;",
+      #         h4(tagList(i18n$t("projeto_texto_12")))
+      #       ),
+      #       tags$div(
+      #         style = "text-align:justify;",
+      #         p(tagList(i18n$t("projeto_texto_13")))
+      #       ),
+      #       tags$div(
+      #         style = "text-align:justify;",
+      #         p(tagList(i18n$t("projeto_texto_14"))),
+      #         br()
+      #       ),
+      #       tags$div(
+      #         style = "text-align:center;",
+      #         h4(tagList(i18n$t("projeto_texto_15")))
+      #       )#,
+      #       # div(
+      #       #   style = "text-align: center;",
+      #       #   imageOutput("FluxogramaTubAzul", height = "100%")
+      #       # )
+      #     )
+      #   )
+      # ),
+      # tabItem(
+      #   tabName = "leia_me",
+      #   fluidRow(
+      #     column(
+      #       width = 10,
+      #       offset = 1,
+      #       tags$head(
+      #         tags$style(
+      #           HTML("
+      #             #boxWithoutHeader .box-header {
+      #               display: none;
+      #             }
+      #           ")
+      #         )
+      #       ),
+      #       box(
+      #         id = "boxWithoutHeader",
+      #         title = NULL,
+      #         width = 12,
+      #         headerBorder = FALSE,
+      #         background = "gray",
+      #         uiOutput("leiameMarkdown")
+      #       )
+      #     )
+      #   )
+      # ),
+      # tabItem(
+      #   tabName = "sobre",
+      #   fluidRow(
+      #     column(
+      #       width = 10,
+      #       offset = 1,
+      #       box(
+      #         id = "boxWithoutHeader",
+      #         title = NULL,
+      #         width = 12,
+      #         headerBorder = FALSE,
+      #         background = "gray",
+      #         uiOutput("sobreMarkdown")
+      #       )
+      #     )
+      #   )
+      # ),
       tabItem(
         tabName = "comprimento_especie_1",
         fluidRow(
@@ -453,7 +462,6 @@ ui <- dashboardPage(
           )
         ),
         fluidRow(
-
           column(
             width = 6,
             box(
@@ -477,7 +485,7 @@ ui <- dashboardPage(
                   carouselItem(
                     div(
                       style = "text-align: center;",
-                      imageOutput("image_1_esp_1", height = "100%", width = "100%", inline = TRUE)
+                      imageOutput("image_1_esp_1", height = "100%", width = "100%")
                     )
                   )#,
                   # carouselItem(
@@ -593,17 +601,17 @@ ui <- dashboardPage(
                 )
               ),
               div(
-                class = "graficos",
-                carousel(
-                  width = 12,
-                  id = "carousel_esp_2",
-                  carouselItem(
-                    imageOutput("image_1_esp_2", height = "100%", width = "100%")
-                  ),
-                  carouselItem(
-                    imageOutput("image_2_esp_2", height = "100%", width = "100%")
-                  )
-                )
+                class = "graficos"#,
+                # carousel(
+                #   width = 12,
+                #   id = "carousel_esp_2",
+                #   carouselItem(
+                #     imageOutput("image_1_esp_2", height = "100%", width = "100%")
+                #   ),
+                #   carouselItem(
+                #     imageOutput("image_2_esp_2", height = "100%", width = "100%")
+                #   )
+                # )
               )
             )
           ),
@@ -696,7 +704,6 @@ ui <- dashboardPage(
           )
         ),
         fluidRow(
-
           column(
             width = 6,
             box(
@@ -713,17 +720,17 @@ ui <- dashboardPage(
                 )
               ),
               div(
-                class = "graficos",
-                carousel(
-                  width = 12,
-                  id = "carousel_esp_3",
-                  carouselItem(
-                    imageOutput("image_1_esp_3", height = "100%", width = "100%")
-                  ),
-                  carouselItem(
-                    imageOutput("image_2_esp_3", height = "100%", width = "100%")
-                  )
-                )
+                class = "graficos"#,
+                # carousel(
+                #   width = 12,
+                #   id = "carousel_esp_3",
+                #   carouselItem(
+                #     imageOutput("image_1_esp_3", height = "100%", width = "100%")
+                #   ),
+                #   carouselItem(
+                #     imageOutput("image_2_esp_3", height = "100%", width = "100%")
+                #   )
+                # )
               )
             )
           ),
@@ -755,487 +762,487 @@ ui <- dashboardPage(
             )
           )
         )
-      )#,
-      # tabItem(
-      #   tabName = "comprimento_especie_4",
-      #   fluidRow(
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("grafico_dispersao")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           plotlyOutput("DispersaoComprimentoXPeso_esp_4", height = "100%")
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_1",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_1")))
-      #         )
-      #       )
-      #       
-      #     ),
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("comprimento_texto_1")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           plotlyOutput("histograma_comprimento_esp_4", height = "100%"),
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_2",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_2")))
-      #         )
-      #       )
-      #     )
-      #   ),
-      #   fluidRow(
-      #     
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = TRUE,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("comprimento_texto_2")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           carousel(
-      #             width = 12,
-      #             id = "carousel_esp_4",
-      #             carouselItem(
-      #               imageOutput("image_1_esp_4", height = "100%", width = "100%")
-      #             ),
-      #             carouselItem(
-      #               imageOutput("image_2_esp_4", height = "100%", width = "100%")
-      #             )
-      #           )
-      #         )
-      #       )
-      #     ),
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("proporcao_sexo")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           DTOutput("tabela_proporcao_esp_4", height = "100%")
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_4",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_4")))
-      #         )
-      #       )
-      #     )
-      #   )
-      # ),
-      # tabItem(
-      #   tabName = "comprimento_especie_5",
-      #   fluidRow(
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("grafico_dispersao")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           plotlyOutput("DispersaoComprimentoXPeso_esp_5", height = "100%")
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_1",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_1")))
-      #         )
-      #       )
-      #       
-      #     ),
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("comprimento_texto_1")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           plotlyOutput("histograma_comprimento_esp_5", height = "100%"),
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_2",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_2")))
-      #         )
-      #       )
-      #     )
-      #   ),
-      #   fluidRow(
-      #     
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = TRUE,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("comprimento_texto_2")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           carousel(
-      #             width = 12,
-      #             id = "carousel_esp_5",
-      #             carouselItem(
-      #               imageOutput("image_1_esp_5", height = "100%", width = "100%")
-      #             ),
-      #             carouselItem(
-      #               imageOutput("image_2_esp_5", height = "100%", width = "100%")
-      #             )
-      #           )
-      #         )
-      #       )
-      #     ),
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("proporcao_sexo")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           DTOutput("tabela_proporcao_esp_5", height = "100%")
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_4",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_4")))
-      #         )
-      #       )
-      #     )
-      #   )
-      # ),
-      # tabItem(
-      #   tabName = "comprimento_especie_6",
-      #   fluidRow(
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("grafico_dispersao")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           plotlyOutput("DispersaoComprimentoXPeso_esp_6", height = "100%")
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_1",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_1")))
-      #         )
-      #       )
-      #       
-      #     ),
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("comprimento_texto_1")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           plotlyOutput("histograma_comprimento_esp_6", height = "100%"),
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_2",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_2")))
-      #         )
-      #       )
-      #     )
-      #   ),
-      #   fluidRow(
-      #     
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = TRUE,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("comprimento_texto_2")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           carousel(
-      #             width = 12,
-      #             id = "carousel_esp_6",
-      #             carouselItem(
-      #               imageOutput("image_1_esp_6", height = "100%", width = "100%")
-      #             ),
-      #             carouselItem(
-      #               imageOutput("image_2_esp_6", height = "100%", width = "100%")
-      #             )
-      #           )
-      #         )
-      #       )
-      #     ),
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("proporcao_sexo")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           DTOutput("tabela_proporcao_esp_6", height = "100%")
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_4",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_4")))
-      #         )
-      #       )
-      #     )
-      #   )
-      # ),
-      # tabItem(
-      #   tabName = "comprimento_especie_7",
-      #   fluidRow(
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("grafico_dispersao")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           plotlyOutput("DispersaoComprimentoXPeso_esp_7", height = "100%")
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_1",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_1")))
-      #         )
-      #       )
-      #       
-      #     ),
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("comprimento_texto_1")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           plotlyOutput("histograma_comprimento_esp_7", height = "100%"),
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_2",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_2")))
-      #         )
-      #       )
-      #     )
-      #   ),
-      #   fluidRow(
-      #     
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = TRUE,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("comprimento_texto_2")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           carousel(
-      #             width = 12,
-      #             id = "carousel_esp_7",
-      #             carouselItem(
-      #               imageOutput("image_1_esp_7", height = "100%", width = "100%")
-      #             ),
-      #             carouselItem(
-      #               imageOutput("image_2_esp_7", height = "100%", width = "100%")
-      #             )
-      #           )
-      #         )
-      #       )
-      #     ),
-      #     column(
-      #       width = 6,
-      #       box(
-      #         width = 12,
-      #         solidHeader = T,
-      #         status = "primary",
-      #         headerBorder = F,
-      #         title = strong(
-      #           div(
-      #             class = "titulos-box",
-      #             tagList(
-      #               i18n$t("proporcao_sexo")
-      #             )
-      #           )
-      #         ),
-      #         div(
-      #           class = "graficos",
-      #           DTOutput("tabela_proporcao_esp_7", height = "100%")
-      #         ),
-      #         sidebar = boxSidebar(
-      #           id = "boxsidebarComprimento_4",
-      #           icon = icon("circle-info"),
-      #           background = "#A6ACAFEF",
-      #           p(tagList(i18n$t("dis_com_texto_4")))
-      #         )
-      #       )
-      #     )
-      #   )
-      # )
+      ),
+      tabItem(
+        tabName = "comprimento_especie_4",
+        fluidRow(
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("grafico_dispersao")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                plotlyOutput("DispersaoComprimentoXPeso_esp_4", height = "100%")
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_1",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_1")))
+              )
+            )
+
+          ),
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("comprimento_texto_1")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                plotlyOutput("histograma_comprimento_esp_4", height = "100%"),
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_2",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_2")))
+              )
+            )
+          )
+        ),
+        fluidRow(
+
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = TRUE,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("comprimento_texto_2")
+                  )
+                )
+              ),
+              div(
+                class = "graficos"#,
+                # carousel(
+                #   width = 12,
+                #   id = "carousel_esp_4",
+                #   carouselItem(
+                #     imageOutput("image_1_esp_4", height = "100%", width = "100%")
+                #   ),
+                #   carouselItem(
+                #     imageOutput("image_2_esp_4", height = "100%", width = "100%")
+                #   )
+                # )
+              )
+            )
+          ),
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("proporcao_sexo")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                DTOutput("tabela_proporcao_esp_4", height = "100%")
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_4",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_4")))
+              )
+            )
+          )
+        )
+      ),
+      tabItem(
+        tabName = "comprimento_especie_5",
+        fluidRow(
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("grafico_dispersao")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                plotlyOutput("DispersaoComprimentoXPeso_esp_5", height = "100%")
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_1",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_1")))
+              )
+            )
+
+          ),
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("comprimento_texto_1")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                plotlyOutput("histograma_comprimento_esp_5", height = "100%"),
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_2",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_2")))
+              )
+            )
+          )
+        ),
+        fluidRow(
+
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = TRUE,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("comprimento_texto_2")
+                  )
+                )
+              ),
+              div(
+                class = "graficos"#,
+                # carousel(
+                #   width = 12,
+                #   id = "carousel_esp_5",
+                #   carouselItem(
+                #     imageOutput("image_1_esp_5", height = "100%", width = "100%")
+                #   ),
+                #   carouselItem(
+                #     imageOutput("image_2_esp_5", height = "100%", width = "100%")
+                #   )
+                # )
+              )
+            )
+          ),
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("proporcao_sexo")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                DTOutput("tabela_proporcao_esp_5", height = "100%")
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_4",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_4")))
+              )
+            )
+          )
+        )
+      ),
+      tabItem(
+        tabName = "comprimento_especie_6",
+        fluidRow(
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("grafico_dispersao")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                plotlyOutput("DispersaoComprimentoXPeso_esp_6", height = "100%")
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_1",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_1")))
+              )
+            )
+
+          ),
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("comprimento_texto_1")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                plotlyOutput("histograma_comprimento_esp_6", height = "100%"),
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_2",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_2")))
+              )
+            )
+          )
+        ),
+        fluidRow(
+
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = TRUE,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("comprimento_texto_2")
+                  )
+                )
+              ),
+              div(
+                class = "graficos"#,
+                # carousel(
+                #   width = 12,
+                #   id = "carousel_esp_6",
+                #   carouselItem(
+                #     imageOutput("image_1_esp_6", height = "100%", width = "100%")
+                #   ),
+                #   carouselItem(
+                #     imageOutput("image_2_esp_6", height = "100%", width = "100%")
+                #   )
+                # )
+              )
+            )
+          ),
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("proporcao_sexo")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                DTOutput("tabela_proporcao_esp_6", height = "100%")
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_4",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_4")))
+              )
+            )
+          )
+        )
+      ),
+      tabItem(
+        tabName = "comprimento_especie_7",
+        fluidRow(
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("grafico_dispersao")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                plotlyOutput("DispersaoComprimentoXPeso_esp_7", height = "100%")
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_1",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_1")))
+              )
+            )
+
+          ),
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("comprimento_texto_1")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                plotlyOutput("histograma_comprimento_esp_7", height = "100%"),
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_2",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_2")))
+              )
+            )
+          )
+        ),
+        fluidRow(
+
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = TRUE,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("comprimento_texto_2")
+                  )
+                )
+              ),
+              div(
+                class = "graficos"#,
+                # carousel(
+                #   width = 12,
+                #   id = "carousel_esp_7",
+                #   carouselItem(
+                #     imageOutput("image_1_esp_7", height = "100%", width = "100%")
+                #   ),
+                #   carouselItem(
+                #     imageOutput("image_2_esp_7", height = "100%", width = "100%")
+                #   )
+                # )
+              )
+            )
+          ),
+          column(
+            width = 6,
+            box(
+              width = 12,
+              solidHeader = T,
+              status = "primary",
+              headerBorder = F,
+              title = strong(
+                div(
+                  class = "titulos-box",
+                  tagList(
+                    i18n$t("proporcao_sexo")
+                  )
+                )
+              ),
+              div(
+                class = "graficos",
+                DTOutput("tabela_proporcao_esp_7", height = "100%")
+              ),
+              sidebar = boxSidebar(
+                id = "boxsidebarComprimento_4",
+                icon = icon("circle-info"),
+                background = "#A6ACAFEF",
+                p(tagList(i18n$t("dis_com_texto_4")))
+              )
+            )
+          )
+        )
+      )
 # fim_teste ---------------------------------------------------------------
     )
   ),
@@ -1247,7 +1254,7 @@ ui <- dashboardPage(
     collapsed = TRUE,
     skin = "light",
     id = "controlbar",
-    width = 230,
+    width = 280,
     controlbarMenu(
       id = "controlbarMenu",
       controlbarItem(
@@ -1418,7 +1425,12 @@ server <- function(input, output, session) {
   
   dados_biometria_filtro_esp_1 <- reactive({
     dados_aux <- osseos %>% 
-      filter(especie == "Micropogonias furnieri" & sexo == input$sexo_comprimento_esp_1)
+      filter(
+        especie == "Micropogonias furnieri" &
+          sexo == input$sexo_comprimento_esp_1 &
+          comprimento_total != 0 & 
+          peso_total != 0
+      )
   })
   
   output$DispersaoComprimentoXPeso_esp_1 <- renderPlotly({
@@ -1518,10 +1530,10 @@ server <- function(input, output, session) {
       #   text = new_data_esp_1$curva,
       #   traces = 1
       # ) %>% 
-      plotly::style(
-        hoverinfo = "none",
-        traces = 3
-      ) %>%
+      # plotly::style(
+      #   hoverinfo = "none",
+      #   traces = 3
+      # ) %>%
       config(
         locale = "pt-br",
         displayModeBar = TRUE,
@@ -1570,7 +1582,8 @@ server <- function(input, output, session) {
   
   output$tabela_proporcao_esp_1 <- renderDT({
     
-    dados_tabela_esp_1 <- dados_biometria_filtro_esp_1() %>% 
+    dados_tabela_esp_1 <- osseos %>% 
+      filter(especie == "Micropogonias furnieri" & sexo != "Indeterminado") %>% 
       group_by(sexo) %>% 
       summarise(
         n = n()
@@ -1613,7 +1626,7 @@ server <- function(input, output, session) {
       src = "www/Micropogonias_furnieri_imagem_1.jpg",
       contentType = "image/jpg",
       height = "auto",
-      width = "70%"
+      width = "60%"
     )
   }, deleteFile = FALSE)
   
@@ -1630,28 +1643,33 @@ server <- function(input, output, session) {
   
   dados_biometria_filtro_esp_2 <- reactive({
     dados_aux <- osseos %>% 
-      filter(especie == "Pomatomus saltatrix" & sexo == input$sexo_comprimento_esp_2)
+      filter(
+        especie == "Pomatomus saltatrix" &
+          sexo == input$sexo_comprimento_esp_2 &
+          comprimento_total != 0 & 
+          peso_total != 0
+      )
   })
   
   output$DispersaoComprimentoXPeso_esp_2 <- renderPlotly({
-    
+
     biometria_esp_2 <- data.frame(
       sexo = dados_biometria_filtro_esp_2()$sexo,
       x = dados_biometria_filtro_esp_2()$comprimento_total,
       y = dados_biometria_filtro_esp_2()$peso_total
     )
-    
+
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_2)
-    # 
+    #
     # a <- coef(mod0)[[1]]
-    # 
+    #
     # b <- coef(mod0)[[2]]
-    # 
+    #
     # cat("a = ", a, "\n")
     # cat("b = ", b, "\n")
-    # 
+    #
     # biometria.nls_esp_2 <- nls (
-    #   formula = y ~ a*x^b, 
+    #   formula = y ~ a*x^b,
     #   data = biometria_esp_2,
     #   start = list(
     #     a = a,
@@ -1659,14 +1677,14 @@ server <- function(input, output, session) {
     #   ),
     #   control = nls.control(maxiter = 200)
     # )
-    # 
+    #
     # # Valores do confint
     # conf <- confint(biometria.nls_esp_2)
     # a_lower <- conf["a", "2.5%"]
     # a_upper <- conf["a", "97.5%"]
     # b_lower <- conf["b", "2.5%"]
     # b_upper <- conf["b", "97.5%"]
-    # 
+    #
     # new_data_esp_2 <- data.frame(
     #   x = seq(
     #     min(biometria_esp_2$x),
@@ -1677,19 +1695,19 @@ server <- function(input, output, session) {
     # new_data_esp_2$fit <- coef(biometria.nls_esp_2)["a"] * new_data_esp_2$x^coef(biometria.nls_esp_2)["b"]
     # new_data_esp_2$lwr <- a_lower * new_data_esp_2$x^b_lower
     # new_data_esp_2$upr <- a_upper * new_data_esp_2$x^b_upper
-    # 
+    #
     # new_data_esp_2$curva <- paste0(
     #   i18n$t("comprimento_legenda"), round(new_data_esp_2$x, 2 ), " cm<br>",
     #   i18n$t("lim_sup_legenda"), round(new_data_esp_2$upr, 2), " kg<br>",
     #   i18n$t("curva_legenda"), round(new_data_esp_2$fit, 2), " kg<br>",
     #   i18n$t("lim_inf_legenda"), round(new_data_esp_2$lwr, 2), " kg"
     # )
-    
+
     biometria_esp_2$XvsY <- paste0(
       i18n$t("comprimento_legenda"), round(biometria_esp_2$x, 2 ), " cm<br>",
       i18n$t("peso_legenda"), round(biometria_esp_2$y, 2), " kg"
     )
-    
+
     p <- ggplot() +
       # geom_line(
       #   data = new_data_esp_2,
@@ -1716,24 +1734,24 @@ server <- function(input, output, session) {
         y = i18n$t("legenda_peso")
       ) +
       theme_minimal()
-    
+
     # Tornar o gráfico interativo
-    ggplotly(p) %>% 
+    ggplotly(p) %>%
       plotly::style(
         hoverinfo = "text",
-        text = biometria_esp_2$XvsY, 
+        text = biometria_esp_2$XvsY,
         # traces = 2
         traces = 1
-      ) %>% 
+      ) %>%
       # plotly::style(
       #   hoverinfo = "text",
       #   text = new_data_esp_2$curva,
       #   traces = 1
-      # ) %>% 
-      plotly::style(
-        hoverinfo = "none",
-        traces = 3
-      ) %>%
+      # ) %>%
+      # plotly::style(
+      #   hoverinfo = "none",
+      #   traces = 3
+      # ) %>%
       config(
         locale = "pt-br",
         displayModeBar = TRUE,
@@ -1782,7 +1800,8 @@ server <- function(input, output, session) {
   
   output$tabela_proporcao_esp_2 <- renderDT({
     
-    dados_tabela_esp_2 <- dados_biometria_filtro_esp_2() %>% 
+    dados_tabela_esp_2 <- osseos %>% 
+      filter(especie == "Pomatomus saltatrix" & sexo != "Indeterminado") %>% 
       group_by(sexo) %>% 
       summarise(
         n = n()
@@ -1844,7 +1863,12 @@ server <- function(input, output, session) {
   
   dados_biometria_filtro_esp_3 <- reactive({
     dados_aux <- osseos %>% 
-      filter(especie == "Mugil liza" & sexo == input$sexo_comprimento_esp_3)
+      filter(
+        especie == "Mugil liza" &
+          sexo == input$sexo_comprimento_esp_3 &
+          comprimento_total != 0 & 
+          peso_total != 0
+      )
   })
   
   output$DispersaoComprimentoXPeso_esp_3 <- renderPlotly({
@@ -1944,10 +1968,10 @@ server <- function(input, output, session) {
       #   text = new_data_esp_3$curva,
       #   traces = 1
       # ) %>% 
-      plotly::style(
-        hoverinfo = "none",
-        traces = 3
-      ) %>%
+      # plotly::style(
+      #   hoverinfo = "none",
+      #   traces = 3
+      # ) %>%
       config(
         locale = "pt-br",
         displayModeBar = TRUE,
@@ -1996,7 +2020,8 @@ server <- function(input, output, session) {
   
   output$tabela_proporcao_esp_3 <- renderDT({
     
-    dados_tabela_esp_3 <- dados_biometria_filtro_esp_3() %>% 
+    dados_tabela_esp_3 <- osseos %>% 
+      filter(especie == "Mugil liza" & sexo != "Indeterminado") %>% 
       group_by(sexo) %>% 
       summarise(
         n = n()
@@ -2052,9 +2077,879 @@ server <- function(input, output, session) {
     # )
   }, deleteFile = FALSE)
   
-  # ControlBar --------------------------------------------------------------
+  # Distribuição de Captura Espécie 4  ----------------------------------------
   
-  # FIM DOS: _esp_3
+  dados_biometria_filtro_esp_4 <- reactive({
+    dados_aux <- osseos %>% 
+      filter(
+        especie == "Oligoplites saliens" & 
+          sexo == input$sexo_comprimento_esp_4 &
+          comprimento_total != 0 & 
+          peso_total != 0
+      )
+  })
+  
+  output$DispersaoComprimentoXPeso_esp_4 <- renderPlotly({
+    
+    biometria_esp_4 <- data.frame(
+      sexo = dados_biometria_filtro_esp_4()$sexo,
+      x = dados_biometria_filtro_esp_4()$comprimento_total,
+      y = dados_biometria_filtro_esp_4()$peso_total
+    )
+    
+    # mod0 <- glm(log(y) ~ x, data = biometria_esp_4)
+    # 
+    # a <- coef(mod0)[[1]]
+    # 
+    # b <- coef(mod0)[[2]]
+    # 
+    # cat("a = ", a, "\n")
+    # cat("b = ", b, "\n")
+    # 
+    # biometria.nls_esp_4 <- nls (
+    #   formula = y ~ a*x^b, 
+    #   data = biometria_esp_4,
+    #   start = list(
+    #     a = a,
+    #     b = b
+    #   ),
+    #   control = nls.control(maxiter = 200)
+    # )
+    # 
+    # # Valores do confint
+    # conf <- confint(biometria.nls_esp_4)
+    # a_lower <- conf["a", "2.5%"]
+    # a_upper <- conf["a", "97.5%"]
+    # b_lower <- conf["b", "2.5%"]
+    # b_upper <- conf["b", "97.5%"]
+    # 
+    # new_data_esp_4 <- data.frame(
+    #   x = seq(
+    #     min(biometria_esp_4$x),
+    #     max(biometria_esp_4$x),
+    #     length.out = 100)
+    # )
+    # # Calcular as curvas ajustadas
+    # new_data_esp_4$fit <- coef(biometria.nls_esp_4)["a"] * new_data_esp_4$x^coef(biometria.nls_esp_4)["b"]
+    # new_data_esp_4$lwr <- a_lower * new_data_esp_4$x^b_lower
+    # new_data_esp_4$upr <- a_upper * new_data_esp_4$x^b_upper
+    # 
+    # new_data_esp_4$curva <- paste0(
+    #   i18n$t("comprimento_legenda"), round(new_data_esp_4$x, 2 ), " cm<br>",
+    #   i18n$t("lim_sup_legenda"), round(new_data_esp_4$upr, 2), " kg<br>",
+    #   i18n$t("curva_legenda"), round(new_data_esp_4$fit, 2), " kg<br>",
+    #   i18n$t("lim_inf_legenda"), round(new_data_esp_4$lwr, 2), " kg"
+    # )
+    
+    biometria_esp_4$XvsY <- paste0(
+      i18n$t("comprimento_legenda"), round(biometria_esp_4$x, 2 ), " cm<br>",
+      i18n$t("peso_legenda"), round(biometria_esp_4$y, 2), " kg"
+    )
+    
+    p <- ggplot() +
+      # geom_line(
+      #   data = new_data_esp_4,
+      #   aes(x = x, y = fit),
+      #   color = "blue",
+      #   linewidth = 0.6
+      # ) +  # Linha ajustada
+      geom_point(
+        data = biometria_esp_4,
+        aes(x = x, y = y),
+        colour = "blue",
+        fill = "lightblue",
+        size = 0.5,
+        shape = 21
+      ) +
+      # geom_ribbon(
+      #   data = new_data_esp_4,
+      #   aes(x = x, ymin = lwr, ymax = upr),
+      #   fill = "blue",
+      #   alpha = 0.2
+      # ) +  # Bandas de confiança
+      labs(
+        x = i18n$t("legenda_comprimento"),
+        y = i18n$t("legenda_peso")
+      ) +
+      theme_minimal()
+    
+    # Tornar o gráfico interativo
+    ggplotly(p) %>% 
+      plotly::style(
+        hoverinfo = "text",
+        text = biometria_esp_4$XvsY, 
+        # traces = 2
+        traces = 1
+      ) %>% 
+      # plotly::style(
+      #   hoverinfo = "text",
+      #   text = new_data_esp_4$curva,
+      #   traces = 1
+      # ) %>% 
+      # plotly::style(
+      #   hoverinfo = "none",
+      #   traces = 3
+      # ) %>%
+      config(
+        locale = "pt-br",
+        displayModeBar = TRUE,
+        modeBarButtonsToRemove = list(
+          'hoverClosestCartesian', 'hoverCompareCartesian'
+        )
+      )
+  })
+  
+  output$histograma_comprimento_esp_4 <- renderPlotly({
+    plot_ly(
+      data = dados_biometria_filtro_esp_4(),
+      x = ~comprimento_total,
+      type = 'histogram',
+      color = ~sexo,
+      xbins = list(
+        size = 5
+      ),
+      customdata = ~case_when(
+        sexo == "Macho" ~ i18n$t("macho"),
+        sexo == "Fêmea" ~ i18n$t("femea"),
+        TRUE ~ sexo
+      ),
+      colors = cores_sexo,
+      hoverinfo = "none",
+      hovertemplate = paste(
+        " ", i18n$t("sexo"), ": %{customdata} <br>",
+        i18n$t("legenda_intervalo"), ": %{x}<br>",
+        i18n$t("frequencia"), ": %{y}<extra></extra>"
+      )
+    ) %>%
+      layout(
+        title = NULL,
+        yaxis = list(
+          title = i18n$t("frequencia"),
+          showgrid = FALSE
+        ),
+        xaxis = list(
+          title = i18n$t("legenda_comprimento")
+        ),
+        barmode = "stack",
+        showlegend = FALSE
+      ) %>%
+      config(displayModeBar = FALSE) 
+  })
+  
+  output$tabela_proporcao_esp_4 <- renderDT({
+    
+    dados_tabela_esp_4 <- osseos %>% 
+      filter(especie == "Oligoplites saliens" & sexo != "Indeterminado") %>% 
+      group_by(sexo) %>% 
+      summarise(
+        n = n()
+      ) %>% 
+      mutate(
+        prop = round((n / sum(n)) * 100, 2)
+      ) %>% 
+      ungroup() %>% 
+      mutate(
+        sexo = case_when(
+          sexo == "Macho" ~ i18n$t("macho"),
+          sexo == "Fêmea" ~ i18n$t("femea"),
+          TRUE ~ sexo
+        )
+      )
+    
+    colnames(dados_tabela_esp_4) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    
+    datatable(
+      data = dados_tabela_esp_4,
+      rownames = FALSE,
+      filter = "none",
+      options = list(
+        paging = FALSE,
+        searching = FALSE,
+        columnDefs = list(
+          list(
+            className = 'dt-center',
+            targets = "_all"
+          )
+        ),
+        class = "cell-border stripe hover",
+        selection = "single"
+      )
+    )
+  })
+  
+  output$image_1_esp_4 <- renderImage({
+    # list(
+    #   src = "www/Micropogonias_furnieri_imagem_1.jpg",
+    #   contentType = "image/jpg",
+    #   height = "auto",
+    #   width = "70%"
+    # )
+  }, deleteFile = FALSE)
+  
+  output$image_2_esp_4 <- renderImage({
+    # list(
+    #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
+    #   contentType = "image/jpg",
+    #   height = "auto",
+    #   width = "70%"
+    # )
+  }, deleteFile = FALSE)
+  
+  # Distribuição de Captura Espécie 5  ----------------------------------------
+  
+  dados_biometria_filtro_esp_5 <- reactive({
+    dados_aux <- osseos %>% 
+      filter(
+        especie == "Trichiurus lepturus" & 
+          sexo == input$sexo_comprimento_esp_5 &
+          comprimento_total != 0 & 
+          peso_total != 0
+          )
+  })
+  
+  output$DispersaoComprimentoXPeso_esp_5 <- renderPlotly({
+    
+    biometria_esp_5 <- data.frame(
+      sexo = dados_biometria_filtro_esp_5()$sexo,
+      x = dados_biometria_filtro_esp_5()$comprimento_total,
+      y = dados_biometria_filtro_esp_5()$peso_total
+    )
+    
+    # mod0 <- glm(log(y) ~ x, data = biometria_esp_5)
+    # 
+    # a <- coef(mod0)[[1]]
+    # 
+    # b <- coef(mod0)[[2]]
+    # 
+    # cat("a = ", a, "\n")
+    # cat("b = ", b, "\n")
+    # 
+    # biometria.nls_esp_5 <- nls (
+    #   formula = y ~ a*x^b, 
+    #   data = biometria_esp_5,
+    #   start = list(
+    #     a = a,
+    #     b = b
+    #   ),
+    #   control = nls.control(maxiter = 200)
+    # )
+    # 
+    # # Valores do confint
+    # conf <- confint(biometria.nls_esp_5)
+    # a_lower <- conf["a", "2.5%"]
+    # a_upper <- conf["a", "97.5%"]
+    # b_lower <- conf["b", "2.5%"]
+    # b_upper <- conf["b", "97.5%"]
+    # 
+    # new_data_esp_5 <- data.frame(
+    #   x = seq(
+    #     min(biometria_esp_5$x),
+    #     max(biometria_esp_5$x),
+    #     length.out = 100)
+    # )
+    # # Calcular as curvas ajustadas
+    # new_data_esp_5$fit <- coef(biometria.nls_esp_5)["a"] * new_data_esp_5$x^coef(biometria.nls_esp_5)["b"]
+    # new_data_esp_5$lwr <- a_lower * new_data_esp_5$x^b_lower
+    # new_data_esp_5$upr <- a_upper * new_data_esp_5$x^b_upper
+    # 
+    # new_data_esp_5$curva <- paste0(
+    #   i18n$t("comprimento_legenda"), round(new_data_esp_5$x, 2 ), " cm<br>",
+    #   i18n$t("lim_sup_legenda"), round(new_data_esp_5$upr, 2), " kg<br>",
+    #   i18n$t("curva_legenda"), round(new_data_esp_5$fit, 2), " kg<br>",
+    #   i18n$t("lim_inf_legenda"), round(new_data_esp_5$lwr, 2), " kg"
+    # )
+    
+    biometria_esp_5$XvsY <- paste0(
+      i18n$t("comprimento_legenda"), round(biometria_esp_5$x, 2 ), " cm<br>",
+      i18n$t("peso_legenda"), round(biometria_esp_5$y, 2), " kg"
+    )
+    
+    p <- ggplot() +
+      # geom_line(
+      #   data = new_data_esp_5,
+      #   aes(x = x, y = fit),
+      #   color = "blue",
+      #   linewidth = 0.6
+      # ) +  # Linha ajustada
+      geom_point(
+        data = biometria_esp_5,
+        aes(x = x, y = y),
+        colour = "blue",
+        fill = "lightblue",
+        size = 0.5,
+        shape = 21
+      ) +
+      # geom_ribbon(
+      #   data = new_data_esp_5,
+      #   aes(x = x, ymin = lwr, ymax = upr),
+      #   fill = "blue",
+      #   alpha = 0.2
+      # ) +  # Bandas de confiança
+      labs(
+        x = i18n$t("legenda_comprimento"),
+        y = i18n$t("legenda_peso")
+      ) +
+      theme_minimal()
+    
+    # Tornar o gráfico interativo
+    ggplotly(p) %>% 
+      plotly::style(
+        hoverinfo = "text",
+        text = biometria_esp_5$XvsY, 
+        # traces = 2
+        traces = 1
+      ) %>% 
+      # plotly::style(
+      #   hoverinfo = "text",
+      #   text = new_data_esp_5$curva,
+      #   traces = 1
+      # ) %>% 
+      # plotly::style(
+      #   hoverinfo = "none",
+      #   traces = 3
+      # ) %>%
+      config(
+        locale = "pt-br",
+        displayModeBar = TRUE,
+        modeBarButtonsToRemove = list(
+          'hoverClosestCartesian', 'hoverCompareCartesian'
+        )
+      )
+  })
+  
+  output$histograma_comprimento_esp_5 <- renderPlotly({
+    plot_ly(
+      data = dados_biometria_filtro_esp_5(),
+      x = ~comprimento_total,
+      type = 'histogram',
+      color = ~sexo,
+      xbins = list(
+        size = 5
+      ),
+      customdata = ~case_when(
+        sexo == "Macho" ~ i18n$t("macho"),
+        sexo == "Fêmea" ~ i18n$t("femea"),
+        TRUE ~ sexo
+      ),
+      colors = cores_sexo,
+      hoverinfo = "none",
+      hovertemplate = paste(
+        " ", i18n$t("sexo"), ": %{customdata} <br>",
+        i18n$t("legenda_intervalo"), ": %{x}<br>",
+        i18n$t("frequencia"), ": %{y}<extra></extra>"
+      )
+    ) %>%
+      layout(
+        title = NULL,
+        yaxis = list(
+          title = i18n$t("frequencia"),
+          showgrid = FALSE
+        ),
+        xaxis = list(
+          title = i18n$t("legenda_comprimento")
+        ),
+        barmode = "stack",
+        showlegend = FALSE
+      ) %>%
+      config(displayModeBar = FALSE) 
+  })
+  
+  output$tabela_proporcao_esp_5 <- renderDT({
+    
+    dados_tabela_esp_5 <- osseos %>% 
+      filter(especie == "Trichiurus lepturus" & sexo != "Indeterminado") %>% 
+      group_by(sexo) %>% 
+      summarise(
+        n = n()
+      ) %>% 
+      mutate(
+        prop = round((n / sum(n)) * 100, 2)
+      ) %>% 
+      ungroup() %>% 
+      mutate(
+        sexo = case_when(
+          sexo == "Macho" ~ i18n$t("macho"),
+          sexo == "Fêmea" ~ i18n$t("femea"),
+          TRUE ~ sexo
+        )
+      )
+    
+    colnames(dados_tabela_esp_5) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    
+    datatable(
+      data = dados_tabela_esp_5,
+      rownames = FALSE,
+      filter = "none",
+      options = list(
+        paging = FALSE,
+        searching = FALSE,
+        columnDefs = list(
+          list(
+            className = 'dt-center',
+            targets = "_all"
+          )
+        ),
+        class = "cell-border stripe hover",
+        selection = "single"
+      )
+    )
+  })
+  
+  output$image_1_esp_5 <- renderImage({
+    # list(
+    #   src = "www/Micropogonias_furnieri_imagem_1.jpg",
+    #   contentType = "image/jpg",
+    #   height = "auto",
+    #   width = "70%"
+    # )
+  }, deleteFile = FALSE)
+  
+  output$image_2_esp_5 <- renderImage({
+    # list(
+    #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
+    #   contentType = "image/jpg",
+    #   height = "auto",
+    #   width = "70%"
+    # )
+  }, deleteFile = FALSE)
+  
+  # Distribuição de Captura Espécie 6  ----------------------------------------
+  
+  dados_biometria_filtro_esp_6 <- reactive({
+    dados_aux <- osseos %>% 
+      filter(
+        especie == "Scomberomorus brasiliensis" & 
+          sexo == input$sexo_comprimento_esp_6 &
+          comprimento_total != 0 & 
+          peso_total != 0
+      )
+  })
+  
+  output$DispersaoComprimentoXPeso_esp_6 <- renderPlotly({
+    
+    biometria_esp_6 <- data.frame(
+      sexo = dados_biometria_filtro_esp_6()$sexo,
+      x = dados_biometria_filtro_esp_6()$comprimento_total,
+      y = dados_biometria_filtro_esp_6()$peso_total
+    )
+    
+    # mod0 <- glm(log(y) ~ x, data = biometria_esp_6)
+    # 
+    # a <- coef(mod0)[[1]]
+    # 
+    # b <- coef(mod0)[[2]]
+    # 
+    # cat("a = ", a, "\n")
+    # cat("b = ", b, "\n")
+    # 
+    # biometria.nls_esp_6 <- nls (
+    #   formula = y ~ a*x^b, 
+    #   data = biometria_esp_6,
+    #   start = list(
+    #     a = a,
+    #     b = b
+    #   ),
+    #   control = nls.control(maxiter = 200)
+    # )
+    # 
+    # # Valores do confint
+    # conf <- confint(biometria.nls_esp_6)
+    # a_lower <- conf["a", "2.5%"]
+    # a_upper <- conf["a", "97.5%"]
+    # b_lower <- conf["b", "2.5%"]
+    # b_upper <- conf["b", "97.5%"]
+    # 
+    # new_data_esp_6 <- data.frame(
+    #   x = seq(
+    #     min(biometria_esp_6$x),
+    #     max(biometria_esp_6$x),
+    #     length.out = 100)
+    # )
+    # # Calcular as curvas ajustadas
+    # new_data_esp_6$fit <- coef(biometria.nls_esp_6)["a"] * new_data_esp_6$x^coef(biometria.nls_esp_6)["b"]
+    # new_data_esp_6$lwr <- a_lower * new_data_esp_6$x^b_lower
+    # new_data_esp_6$upr <- a_upper * new_data_esp_6$x^b_upper
+    # 
+    # new_data_esp_6$curva <- paste0(
+    #   i18n$t("comprimento_legenda"), round(new_data_esp_6$x, 2 ), " cm<br>",
+    #   i18n$t("lim_sup_legenda"), round(new_data_esp_6$upr, 2), " kg<br>",
+    #   i18n$t("curva_legenda"), round(new_data_esp_6$fit, 2), " kg<br>",
+    #   i18n$t("lim_inf_legenda"), round(new_data_esp_6$lwr, 2), " kg"
+    # )
+    
+    biometria_esp_6$XvsY <- paste0(
+      i18n$t("comprimento_legenda"), round(biometria_esp_6$x, 2 ), " cm<br>",
+      i18n$t("peso_legenda"), round(biometria_esp_6$y, 2), " kg"
+    )
+    
+    p <- ggplot() +
+      # geom_line(
+      #   data = new_data_esp_6,
+      #   aes(x = x, y = fit),
+      #   color = "blue",
+      #   linewidth = 0.6
+      # ) +  # Linha ajustada
+      geom_point(
+        data = biometria_esp_6,
+        aes(x = x, y = y),
+        colour = "blue",
+        fill = "lightblue",
+        size = 0.5,
+        shape = 21
+      ) +
+      # geom_ribbon(
+      #   data = new_data_esp_6,
+      #   aes(x = x, ymin = lwr, ymax = upr),
+      #   fill = "blue",
+      #   alpha = 0.2
+      # ) +  # Bandas de confiança
+      labs(
+        x = i18n$t("legenda_comprimento"),
+        y = i18n$t("legenda_peso")
+      ) +
+      theme_minimal()
+    
+    # Tornar o gráfico interativo
+    ggplotly(p) %>% 
+      plotly::style(
+        hoverinfo = "text",
+        text = biometria_esp_6$XvsY, 
+        # traces = 2
+        traces = 1
+      ) %>% 
+      # plotly::style(
+      #   hoverinfo = "text",
+      #   text = new_data_esp_6$curva,
+      #   traces = 1
+      # ) %>% 
+      # plotly::style(
+      #   hoverinfo = "none",
+      #   traces = 3
+      # ) %>%
+      config(
+        locale = "pt-br",
+        displayModeBar = TRUE,
+        modeBarButtonsToRemove = list(
+          'hoverClosestCartesian', 'hoverCompareCartesian'
+        )
+      )
+  })
+  
+  output$histograma_comprimento_esp_6 <- renderPlotly({
+    plot_ly(
+      data = dados_biometria_filtro_esp_6(),
+      x = ~comprimento_total,
+      type = 'histogram',
+      color = ~sexo,
+      xbins = list(
+        size = 5
+      ),
+      customdata = ~case_when(
+        sexo == "Macho" ~ i18n$t("macho"),
+        sexo == "Fêmea" ~ i18n$t("femea"),
+        TRUE ~ sexo
+      ),
+      colors = cores_sexo,
+      hoverinfo = "none",
+      hovertemplate = paste(
+        " ", i18n$t("sexo"), ": %{customdata} <br>",
+        i18n$t("legenda_intervalo"), ": %{x}<br>",
+        i18n$t("frequencia"), ": %{y}<extra></extra>"
+      )
+    ) %>%
+      layout(
+        title = NULL,
+        yaxis = list(
+          title = i18n$t("frequencia"),
+          showgrid = FALSE
+        ),
+        xaxis = list(
+          title = i18n$t("legenda_comprimento")
+        ),
+        barmode = "stack",
+        showlegend = FALSE
+      ) %>%
+      config(displayModeBar = FALSE) 
+  })
+  
+  output$tabela_proporcao_esp_6 <- renderDT({
+    
+    dados_tabela_esp_6 <- osseos %>% 
+      filter(especie == "Scomberomorus brasiliensis" & sexo != "Indeterminado") %>%  
+      group_by(sexo) %>% 
+      summarise(
+        n = n()
+      ) %>% 
+      mutate(
+        prop = round((n / sum(n)) * 100, 2)
+      ) %>% 
+      ungroup() %>% 
+      mutate(
+        sexo = case_when(
+          sexo == "Macho" ~ i18n$t("macho"),
+          sexo == "Fêmea" ~ i18n$t("femea"),
+          TRUE ~ sexo
+        )
+      )
+    
+    colnames(dados_tabela_esp_6) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    
+    datatable(
+      data = dados_tabela_esp_6,
+      rownames = FALSE,
+      filter = "none",
+      options = list(
+        paging = FALSE,
+        searching = FALSE,
+        columnDefs = list(
+          list(
+            className = 'dt-center',
+            targets = "_all"
+          )
+        ),
+        class = "cell-border stripe hover",
+        selection = "single"
+      )
+    )
+  })
+  
+  output$image_1_esp_6 <- renderImage({
+    # list(
+    #   src = "www/Micropogonias_furnieri_imagem_1.jpg",
+    #   contentType = "image/jpg",
+    #   height = "auto",
+    #   width = "70%"
+    # )
+  }, deleteFile = FALSE)
+  
+  output$image_2_esp_6 <- renderImage({
+    # list(
+    #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
+    #   contentType = "image/jpg",
+    #   height = "auto",
+    #   width = "70%"
+    # )
+  }, deleteFile = FALSE)
+  
+  # Distribuição de Captura Espécie 7  ----------------------------------------
+  
+  dados_biometria_filtro_esp_7 <- reactive({
+    dados_aux <- osseos %>% 
+      filter(
+        especie == "Oligoplites saurus" &
+          sexo == input$sexo_comprimento_esp_7 &
+          comprimento_total != 0 & 
+          peso_total != 0
+      )
+  })
+  
+  output$DispersaoComprimentoXPeso_esp_7 <- renderPlotly({
+    
+    biometria_esp_7 <- data.frame(
+      sexo = dados_biometria_filtro_esp_7()$sexo,
+      x = dados_biometria_filtro_esp_7()$comprimento_total,
+      y = dados_biometria_filtro_esp_7()$peso_total
+    )
+    
+    # mod0 <- glm(log(y) ~ x, data = biometria_esp_7)
+    # 
+    # a <- coef(mod0)[[1]]
+    # 
+    # b <- coef(mod0)[[2]]
+    # 
+    # cat("a = ", a, "\n")
+    # cat("b = ", b, "\n")
+    # 
+    # biometria.nls_esp_7 <- nls (
+    #   formula = y ~ a*x^b, 
+    #   data = biometria_esp_7,
+    #   start = list(
+    #     a = a,
+    #     b = b
+    #   ),
+    #   control = nls.control(maxiter = 200)
+    # )
+    # 
+    # # Valores do confint
+    # conf <- confint(biometria.nls_esp_7)
+    # a_lower <- conf["a", "2.5%"]
+    # a_upper <- conf["a", "97.5%"]
+    # b_lower <- conf["b", "2.5%"]
+    # b_upper <- conf["b", "97.5%"]
+    # 
+    # new_data_esp_7 <- data.frame(
+    #   x = seq(
+    #     min(biometria_esp_7$x),
+    #     max(biometria_esp_7$x),
+    #     length.out = 100)
+    # )
+    # # Calcular as curvas ajustadas
+    # new_data_esp_7$fit <- coef(biometria.nls_esp_7)["a"] * new_data_esp_7$x^coef(biometria.nls_esp_7)["b"]
+    # new_data_esp_7$lwr <- a_lower * new_data_esp_7$x^b_lower
+    # new_data_esp_7$upr <- a_upper * new_data_esp_7$x^b_upper
+    # 
+    # new_data_esp_7$curva <- paste0(
+    #   i18n$t("comprimento_legenda"), round(new_data_esp_7$x, 2 ), " cm<br>",
+    #   i18n$t("lim_sup_legenda"), round(new_data_esp_7$upr, 2), " kg<br>",
+    #   i18n$t("curva_legenda"), round(new_data_esp_7$fit, 2), " kg<br>",
+    #   i18n$t("lim_inf_legenda"), round(new_data_esp_7$lwr, 2), " kg"
+    # )
+    
+    biometria_esp_7$XvsY <- paste0(
+      i18n$t("comprimento_legenda"), round(biometria_esp_7$x, 2 ), " cm<br>",
+      i18n$t("peso_legenda"), round(biometria_esp_7$y, 2), " kg"
+    )
+    
+    p <- ggplot() +
+      # geom_line(
+      #   data = new_data_esp_7,
+      #   aes(x = x, y = fit),
+      #   color = "blue",
+      #   linewidth = 0.6
+      # ) +  # Linha ajustada
+      geom_point(
+        data = biometria_esp_7,
+        aes(x = x, y = y),
+        colour = "blue",
+        fill = "lightblue",
+        size = 0.5,
+        shape = 21
+      ) +
+      # geom_ribbon(
+      #   data = new_data_esp_7,
+      #   aes(x = x, ymin = lwr, ymax = upr),
+      #   fill = "blue",
+      #   alpha = 0.2
+      # ) +  # Bandas de confiança
+      labs(
+        x = i18n$t("legenda_comprimento"),
+        y = i18n$t("legenda_peso")
+      ) +
+      theme_minimal()
+    
+    # Tornar o gráfico interativo
+    ggplotly(p) %>% 
+      plotly::style(
+        hoverinfo = "text",
+        text = biometria_esp_7$XvsY, 
+        # traces = 2
+        traces = 1
+      ) %>% 
+      # plotly::style(
+      #   hoverinfo = "text",
+      #   text = new_data_esp_7$curva,
+      #   traces = 1
+      # ) %>% 
+      # plotly::style(
+      #   hoverinfo = "none",
+      #   traces = 3
+      # ) %>%
+      config(
+        locale = "pt-br",
+        displayModeBar = TRUE,
+        modeBarButtonsToRemove = list(
+          'hoverClosestCartesian', 'hoverCompareCartesian'
+        )
+      )
+  })
+  
+  output$histograma_comprimento_esp_7 <- renderPlotly({
+    plot_ly(
+      data = dados_biometria_filtro_esp_7(),
+      x = ~comprimento_total,
+      type = 'histogram',
+      color = ~sexo,
+      xbins = list(
+        size = 5
+      ),
+      customdata = ~case_when(
+        sexo == "Macho" ~ i18n$t("macho"),
+        sexo == "Fêmea" ~ i18n$t("femea"),
+        TRUE ~ sexo
+      ),
+      colors = cores_sexo,
+      hoverinfo = "none",
+      hovertemplate = paste(
+        " ", i18n$t("sexo"), ": %{customdata} <br>",
+        i18n$t("legenda_intervalo"), ": %{x}<br>",
+        i18n$t("frequencia"), ": %{y}<extra></extra>"
+      )
+    ) %>%
+      layout(
+        title = NULL,
+        yaxis = list(
+          title = i18n$t("frequencia"),
+          showgrid = FALSE
+        ),
+        xaxis = list(
+          title = i18n$t("legenda_comprimento")
+        ),
+        barmode = "stack",
+        showlegend = FALSE
+      ) %>%
+      config(displayModeBar = FALSE) 
+  })
+  
+  output$tabela_proporcao_esp_7 <- renderDT({
+    
+    dados_tabela_esp_7 <- osseos %>% 
+      filter(especie == "Oligoplites saurus" & sexo != "Indeterminado") %>% 
+      group_by(sexo) %>% 
+      summarise(
+        n = n()
+      ) %>% 
+      mutate(
+        prop = round((n / sum(n)) * 100, 2)
+      ) %>% 
+      ungroup() %>% 
+      mutate(
+        sexo = case_when(
+          sexo == "Macho" ~ i18n$t("macho"),
+          sexo == "Fêmea" ~ i18n$t("femea"),
+          TRUE ~ sexo
+        )
+      )
+    
+    colnames(dados_tabela_esp_7) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    
+    datatable(
+      data = dados_tabela_esp_7,
+      rownames = FALSE,
+      filter = "none",
+      options = list(
+        paging = FALSE,
+        searching = FALSE,
+        columnDefs = list(
+          list(
+            className = 'dt-center',
+            targets = "_all"
+          )
+        ),
+        class = "cell-border stripe hover",
+        selection = "single"
+      )
+    )
+  })
+  
+  output$image_1_esp_7 <- renderImage({
+    # list(
+    #   src = "www/Micropogonias_furnieri_imagem_1.jpg",
+    #   contentType = "image/jpg",
+    #   height = "auto",
+    #   width = "70%"
+    # )
+  }, deleteFile = FALSE)
+  
+  output$image_2_esp_7 <- renderImage({
+    # list(
+    #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
+    #   contentType = "image/jpg",
+    #   height = "auto",
+    #   width = "70%"
+    # )
+  }, deleteFile = FALSE)
+  
+  # ControlBar --------------------------------------------------------------
   
   observeEvent(input$selected_language, {
     update_lang(input$selected_language)
@@ -2077,19 +2972,10 @@ server <- function(input, output, session) {
 
   # Modal Dialog ------------------------------------------------------------
 
-  output$Lema <- renderImage({
-    # list(
-    #   src = "dados_brutos/LEMA.png",
-    #   height = "auto",
-    #   width = "150wv",
-    #   contentType = "image/png"
-    # )
-  }, deleteFile = FALSE)
-
   output$TituloModal <- renderUI({
     div(
       style = "text-align: center;",
-      # imageOutput("Lema", height = "100%"),
+      # imageOutput("LABORATORIO_RESPONSAVEL", height = "100%"),
       h2(i18n$t("intro_texto_1")),
       h2(strong(i18n$t("intro_texto_2"))),
       tags$small(i18n$t("intro_texto_3"))
@@ -2108,34 +2994,34 @@ server <- function(input, output, session) {
     )
   })
 
-  showModal(
-    modalDialog(
-      title = uiOutput("TituloModal"),
-      fade = TRUE,
-      easyClose = TRUE,
-      uiOutput("ConteudoModal"),
-      footer = tagList(
-        div(
-          class = "pull-left",
-          style = "text-align: left",
-          selectInput(
-            inputId = "selected_language",
-            label = NULL,
-            width = "135px",
-            choices = setNames(
-              i18n$get_languages()[-1],
-              c("🇧🇷 - Português","🇬🇧 - English", "🇪🇸 - Español")
-            ),
-            selected = i18n$get_key_translation()
-          )
-        ),
-        modalButton(
-          "Fechar",
-          icon = icon("times")
-        )
-      )
-    )
-  )
+  # showModal(
+  #   modalDialog(
+  #     title = uiOutput("TituloModal"),
+  #     fade = TRUE,
+  #     easyClose = TRUE,
+  #     uiOutput("ConteudoModal"),
+  #     footer = tagList(
+  #       div(
+  #         class = "pull-left",
+  #         style = "text-align: left",
+  #         selectInput(
+  #           inputId = "selected_language",
+  #           label = NULL,
+  #           width = "135px",
+  #           choices = setNames(
+  #             i18n$get_languages()[-1],
+  #             c("🇧🇷 - Português","🇬🇧 - English", "🇪🇸 - Español")
+  #           ),
+  #           selected = i18n$get_key_translation()
+  #         )
+  #       ),
+  #       modalButton(
+  #         "Fechar",
+  #         icon = icon("times")
+  #       )
+  #     )
+  #   )
+  # )
 
 
   # Rintrojs ----------------------------------------------------------------
