@@ -1,0 +1,61 @@
+# Ignore R-related temporary files
+*.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Rprofile
+.Rapp.history
+
+# Ignore R package build artifacts
+.Rbuildignore
+*.tar.gz
+*.Rcheck/
+
+# Ignore compiled files
+*.o
+*.so
+*.dll
+
+# Ignore logs and temporary files
+*.log
+*.out
+*.aux
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.synctex.gz
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE and editor-specific files
+
+# RStudio
+.Rproj.user/
+
+# VS Code
+.vscode/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# vi/vim
+*.swp
+*.swo
+*.swn
+*~
+
+# Windows specific
+Desktop.ini
+
+# Linux specific
+*~
+.nfs*
+
+# Ignore Git-related files
+.git
+.gitignore
