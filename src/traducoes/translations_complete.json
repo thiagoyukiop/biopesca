@@ -14,82 +14,10 @@
             "es": "Cambiar idioma"
         },
         {
-            "tag": "projeto_tubarao_azul",
-            "pt": "Projeto Tubarão Azul",
-            "en": "Blue Shark Project",
-            "es": "Proyecto Tiburón Azul"
-        },
-        {
-            "tag": "tubarao_azul",
-            "pt": "Tubarão azul",
-            "en": "Blue shark",
-            "es": "Tiburón azul"
-        },
-        {
             "tag": "filtros",
             "pt": "Filtros",
             "en": "Filters",
             "es": "Filtros"
-        },
-        {
-            "tag": "intervalo_anos",
-            "pt": "Intervalo de Anos:",
-            "en": "Year Range:",
-            "es": "Rango de años:"
-        },
-        {
-            "tag": "seletor_especies",
-            "pt": "Seletor de Espécies:",
-            "en": "Species Selector:",
-            "es": "Selector de especies:"
-        },
-        {
-            "tag": "albacora_bandolim",
-            "pt": "Albacora bandolim",
-            "en": "Bigeye tuna",
-            "es": "Patudo"
-        },
-        {
-            "tag": "albacora_branca",
-            "pt": "Albacora branca",
-            "en": "Albacore",
-            "es": "Albacora"
-        },
-        {
-            "tag": "albacora_lage",
-            "pt": "Albacora lage",
-            "en": "Yellowfin tuna",
-            "es": "Rabil"
-        },
-        {
-            "tag": "bonito_listrado",
-            "pt": "Bonito listrado",
-            "en": "Skipjack tuna",
-            "es": "Bonito de veintre rayado"
-        },
-        {
-            "tag": "cacao_anequim",
-            "pt": "Cação anequim",
-            "en": "Shortfin mako",
-            "es": "Espadarte"
-        },
-        {
-            "tag": "meca",
-            "pt": "Meca",
-            "en": "Swordfish",
-            "es": "Caballa"
-        },
-        {
-            "tag": "outros",
-            "pt": "Outros",
-            "en": "Others",
-            "es": "Otros"
-        },
-        {
-            "tag": "bonito_listrado_legenda",
-            "pt": "Bonito listrado",
-            "en": "Skipjack tuna",
-            "es": "Bonito de \nveintre rayado"
         },
         {
             "tag": "seletor_sexo",
@@ -158,96 +86,6 @@
             "es": "Límite Inferior: "
         },
         {
-            "tag": "seletor_mapa",
-            "pt": "Seletor de Mapa:",
-            "en": "Map Selector:",
-            "es": "Selector de mapa:"
-        },
-        {
-            "tag": "kilostotais",
-            "pt": "Capturas Totais (kg)",
-            "en": "Total Catch (kg)",
-            "es": "Capturas Totales (kg)"
-        },
-        {
-            "tag": "kiloporviagem",
-            "pt": "Capturas por Viagem (kg)",
-            "en": "Catch per Trip (kg)",
-            "es": "Capturas por Viaje (kg)"
-        },
-        {
-            "tag": "viagens",
-            "pt": "Viagens",
-            "en": "Trips",
-            "es": "Viajes"
-        },
-        {
-            "tag": "status_embarcacao",
-            "pt": "Defina o Status das Embarcações",
-            "en": "Set the Status of the Vessels:",
-            "es": "Definir el estado de las embarcaciones:"
-        },
-        {
-            "tag": "hoje",
-            "pt": "Hoje",
-            "en": "Today",
-            "es": "Hoy"
-        },
-        {
-            "tag": "passado_realizado",
-            "pt": "Passado - Realizado",
-            "en": "Past - Completed",
-            "es": "Pasado - Realizado"
-        },
-        {
-            "tag": "passado_nao_realizado",
-            "pt": "Passado - Não Realizado",
-            "en": "Past - Not Completed",
-            "es": "Pasado - No Realizado"
-        },
-        {
-            "tag": "futuro",
-            "pt": "Futuro",
-            "en": "Future",
-            "es": "Futuro"
-        },
-        {
-            "tag": "notificacao_texto_1",
-            "pt": "Ocorrerá/Ocorreu Hoje",
-            "en": "Will Occur/Has Occurred Today",
-            "es": "Ocurrirá/Ocurrió hoy"
-        },
-        {
-            "tag": "notificacao_texto_2",
-            "pt": "Ocorrerá em ",
-            "en": "Will Occur in",
-            "es": "Ocurrirá en"
-        },
-        {
-            "tag": "notificacao_texto_3",
-            "pt": "dias",
-            "en": "days",
-            "es": "días"
-        },
-        {
-            "tag": "notificacao_texto_4",
-            "pt": "Você tem ",
-            "en": "You have ",
-            "es": "Tienes "
-        },
-        {
-            "tag": "notificacao_texto_5",
-            "pt": "notificações",
-            "en": "notifications",
-            "es": "notificaciones"
-        },
-        {
-            "tag": "notificacao_texto_6",
-            "pt": "dia",
-            "en": "day",
-            "es": "día"
-        },
-        {
             "tag": "apresentacao",
             "pt": "Apresentação",
             "en": "Presentation",
@@ -272,10 +110,10 @@
             "es": "Acerca de"
         },
         {
-            "tag": "distribuicao",
-            "pt": "Distribuição",
-            "en": "Distribution",
-            "es": "Distribución"
+            "tag": "distribuicao_comprimento",
+            "pt": "Distribuição de Comprimento",
+            "en": "Distribution of Length",
+            "es": "Distribución de Longitud"
         },
         {
             "tag": "captura",
@@ -288,24 +126,6 @@
             "pt": "Comprimento",
             "en": "Length",
             "es": "Longitud"
-        },
-        {
-            "tag": "desembarque",
-            "pt": "Desembarques",
-            "en": "Disembarkations",
-            "es": "Desembarques"
-        },
-        {
-            "tag": "distribuicao_espacial",
-            "pt": "Distribuição espacial",
-            "en": "Spatial distribution",
-            "es": "Distribución espacial"
-        },
-        {
-            "tag": "tabela_embarcacoes",
-            "pt": "Tabela de embarcações",
-            "en": "Vessel table",
-            "es": "Tabla de embarcaciones"
         },
         {
             "tag": "tubaroes_medidos",
@@ -434,120 +254,6 @@
             "es": "Diagrama de flujo del Plan de Gestión de la Pesca del Tiburón azul en Rio Grande do Sul"
         },
         {
-            "tag": "captura_texto_1",
-            "pt": "Capturas Mensais: Proporção e Quantidade de Registros de Tubarão azul e Outras Espécies", 
-            "en": "Monthly Catches: Proportion and Number of Blue shark and Other Species Records",
-            "es": "Capturas Mensuales: Proporción y Cantidad de Registros de Tiburón Azul y Otras Especies"
-        },
-        {
-            "tag": "captura_texto_2",
-            "pt": "Este gráfico apresenta a frequência relativa de registros de duas categorias principais: Tubarão azul e Outros. A categoria 'Outros' inclui todas as demais espécies coletadas, com o objetivo de destacar o comportamento do Tubarão azul ao longo do tempo. A frequência relativa é calculada com base na quantidade de registros de cada espécie, o que nos permite entender a distribuição dessas espécies ao longo dos meses e anos. Os dados temporais estão organizados por mês/ano, permitindo uma comparação direta entre as categorias ao longo do tempo, com ênfase nas tendências observadas em cada período.", 
-            "en": "This graph presents the relative frequency of records for two main categories: Blue shark and Others. The 'Others' category includes all other collected species, aiming to highlight the behavior of the Blue shark over time. The relative frequency is calculated based on the number of records for each species, allowing us to understand the distribution of these species over months and years. The temporal data is organized by month/year, enabling direct comparison between categories over time, with an emphasis on trends observed in each period.",
-            "es": "Este gráfico presenta la frecuencia relativa de registros de dos categorías principales: Tiburón azul y Otros. La categoría 'Otros' incluye todas las demás especies recolectadas, con el objetivo de destacar el comportamiento del Tiburón azul a lo largo del tiempo. La frecuencia relativa se calcula en función de la cantidad de registros de cada especie, lo que permite comprender la distribución de estas especies a lo largo de meses y años. Los datos temporales están organizados por mes/año, lo que permite una comparación directa entre categorías a lo largo del tiempo, con énfasis en las tendencias observadas en cada período."
-        },
-        {
-            "tag": "captura_texto_3",
-            "pt": "Proporção de Capturas por Mês: Tubarão azul x Outras Espécies", 
-            "en": "Catch Proportion per Month: Blue shark x Other Species",
-            "es": "Proporción de Capturas por Mes: Tiburón azul x Otras Especies"
-        },
-        {
-            "tag": "captura_texto_4",
-            "pt": "Este gráfico de barras exibe a frequência relativa das categorias Tubarão azul e Outros, com a categoria 'Outros' representando todas as outras espécies coletadas. O objetivo é destacar a proporção de registro de dados mensais do Tubarão azul, comparada com as demais categorias. A frequência relativa foi calculada com base na quantidade média de registros por mês, permitindo analisar a tendência de ocorrência das espécies de forma mais equilibrada ao longo dos períodos. Os dados temporais estão organizados por mês/ano, proporcionando uma visão detalhada da evolução da frequência das espécies ao longo do tempo.", 
-            "en": "This bar chart shows the relative frequency of Blue shark and Other categories, with the 'Other' category representing all other collected species. The goal is to highlight the proportion of Blue shark data records compared to other categories. The relative frequency is calculated based on the average number of records per month, allowing for a more balanced analysis of species occurrence trends over periods. The temporal data is organized by month/year, providing a detailed view of the evolution of species frequency over time.",
-            "es": "Este gráfico de barras muestra la frecuencia relativa de las categorias Tiburón azul y Otros, con la categoría 'Otros' representando todas las demás especies recolectadas. El objetivo es destacar la proporción de registros de datos mensuales del Tiburón azul, en comparación con las demás categorías. La frecuencia relativa se calculó en función de la cantidad promedio de registros por mes, permitiendo analizar la tendencia de ocurrencia de las especies de forma más equilibrada a lo largo de los períodos. Los datos temporales están organizados por mes/año, proporcionando una visión detallada de la evolución de la frecuencia de las especies a lo largo del tiempo."
-        },
-        {
-            "tag": "captura_texto_5",
-            "pt": "Distribuição Temporal de Registros por Mês e Ano", 
-            "en": "Temporal Distribution of Records by Month and Year",
-            "es": "Distribución Temporal de Registros por Mes y Año"
-        },
-        {
-            "tag": "captura_texto_6",
-            "pt": "Este mapa de calor compara a frequência relativa de registros do Tubarão azul ao longo de diferentes meses e anos. Cada quadrado no mapa representa um mês de um ano específico, com a intensidade da cor indicando a frequência relativa dos registros para aquele período. A frequência relativa é calculada com base na quantidade de registros do Tubarão azul, proporcionando uma visão clara das variações sazonais e anuais na ocorrência dessa espécie.", 
-            "en": "This heatmap compares the relative frequency of Blue shark records across different months and years. Each square on the map represents a month of a specific year, with the color intensity indicating the relative frequency of records for that period. The relative frequency is calculated based on the number of Blue shark records, offering a clear view of the seasonal and annual variations in the occurrence of this species.",
-            "es": "Este mapa de calor compara la frecuencia relativa de registros del Tiburón azul a lo largo de diferentes meses y años. Cada cuadrado en el mapa representa un mes de un año específico, con la intensidad del color indicando la frecuencia relativa de los registros para ese período. La frecuencia relativa se calcula en función de la cantidad de registros del Tiburón azul, ofreciendo una visión clara de las variaciones estacionales y anuales en la ocurrencia de esta especie."
-        },
-        {
-            "tag": "desembarque_texto_1",
-            "pt": "Média Mensal de Captura por Espécie e por Viagem", 
-            "en": "Monthly Average Catch per Species and per Trip",
-            "es": "Promedio Mensual de Captura por Especie y por Viaje"
-        },
-        {
-            "tag": "desembarque_texto_2",
-            "pt": "O gráfico de linha apresenta a captura média mensal por espécie ao longo do tempo, com cada espécie representada por uma cor distinta. Os dados utilizados são derivados do peso de captura, que é dividido pelo número de viagens, e organizado em grupos por Categoria, Ano e Mês. Para cada grupo, é calculada a média do valor de captura. Em seguida, os dados são segmentados por Categoria e Mês, permitindo visualizar as tendências de captura de cada espécie ao longo dos períodos analisados.", 
-            "en": "The line chart shows the average monthly catch per species over time, with each species represented by a distinct color. The data used is derived from the catch weight, which is divided by the number of trips and organized into groups by Category, Year, and Month. For each group, the average catch value is calculated. Then, the data is segmented by Category and Month, allowing the visualization of catch trends for each species over the analyzed periods.",
-            "es": "El gráfico de líneas muestra la captura promedio mensual por especie a lo largo del tiempo, con cada especie representada por un color distinto. Los datos utilizados se derivan del peso de captura, que se divide por el número de viajes y se organiza en grupos por Categoría, Año y Mes. Para cada grupo, se calcula el promedio del valor de captura. Luego, los datos se segmentan por categoría y mes, permitiendo visualizar las tendencias de captura de cada especie durante los períodos analizados."
-        },
-        {
-            "tag": "desembarque_texto_3",
-            "pt": "O mapa de calor exibe os valores de captura média para diferentes espécies ao longo do tempo. Cada quadrado no mapa corresponde a um mês de uma categoria específica e contém o valor médio de captura para aquele mês e espécie. A intensidade da cor em cada quadrado indica o valor da captura média, permitindo identificar padrões sazonais e comparar a captura entre as diferentes espécies ao longo dos meses.", 
-            "en": "The heatmap displays the average catch values for different species over time. Each square on the map corresponds to a month of a specific category and contains the average catch value for that month and species. The color intensity in each square indicates the average catch value, helping identify seasonal patterns and compare the catch among different species over the months.",
-            "es": "El mapa de calor muestra los valores promedio de captura para diferentes especies a lo largo del tiempo. Cada cuadrado en el mapa corresponde a un mes de una categoría específica e incluye el valor promedio de captura para ese mes y especie. La intensidad del color en cada cuadrado indica el valor promedio de captura, ayudando a identificar patrones estacionales y comparar las capturas entre las diferentes especies a lo largo de los meses."
-        },
-        {
-            "tag": "desembarque_texto_4",
-            "pt": "Proporção Mensal de Captura por Espécie e por Viagem ao Longo do Período Registrado", 
-            "en": "Monthly Catch Proportion per Species and per Trip Over the Recorded Period",
-            "es": "Proporción Mensual de Captura por Especie y por Viaje a lo Largo del Período Registrado"
-        },
-        {
-            "tag": "desembarque_texto_5",
-            "pt": "O gráfico de área relativa exibe os valores de captura média em quilos ao longo do tempo, organizados por mês/ano. Cada área colorida no gráfico representa uma categoria, sendo estas as diferentes espécies capturadas. Os dados abrangem todos os meses e anos dentro do período analisado, permitindo visualizar como a captura média de cada espécie varia ao longo do tempo. A soma das áreas reflete o total de captura média, enquanto as proporções indicam a contribuição relativa de cada espécie em cada período.", 
-            "en": "The relative area chart shows the average catch values in kilograms over time, organized by month/year. Each colored area on the chart represents a category, being these the different species captured. The data covers all months and years within the analyzed period, allowing the visualization of how the average catch of each species varies over time. The sum of the areas reflects the total average catch, while the proportions indicate the relative contribution of each species in each period.",
-            "es": "El gráfico de área relativa muestra los valores promedio de captura en kilogramos a lo largo del tiempo, organizados por mes/año. Cada área de color en el gráfico representa una categoría, que son las diferentes especies capturadas. Los datos abarcan todos los meses y años dentro del período analizado, permitiendo visualizar cómo varía la captura promedio de cada especie a lo largo del tiempo. La suma de las áreas refleja el total promedio de captura, mientras que las proporciones indican la contribución relativa de cada especie en cada período."
-        },
-        {
-            "tag": "desembarque_texto_6",
-            "pt": "Distribuição Mensal da Captura Média por Espécie e por Viagem", 
-            "en": "Monthly Distribution of Average Catch per Species and per Trip",
-            "es": "Distribución Mensual de la Captura Promedio por Especie y por Viaje"
-        },
-        {
-            "tag": "captura_espacial_texto_1",
-            "pt": "Mapas", 
-            "en": "Maps",
-            "es": "Mapas"
-        },
-        {
-            "tag": "captura_espacial_texto_2",
-            "pt": "O mapa espacializado por blocos apresenta os valores de captura total em quilos, organizados de forma visual para facilitar a análise. Cada bloco representa uma unidade específica de agrupamento, e o preenchimento dos blocos reflete o valor total de captura registrado em quilogramas. Essa representação permite identificar concentrações de capturas, comparando diferentes categorias ou períodos.",
-            "en": "The block spatial map shows the total catch values in kilograms, organized visually to facilitate analysis. Each block represents a specific unit of grouping, and the filling of the blocks reflects the total catch value recorded in kilograms. This representation allows identifying catch concentrations, comparing different categories or periods.",
-            "es": "El mapa espacializado por bloques muestra los valores totales de captura en kilogramos, organizados visualmente para facilitar el análisis. Cada bloque representa una unidad específica de agrupación, y el relleno de los bloques refleja el valor total de captura registrado en kilogramos. Esta representación permite identificar concentraciones de capturas y comparar diferentes categorías o períodos."
-        },
-        {
-            "tag": "captura_espacial_texto_3",
-            "pt": "O mapa espacializado por blocos apresenta os valores de captura por viagem em quilos, organizados de forma visual para facilitar a análise. Cada bloco representa uma unidade específica de agrupamento, e o preenchimento dos blocos reflete o valor captura por viagens registrado em quilogramas. Essa representação permite identificar concentrações de capturas, comparando diferentes categorias ou períodos.",
-            "en": "The block spatial map shows the catch values per trip in kilograms, organized visually to facilitate analysis. Each block represents a specific unit of grouping, and the filling of the blocks reflects the catch value per trips recorded in kilograms. This representation allows identifying catch concentrations, comparing different categories or periods.",
-            "es": "El mapa espacializado por bloques muestra los valores de captura por viaje en kilogramos, organizados visualmente para facilitar el análisis. Cada bloque representa una unidad específica de agrupación, y el relleno de los bloques refleja el valor de captura por viajes registrado en kilogramos. Esta representación permite identificar concentraciones de capturas y comparar diferentes categorías o períodos."
-        },
-        {
-            "tag": "captura_espacial_texto_4",
-            "pt": "O mapa espacializado por blocos apresenta os valores de viagens, organizados de forma visual para facilitar a análise. Cada bloco representa uma unidade específica de agrupamento, e o preenchimento dos blocos reflete o valor viagens. Essa representação permite identificar concentrações de capturas, comparando diferentes categorias ou períodos.",
-            "en": "The block spatial map shows the trip values, organized visually to facilitate analysis. Each block represents a specific unit of grouping, and the filling of the blocks reflects the trip values. This representation allows identifying catch concentrations, comparing different categories or periods.",
-            "es": "El mapa espacializado por bloques muestra los valores de viajes, organizados visualmente para facilitar el análisis. Cada bloque representa una unidad específica de agrupación, y el relleno de los bloques refleja los valores de los viajes. Esta representación permite identificar concentraciones de capturas y comparar diferentes categorías o períodos."
-        },
-        {
-            "tag": "captura_espacial_titulo_1",
-            "pt": "Distribuição Espacial das Capturas Totais (kg) por Bloco",
-            "en": "Spatial Distribution of Total Catches (kg) by Block",
-            "es": "Distribución Espacial de las Capturas Totales (kg) por Bloque"
-        },
-        {
-            "tag": "captura_espacial_titulo_2",
-            "pt": "Distribuição Espacial das Capturas (kg) por Viagem e por Bloco",
-            "en": "Spatial Distribution of Catches (kg) by Trip and by Block",
-            "es": "Distribución Espacial de las Capturas (kg) por Viaje y por Bloque"
-        },
-        {
-            "tag": "captura_espacial_titulo_3",
-            "pt": "Distribuição Espacial das Capturas por Viagem e por Bloco",
-            "en": "Spatial Distribution of Catches by Trip and by Block",
-            "es": "Distribución Espacial de las Capturas por Viaje y por Bloque"
-        },
-        {
             "tag": "comprimento_texto_1",
             "pt": "Histograma do Comprimento Total",
             "en": "Total Length Histogram",
@@ -558,168 +264,6 @@
             "pt": "Medidas Biométricas",
             "en": "Biometric Measurements",
             "es": "Medidas Biométricas"
-        },
-        {
-            "tag": "tabela_embarcacoes_nome_1",
-            "pt": "Embarcação",
-            "en": "Vessel",
-            "es": "Embarcación"
-        },
-        {
-            "tag": "tabela_embarcacoes_nome_2",
-            "pt": "Empresa",
-            "en": "Company",
-            "es": "Empresa"
-        },
-        {
-            "tag": "tabela_embarcacoes_nome_3",
-            "pt": "Data do Aviso Desembarque",
-            "en": "Notice of Disembarkation Date",
-            "es": "Fecha del Aviso de Desembarque"
-        },
-        {
-            "tag": "tabela_embarcacoes_nome_4",
-            "pt": "Saída",
-            "en": "Departure",
-            "es": "Salida"
-        },
-        {
-            "tag": "tabela_embarcacoes_nome_5",
-            "pt": "Chegada",
-            "en": "Arrival",
-            "es": "Llegada"
-        },
-        {
-            "tag": "tabela_embarcacoes_nome_6",
-            "pt": "Data da Coleta da Biometria",
-            "en": "Biometrics Collection Date",
-            "es": "Fecha de Recolección de Biometría"
-        },
-        {
-            "tag": "tabela_embarcacoes_nome_7",
-            "pt": "Indivíduos Medidos de Tubarão Azul",
-            "en": "Measured Individuals of Blue shark",
-            "es": "Individuos Medidos de Tiburón Azul"
-        },
-        {
-            "tag": "tabela_embarcacoes_nome_8",
-            "pt": "Indivíduos Pesados de Tubarão Azul",
-            "en": "Weighed Individuals of Blue shark",
-            "es": "Individuos Pesados de Tiburón Azul"
-        },
-        {
-            "tag": "mapa_claro",
-            "pt": "Mapa Claro",
-            "en": "Light Map",
-            "es": "Mapa Claro"
-        },
-        {
-            "tag": "mapa_escuro",
-            "pt": "Mapa Escuro",
-            "en": "Dark Map",
-            "es": "Mapa Oscuro"
-        },
-        {
-            "tag": "mapa_legenda_1",
-            "pt": "Captura: ",
-            "en": "Catches: ",
-            "es": "Capturas: "
-        },
-        {
-            "tag": "mapa_legenda_2",
-            "pt": "Viagens: ",
-            "en": "Trips: ",
-            "es": "Viajes: "
-        },
-        {
-            "tag": "mapa_legenda_3",
-            "pt": "Percentual de Captura",
-            "en": "Catch Percentage",
-            "es": "Porcentaje de Captura"
-        },
-        {
-            "tag": "mapa_legenda_4",
-            "pt": "Percentual de Viagens",
-            "en": "Trips Percentage",
-            "es": "Porcentaje de Viajes"
-        },
-        {
-            "tag": "mapa_legenda_5",
-            "pt": "Bloco: ",
-            "en": "Block: ",
-            "es": "Bloque: "
-        },
-        {
-            "tag": "mes_1",
-            "pt": "Janeiro",
-            "en": "January",
-            "es": "Enero"
-        },
-        {
-            "tag": "mes_2",
-            "pt": "Fevereiro",
-            "en": "February",
-            "es": "Febrero"
-        },
-        {
-            "tag": "mes_3",
-            "pt": "Março",
-            "en": "March",
-            "es": "Marzo"
-        },
-        {
-            "tag": "mes_4",
-            "pt": "Abril",
-            "en": "April",
-            "es": "Abril"
-        },
-        {
-            "tag": "mes_5",
-            "pt": "Maio",
-            "en": "May",
-            "es": "Mayo"
-        },
-        {
-            "tag": "mes_6",
-            "pt": "Junho",
-            "en": "June",
-            "es": "Junio"
-        },
-        {
-            "tag": "mes_7",
-            "pt": "Julho",
-            "en": "July",
-            "es": "Julio"
-        },
-        {
-            "tag": "mes_8",
-            "pt": "Agosto",
-            "en": "August",
-            "es": "Agosto"
-        },
-        {
-            "tag": "mes_9",
-            "pt": "Setembro",
-            "en": "September",
-            "es": "Septiembre"
-        },
-        {
-            "tag": "mes_10",
-            "pt": "Outubro",
-            "en": "October",
-            "es": "Octubre"
-        },
-        {
-            "tag": "mes_11",
-            "pt": "Novembro",
-            "en": "November",
-            "es": "Noviembre"
-        },
-        {
-            "tag": "mes_12",
-            "pt": "Dezembro",
-            "en": "December",
-            "es": "Diciembre"
         },
         {
             "tag": "legenda_data",
@@ -816,13 +360,7 @@
             "pt": "Captura\nMédia",
             "en": "Average\nCatch",
             "es": "Captura\nPromedio"
-        },/*
-        {
-            "tag": "frequencia_relativa",
-            "pt": "Frequência Relativa",
-            "en": "Relative Frequency",
-            "es": "Frecuencia Relativa"
-        },*/
+        },
         {
             "tag": "grafico_dispersao",
             "pt": "Diagrama de Dispersão",
@@ -900,48 +438,6 @@
             "pt": "A tabela apresenta os dados registrados organizados pelas categorias de Sexo, com três colunas: Sexo, que indica o gênero da espécie registrada; Total, que representa o número total de registros para cada categoria de sexo; e Porcentagem, que mostra a porcentagem de registros de cada sexo em relação ao total geral de dados registrados. A tabela permite analisar a distribuição dos dados por sexo, comparando a quantidade e a proporção de registros de cada categoria.",
             "en": "The table presents the registered data organized by Gender categories, with three columns: Gender, which indicates the gender of the recorded species; Total, representing the total number of records for each gender category; and Percentage, showing the percentage of records for each gender relative to the overall total of registered data. The table allows analyzing the distribution of data by gender, comparing the quantity and proportion of records for each category.",
             "es": "La tabla presenta los datos registrados organizados por categorías de Sexo, con tres columnas: Sexo, que indica el género de la especie registrada; Total, que representa el número total de registros para cada categoría de sexo; y Porcentaje, que muestra el porcentaje de registros de cada sexo en relación con el total general de datos registrados. La tabla permite analizar la distribución de los datos por sexo, comparando la cantidad y la proporción de registros de cada categoría."
-        },
-        {
-            "tag": "todos_tabela",
-            "pt": "Todos",
-            "en": "all",
-            "es": "todos"
-        },
-        {
-            "tag": "length_menu",
-            "pt": "_MENU_ resultados por página",
-            "en": "Show _MENU_ entries",
-            "es": "Mostrar _MENU_ registros"
-        },
-        {
-            "tag": "anterior",
-            "pt": "Anterior",
-            "en": "Previous",
-            "es": "Anterior"
-        },
-        {
-            "tag": "proximo",
-            "pt": "Próximo",
-            "en": "Next",
-            "es": "Siguiente"
-        },
-        {
-            "tag": "info",
-            "pt": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-            "en": "Showing _START_ to _END_ of _TOTAL_ entries",
-            "es": "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros"
-        },
-        {
-            "tag": "info_empty",
-            "pt": "Mostrando 0 até 0 de 0 registros",
-            "en": "Showing 0 to 0 of 0 entries",
-            "es": "Mostrando registros del 0 al 0 de un total de 0 registros"
-        },
-        {
-            "tag": "info_filtered",
-            "pt": "(Filtrados de _MAX_ registros)",
-            "en": "(filtered of _MAX_ total entries)",
-            "es": "(filtrado de un total de _MAX_ registros)"
         },
         {
             "tag": "sair",
