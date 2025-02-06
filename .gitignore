@@ -32,6 +32,8 @@
 .DS_Store
 Thumbs.db
 
+# csv
+.csv
 # IDE and Editor-specific ignores
 
 # RStudio
