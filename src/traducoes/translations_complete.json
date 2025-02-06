@@ -26,12 +26,6 @@
             "es": "Selector de sexo:"
         },
         {
-            "tag": "todos",
-            "pt": "Todos",
-            "en": "All",
-            "es": "Todos"
-        },
-        {
             "tag": "macho",
             "pt": "Macho",
             "en": "Male",
@@ -42,12 +36,6 @@
             "pt": "Fêmea",
             "en": "Female",
             "es": "Hembra"
-        },
-        {
-            "tag": "indeterminado",
-            "pt": "Indeterminado",
-            "en": "Undetermined",
-            "es": "Indeterminado"
         },
         {
             "tag": "sexo_legenda",
@@ -63,9 +51,9 @@
         },
         {
             "tag": "peso_legenda",
-            "pt": "Peso: ",
-            "en": "Weight: ",
-            "es": "Peso: "
+            "pt": "Peso Total: ",
+            "en": "Total Weight: ",
+            "es": "Peso Total: "
         },
         {
             "tag": "curva_legenda",
@@ -116,144 +104,6 @@
             "es": "Distribución de Longitud"
         },
         {
-            "tag": "captura",
-            "pt": "Captura",
-            "en": "Catch",
-            "es": "Captura"
-        },
-        {
-            "tag": "comprimento",
-            "pt": "Comprimento",
-            "en": "Length",
-            "es": "Longitud"
-        },
-        {
-            "tag": "tubaroes_medidos",
-            "pt": "Tubarões medidos",
-            "en": "Measured sharks",
-            "es": "Tiburones medidos"
-        },
-        {
-            "tag": "entrevista_desembarque",
-            "pt": "Entrevista de desembarque",
-            "en": "Disembark interview",
-            "es": "Entrevista de desembarque"
-        },
-        {
-            "tag": "cadernos_bordo",
-            "pt": "Cadernos de bordo",
-            "en": "Logbooks",
-            "es": "Cuadernos de bitácora"
-        },
-        {
-            "tag": "embarcacoes_monitoradas",
-            "pt": "Embarcações monitoradas",
-            "en": "Monitored vessels",
-            "es": "Embarcaciones monitoreadas"
-        },
-        {
-            "tag": "instituicoes_executoras",
-            "pt": "Instituições Executoras",
-            "en": "Executing Institutions",
-            "es": "Instituciones Ejecutoras"
-        },
-        {
-            "tag": "apoio",
-            "pt": "Apoio",
-            "en": "Support",
-            "es": "Apoyo"
-        },
-        {
-            "tag": "projeto_texto_1",
-            "pt": "Geração de subsídios e elaboração do Plano de gestão da pesca do Tubarão azul, e monitoramento da atividade no Estado do Rio Grande do Sul",
-            "en": "Generation of subsidies and development of the Blue shark fishing management plan, and monitoring of the activity in the State of Rio Grande do Sul",
-            "es": "Generación de subsidios y elaboración del Plan de gestión de pesca del Tiburón Azul y monitoreo de la actividad en el Estado de Rio Grande do Sul"
-        },
-        {
-            "tag": "projeto_texto_2",
-            "pt": "Como surgiu o Projeto Tubarão Azul?",
-            "en": "How the Blue Shark Project originated?",
-            "es": "¿Cómo surgió el Proyecto Tiburón Azul?"
-        },
-        {
-            "tag": "projeto_texto_3",
-            "pt": "O tubarão-azul",
-            "en": "The blue shark",
-            "es": "El tiburón azul"
-        },
-        {
-            "tag": "projeto_texto_4",
-            "pt": " é um dos Tubarões mais abundantes e de mais ampla distribuição nos oceanos do planeta, sendo a espécie mais frequente nas capturas da frota de espinhel e superfície no Oceano Atlântico Sul.",
-            "en": " is one of the most abundant sharks and has the widest distribution in the oceans of the planet, being the most frequent species in the catches of the longline and surface fleet in the South Atlantic Ocean.",
-            "es": " es uno de los tiburones más abundantes y de mayor distribución en los océanos del planeta, siendo la especie más frecuente en las capturas de la flota de palangre y de superficie en el Océano Atlántico Sur."
-        },
-        {
-            "tag": "projeto_texto_5",
-            "pt": "Em 2014 o tubarão-azul foi classificado como Vulnerável à extinção a nível estadual (Decreto Estadual 51.797/2014). Tal classificação impõe, por meio de leis federais, restrição à captura, desembarque e comercialização da espécie no estado do Rio Grande do Sul.",
-            "en": "In 2014, the blue shark was classified as Vulnerable to extinction at the state level (State Decree 51.797/2014). This classification imposes, through federal laws, restrictions on the catch, landing, and commercialization of the species in the state of Rio Grande do Sul.",
-            "es": "En 2014, el tiburón azul fue clasificado como Vulnerable a la extinción a nivel estatal (Decreto Estatal 51.797/2014). Esta clasificación impone, a través de leyes federales, restricciones a la captura, desembarque y comercialización de la especie en el estado de Rio Grande do Sul."
-        },
-        {
-            "tag": "projeto_texto_6",
-            "pt": "Em 2016, 17 especialistas de diferentes instituições concordaram com a classificação da espécie como vulnerável. Avaliaram, no entanto, que a proibição pontual da pesca do tubarão-azul em águas gaúchas não seria uma medida adequada para a sua conservação, devido aos seguintes motivos:",
-            "en": "In 2016, 17 specialists from different institutions agreed with the classification of the species as vulnerable. However, they assessed that a targeted ban on blue shark fishing in Gaúcho waters would not be an adequate measure for its conservation, due to the following reasons:",
-            "es": "En 2016, 17 especialistas de diferentes instituciones estuvieron de acuerdo con la clasificación de la especie como vulnerable. Sin embargo, evaluaron que una prohibición puntual de la pesca del tiburón azul en aguas gauchas no sería una medida adecuada para su conservación, debido a las siguientes razones:"
-        },
-        {
-            "tag": "projeto_texto_7",
-            "pt": "1) Por ser fauna acompanhante de outras espécies comerciais, Tubarões azuis continuariam sendo capturados em quantidades expressivas.",
-            "en": "1) As bycatch of other commercial species, blue sharks would continue to be caught in significant quantities.",
-            "es": "1) Como fauna acompañante de otras especies comerciales, los tiburones azules seguirían siendo capturados en cantidades significativas."
-        },
-        {
-            "tag": "projeto_texto_8",
-            "pt": "2) O procedimento de liberação dos exemplares capturados poderia inviabilizar economicamente a frota de espinhel pelágico",
-            "en": "2) The procedure for releasing captured specimens could economically undermine the pelagic longline fleet.",
-            "es": "2) El procedimiento para liberar los ejemplares capturados podría socavar económicamente a la flota de palangre pelágico."
-        },
-        {
-            "tag": "projeto_texto_9",
-            "pt": "3) A pesca clandestina e a descarga em locais fora do Rio Grande do Sul continuariam ocorrendo.",
-            "en": "3) Illegal fishing and unloading in locations outside of Rio Grande do Sul would continue to occur.",
-            "es": "3) La pesca ilegal y el desembarque en lugares fuera de Rio Grande do Sul seguirían ocurriendo."
-        },
-        {
-            "tag": "projeto_texto_10",
-            "pt": "4) Perder-se-ia a pesca regularizada e sistematicamente acompanhada como fonte de dados para o monitoramento do estoque.",
-            "en": "4) The regulated and systematically monitored fishing would be lost as a source of data for stock monitoring.",
-            "es": "4) Se perdería la pesca regulada y monitoreada sistemáticamente como fuente de datos para el monitoreo de las poblaciones."
-        },
-        {
-            "tag": "projeto_texto_11",
-            "pt": "Como parte do processo, foi criado um Grupo Técnico para a elaboração de um Plano de Gestão da Pesca do Tubarão azul no Rio Grande do Sul, surgindo daí o Projeto Tubarão Azul.",
-            "en": "As part of the process, a Technical Group was created to develop a Management Plan for Blue shark Fishing in Rio Grande do Sul, leading to the emergence of the Blue Shark Project.",
-            "es": "Como parte del proceso, se creó un Grupo Técnico para desarrollar un Plan de Gestión de la Pesca del Tiburón Azul en Rio Grande do Sul, lo que dio origen al Proyecto Tiburón Azul."
-        },
-        {
-            "tag": "projeto_texto_12",
-            "pt": "Legal, mas o que é um Plano de Gestão da Pesca?",
-            "en": "Cool, but what is a Fishing Management Plan?",
-            "es": "Genial, pero ¿qué es un Plan de Gestión Pesquera?"
-        },
-        {
-            "tag": "projeto_texto_13",
-            "pt": "Trata-se de um documento que estabelece as orientações para o uso sustentável dos recursos pesqueiros e tem como objetivo assegurar a sustentabilidade tanto da pesca quanto do ambiente natural, levando em conta os aspectos sociais, econômicos e ecológicos das pescarias.",
-            "en": "It is a document that establishes guidelines for the sustainable use of fishery resources and aims to ensure the sustainability of both fishing and the natural environment, taking into account the social, economic, and ecological aspects of fisheries.",
-            "es": "Es un documento que establece las pautas para el uso sostenible de los recursos pesqueros y tiene como objetivo asegurar la sostenibilidad tanto de la pesca como del ambiente natural, teniendo en cuenta los aspectos sociales, económicos y ecológicos de las pesquerías."
-        },
-        {
-            "tag": "projeto_texto_14",
-            "pt": "A equipe técnica vem realizando levantamento de informações através de ações de monitoramento e coleta de amostras biológicas na descarga das embarcações de espinhel e da realização de embarque de observadores de bordo - profissionais treinados que participam das viagens de pesca coletando amostra e informações, com vistas a avaliação do estoque e proposição/adoção de medidas para os órgãos de manejo responsáveis, conforme o fluxograma.",
-            "en": "The technical team has been gathering information through monitoring actions and the collection of biological samples during the unloading of longline vessels and the boarding of observers—trained professionals who participate in fishing trips collecting samples and information, with the aim of assessing the stock and proposing/adopting measures for the responsible management agencies, as outlined in the flowchart.",
-            "es": "El equipo técnico ha estado recopilando información a través de acciones de monitoreo y la recolección de muestras biológicas durante el desembarque de embarcaciones de palangre y el embarque de observadores—profesionales capacitados que participan en los viajes de pesca recolectando muestras e información, con el objetivo de evaluar las poblaciones y proponer/adoptar medidas para las agencias de gestión responsables, según lo descrito en el diagrama de flujo."
-        },
-        {
-            "tag": "projeto_texto_15",
-            "pt": "Fluxograma do Plano de Gestão da pesca de Tubarão azul no Rio Grande do Sul",
-            "en": "Flowchart of the Blue shark Fishing Management Plan in Rio Grande do Sul",
-            "es": "Diagrama de flujo del Plan de Gestión de la Pesca del Tiburón azul en Rio Grande do Sul"
-        },
-        {
             "tag": "comprimento_texto_1",
             "pt": "Histograma do Comprimento Total",
             "en": "Total Length Histogram",
@@ -264,102 +114,6 @@
             "pt": "Medidas Biométricas",
             "en": "Biometric Measurements",
             "es": "Medidas Biométricas"
-        },
-        {
-            "tag": "legenda_data",
-            "pt": "Data: ",
-            "en": "Date: ",
-            "es": "Fecha: "
-        },
-        {
-            "tag": "legenda_categoria",
-            "pt": "Categoria: ",
-            "en": "Category: ",
-            "es": "Categoría: "
-        },
-        {
-            "tag": "legenda_quantidade",
-            "pt": "Quantidade: ",
-            "en": "Quantity: ",
-            "es": "Cantidad: "
-        },
-        {
-            "tag": "legenda_porcentagem",
-            "pt": "Porcentagem: ",
-            "en": "Percentage: ",
-            "es": "Porcentaje: "
-        },
-        {
-            "tag": "legenda_quantidade_total",
-            "pt": "Quantidade Total: ",
-            "en": "Total Quantity: ",
-            "es": "Cantidad Total: "
-        },
-        {
-            "tag": "legenda_quantidade_media",
-            "pt": "Quantidade Média: ",
-            "en": "Average Quantity: ",
-            "es": "Cantidad Promedio: "
-        },
-        {
-            "tag": "mes",
-            "pt": "Mês",
-            "en": "Month",
-            "es": "Mes"
-        },
-        {
-            "tag": "ano",
-            "pt": "Ano",
-            "en": "Year",
-            "es": "Año"
-        },
-        {
-            "tag": "quantidade",
-            "pt": "Quantidade",
-            "en": "Quantity",
-            "es": "Cantidad"
-        },
-        {
-            "tag": "legenda_mes",
-            "pt": "Mês: ",
-            "en": "Month: ",
-            "es": "Mes: "
-        },
-        {
-            "tag": "legenda_ano",
-            "pt": "Ano: ",
-            "en": "Year: ",
-            "es": "Año: "
-        },
-        {
-            "tag": "legenda_dados_registrados",
-            "pt": "Dados Registrados: ",
-            "en": "Recorded Data: ",
-            "es": "Datos Registrados: "
-        },
-        {
-            "tag": "legenda_especie",
-            "pt": "Espécie: ",
-            "en": "Species: ",
-            "es": "Especie: "
-        },
-        {
-            "tag": "legenda_MCV",
-            "pt": "Média de Captura por Viagem: ",
-            "en": "Average Catch per Trip:",
-            "es": "Promedio de Captura por Viaje:"
-        },
-        {
-            "tag": "legenda_CMV",
-            "pt": "Captura Média (KG) por Viagem",
-            "en": "Average Catch (KG) per Trip",
-            "es": "Captura Promedio (KG) por Viaje"
-        },
-        {
-            "tag": "captura_media",
-            "pt": "Captura\nMédia",
-            "en": "Average\nCatch",
-            "es": "Captura\nPromedio"
         },
         {
             "tag": "grafico_dispersao",
@@ -393,9 +147,9 @@
         },
         {
             "tag": "legenda_peso",
-            "pt": "Peso (kg)",
-            "en": "Weight (kg)",
-            "es": "Peso (kg)"
+            "pt": "Peso Total (kg)",
+            "en": "Total Weight (kg)",
+            "es": "Peso Total (kg)"
         },
         {
             "tag": "frequencia_legenda",
@@ -417,9 +171,9 @@
         },
         {
             "tag": "dis_com_texto_1",
-            "pt": "Este diagrama de dispersão ilustra a relação entre o Comprimento Total (cm) e o Peso (kg) de registros. Cada círculo no gráfico representa um registro individual, com a posição de cada ponto indicando a correspondência entre o comprimento e o peso para esse registro específico. O gráfico inclui um intervalo de confiança de 95%, que mostra a área em que os valores reais de comprimento e peso provavelmente se encontram, com base na variação observada nos dados. Esse intervalo ajuda a visualizar a precisão da relação entre as variáveis.",
-            "en": "This scatter plot illustrates the relationship between Total Length (cm) and Weight (kg) of records. Each circle on the graph represents an individual record, with the position of each point indicating the correspondence between the length and weight for that specific record. The graph includes a 95% confidence interval, which shows the area where the real values of length and weight are likely to be found, based on the observed data variation. This interval helps visualize the precision of the relationship between the variables.",
-            "es": "Este diagrama de dispersión ilustra la relación entre la Longitud Total (cm) y el Peso (kg) de los registros. Cada círculo en el gráfico representa un registro individual, con la posición de cada punto indicando la correspondencia entre la longitud y el peso para ese registro específico. El gráfico incluye un intervalo de confianza del 95%, que muestra el área donde probablemente se encuentren los valores reales de longitud y peso, basándose en la variación observada en los datos. Este intervalo ayuda a visualizar la precisión de la relación entre las variables."
+            "pt": "Este diagrama de dispersão ilustra a relação entre o Comprimento Total (cm) e o Peso Total (kg) de registros. Cada círculo no gráfico representa um registro individual, com a posição de cada ponto indicando a correspondência entre o comprimento e o peso para esse registro específico. O gráfico inclui um intervalo de confiança de 95%, que mostra a área em que os valores reais de comprimento e peso provavelmente se encontram, com base na variação observada nos dados. Esse intervalo ajuda a visualizar a precisão da relação entre as variáveis.",
+            "en": "This scatter plot illustrates the relationship between Total Length (cm) and Total Weight (kg) of records. Each circle on the graph represents an individual record, with the position of each point indicating the correspondence between the length and weight for that specific record. The graph includes a 95% confidence interval, which shows the area where the real values of length and weight are likely to be found, based on the observed data variation. This interval helps visualize the precision of the relationship between the variables.",
+            "es": "Este diagrama de dispersión ilustra la relación entre la Longitud Total (cm) y el Peso Total (kg) de los registros. Cada círculo en el gráfico representa un registro individual, con la posición de cada punto indicando la correspondencia entre la longitud y el peso para ese registro específico. El gráfico incluye un intervalo de confianza del 95%, que muestra el área donde probablemente se encuentren los valores reales de longitud y peso, basándose en la variación observada en los datos. Este intervalo ayuda a visualizar la precisión de la relación entre las variables."
         },
         {
             "tag": "dis_com_texto_2",
