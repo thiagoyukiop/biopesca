@@ -497,16 +497,17 @@ ui <- dashboardPage(
                   )
                 )
               ),
-              carousel(
-                width = 12,
-                id = "carousel_esp_1",
-                carouselItem(
-                  imageOutput("image_1_esp_1", height = "100%", width = "100%")
-                )#,
-                # carouselItem(
-                #   imageOutput("image_2_esp_1", height = "100%", width = "100%")
-                # )
-              )
+              imageOutput("image_1_esp_1", height = "100%", width = "100%")
+              # carousel(
+              #   width = 12,
+              #   id = "carousel_esp_1",
+              #   carouselItem(
+              #     imageOutput("image_1_esp_1", height = "100%", width = "100%")
+              #   )#,
+              #   # carouselItem(
+              #   #   imageOutput("image_2_esp_1", height = "100%", width = "100%")
+              #   # )
+              # )
             )
           ),
           column(
@@ -610,7 +611,8 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              )#,
+              ),
+              imageOutput("image_1_esp_2", height = "100%", width = "100%")
               # carousel(
               #   width = 12,
               #   id = "carousel_esp_2",
@@ -723,7 +725,8 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              )#,
+              ),
+              imageOutput("image_1_esp_3", height = "100%", width = "100%")
               # carousel(
               #   width = 12,
               #   id = "carousel_esp_3",
@@ -837,7 +840,8 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              )#,
+              ),
+              imageOutput("image_1_esp_4", height = "100%", width = "100%")
               # carousel(
               #   width = 12,
               #   id = "carousel_esp_4",
@@ -951,7 +955,8 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              )#,
+              ),
+              imageOutput("image_1_esp_5", height = "100%", width = "100%")
               # carousel(
               #   width = 12,
               #   id = "carousel_esp_5",
@@ -1065,7 +1070,8 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              )#,
+              ),
+              imageOutput("image_1_esp_6", height = "100%", width = "100%")
               # carousel(
               #   width = 12,
               #   id = "carousel_esp_6",
@@ -1179,7 +1185,8 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              )#,
+              ),
+              imageOutput("image_1_esp_7", height = "100%", width = "100%")
               # carousel(
               #   width = 12,
               #   id = "carousel_esp_7",
@@ -1613,8 +1620,8 @@ server <- function(input, output, session) {
   
   output$image_1_esp_1 <- renderImage({
     list(
-      src = "www/Micropogonias_furnieri_imagem_1.jpg",
-      contentType = "image/jpg",
+      src = "www/Micropogonias_furnieri_imagem_1.png",
+      contentType = "image/png",
       height = "auto",
       width = "100%"
     )
@@ -1845,13 +1852,12 @@ server <- function(input, output, session) {
   })
   
   output$image_1_esp_2 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_1.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
-    NULL
+    list(
+      src = "www/Pomatomus_saltatrix_imagem_1.jpg",
+      contentType = "image/jng",
+      height = "auto",
+      width = "100%"
+    )
   }, deleteFile = FALSE)
   
   output$image_2_esp_2 <- renderImage({
@@ -1861,7 +1867,6 @@ server <- function(input, output, session) {
     #   height = "auto",
     #   width = "70%"
     # )
-    NULL
   }, deleteFile = FALSE)
   
   # Distribuição de Captura Espécie 3  ----------------------------------------
@@ -2080,12 +2085,12 @@ server <- function(input, output, session) {
   })
   
   output$image_1_esp_3 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_1.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
+    list(
+      src = "www/Mugil_liza_imagem_1.png",
+      contentType = "image/png",
+      height = "auto",
+      width = "100%"
+    )
   }, deleteFile = FALSE)
   
   output$image_2_esp_3 <- renderImage({
@@ -2313,12 +2318,12 @@ server <- function(input, output, session) {
   })
   
   output$image_1_esp_4 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_1.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
+    list(
+      src = "www/Oligoplites_saliens_imagem_1.png",
+      contentType = "image/png",
+      height = "auto",
+      width = "100%"
+    )
   }, deleteFile = FALSE)
   
   output$image_2_esp_4 <- renderImage({
@@ -2546,12 +2551,12 @@ server <- function(input, output, session) {
   })
   
   output$image_1_esp_5 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_1.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
+    list(
+      src = "www/Trichiurus_lepturus_imagem_1.png",
+      contentType = "image/png",
+      height = "auto",
+      width = "100%"
+    )
   }, deleteFile = FALSE)
   
   output$image_2_esp_5 <- renderImage({
@@ -2779,12 +2784,12 @@ server <- function(input, output, session) {
   })
   
   output$image_1_esp_6 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_1.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
+    list(
+      src = "www/Scomberomorus_brasiliensis_imagem_1.png",
+      contentType = "image/png",
+      height = "auto",
+      width = "70%"
+    )
   }, deleteFile = FALSE)
   
   output$image_2_esp_6 <- renderImage({
@@ -3012,12 +3017,12 @@ server <- function(input, output, session) {
   })
   
   output$image_1_esp_7 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_1.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
+    list(
+      src = "www/Oligoplites_saurus_imagem_1.png",
+      contentType = "image/png",
+      height = "auto",
+      width = "70%"
+    )
   }, deleteFile = FALSE)
   
   output$image_2_esp_7 <- renderImage({
