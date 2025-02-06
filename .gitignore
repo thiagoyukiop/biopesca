@@ -34,6 +34,8 @@ Thumbs.db
 
 # csv
 .csv
+/src/dados_brutos/*.csv
+
 # IDE and Editor-specific ignores
 
 # RStudio
