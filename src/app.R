@@ -24,6 +24,19 @@ remover_outliers <- function(dados, coluna) {
   subset(dados, dados[[coluna]] >= lim_inf & dados[[coluna]] <= lim_sup)
 }
 
+osseos_modificado <- read.csv(
+  "dados_brutos/osseos_modificado.csv",
+  stringsAsFactors = FALSE,
+  sep = ";",
+  dec = ".",
+  fileEncoding = "UTF-8"  # Se UTF-8 não funcionar, tente "latin1"
+)
+
+osseos_alterado <- osseos_modificado %>% 
+  mutate(
+    peso_total_kg = peso_total / 1000
+    )
+
 i18n <- Translator$new(
   translation_json_path = "traducoes/translations_complete.json"
 )
@@ -213,6 +226,7 @@ ui <- dashboardPage(
     tabItems(
       tabItem(
         tabName = "projeto"
+        # ADICIONAR TEXTOS COM LORE IPSUM EM TODOS OS ARQUIVOS
       ),
       tabItem(
         tabName = "leia_me"
@@ -405,6 +419,12 @@ ui <- dashboardPage(
       tabItem(
         tabName = "comprimento_especie_1",
         fluidRow(
+          div(
+            style = "text-align: center; margin-bottom:30px;",
+            h1("Micropogonias furnieri")
+          )
+        ),
+        fluidRow(
           column(
             width = 6,
             box(
@@ -477,21 +497,15 @@ ui <- dashboardPage(
                   )
                 )
               ),
-              div(
-                class = "graficos",
-                carousel(
-                  width = 12,
-                  id = "carousel_esp_1",
-                  carouselItem(
-                    div(
-                      style = "text-align: center;",
-                      imageOutput("image_1_esp_1", height = "100%", width = "100%")
-                    )
-                  )#,
-                  # carouselItem(
-                  #   imageOutput("image_2_esp_1", height = "100%", width = "100%")
-                  # )
-                )
+              carousel(
+                width = 12,
+                id = "carousel_esp_1",
+                carouselItem(
+                  imageOutput("image_1_esp_1", height = "100%", width = "100%")
+                )#,
+                # carouselItem(
+                #   imageOutput("image_2_esp_1", height = "100%", width = "100%")
+                # )
               )
             )
           ),
@@ -510,10 +524,7 @@ ui <- dashboardPage(
                   )
                 )
               ),
-              div(
-                class = "graficos",
-                DTOutput("tabela_proporcao_esp_1", height = "100%")
-              ),
+              DTOutput("tabela_proporcao_esp_1", height = "100%"),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_4",
                 icon = icon("circle-info"),
@@ -599,20 +610,17 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              ),
-              div(
-                class = "graficos"#,
-                # carousel(
-                #   width = 12,
-                #   id = "carousel_esp_2",
-                #   carouselItem(
-                #     imageOutput("image_1_esp_2", height = "100%", width = "100%")
-                #   ),
-                #   carouselItem(
-                #     imageOutput("image_2_esp_2", height = "100%", width = "100%")
-                #   )
-                # )
-              )
+              )#,
+              # carousel(
+              #   width = 12,
+              #   id = "carousel_esp_2",
+              #   carouselItem(
+              #     imageOutput("image_1_esp_2", height = "100%", width = "100%")
+              #   ),
+              #   carouselItem(
+              #     imageOutput("image_2_esp_2", height = "100%", width = "100%")
+              #   )
+              # )
             )
           ),
           column(
@@ -630,10 +638,7 @@ ui <- dashboardPage(
                   )
                 )
               ),
-              div(
-                class = "graficos",
-                DTOutput("tabela_proporcao_esp_2", height = "100%")
-              ),
+              DTOutput("tabela_proporcao_esp_2", height = "100%"),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_4",
                 icon = icon("circle-info"),
@@ -718,20 +723,17 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              ),
-              div(
-                class = "graficos"#,
-                # carousel(
-                #   width = 12,
-                #   id = "carousel_esp_3",
-                #   carouselItem(
-                #     imageOutput("image_1_esp_3", height = "100%", width = "100%")
-                #   ),
-                #   carouselItem(
-                #     imageOutput("image_2_esp_3", height = "100%", width = "100%")
-                #   )
-                # )
-              )
+              )#,
+              # carousel(
+              #   width = 12,
+              #   id = "carousel_esp_3",
+              #   carouselItem(
+              #     imageOutput("image_1_esp_3", height = "100%", width = "100%")
+              #   ),
+              #   carouselItem(
+              #     imageOutput("image_2_esp_3", height = "100%", width = "100%")
+              #   )
+              # )
             )
           ),
           column(
@@ -749,10 +751,7 @@ ui <- dashboardPage(
                   )
                 )
               ),
-              div(
-                class = "graficos",
-                DTOutput("tabela_proporcao_esp_3", height = "100%")
-              ),
+              DTOutput("tabela_proporcao_esp_3", height = "100%"),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_4",
                 icon = icon("circle-info"),
@@ -838,20 +837,17 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              ),
-              div(
-                class = "graficos"#,
-                # carousel(
-                #   width = 12,
-                #   id = "carousel_esp_4",
-                #   carouselItem(
-                #     imageOutput("image_1_esp_4", height = "100%", width = "100%")
-                #   ),
-                #   carouselItem(
-                #     imageOutput("image_2_esp_4", height = "100%", width = "100%")
-                #   )
-                # )
-              )
+              )#,
+              # carousel(
+              #   width = 12,
+              #   id = "carousel_esp_4",
+              #   carouselItem(
+              #     imageOutput("image_1_esp_4", height = "100%", width = "100%")
+              #   ),
+              #   carouselItem(
+              #     imageOutput("image_2_esp_4", height = "100%", width = "100%")
+              #   )
+              # )
             )
           ),
           column(
@@ -869,10 +865,7 @@ ui <- dashboardPage(
                   )
                 )
               ),
-              div(
-                class = "graficos",
-                DTOutput("tabela_proporcao_esp_4", height = "100%")
-              ),
+              DTOutput("tabela_proporcao_esp_4", height = "100%"),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_4",
                 icon = icon("circle-info"),
@@ -958,20 +951,17 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              ),
-              div(
-                class = "graficos"#,
-                # carousel(
-                #   width = 12,
-                #   id = "carousel_esp_5",
-                #   carouselItem(
-                #     imageOutput("image_1_esp_5", height = "100%", width = "100%")
-                #   ),
-                #   carouselItem(
-                #     imageOutput("image_2_esp_5", height = "100%", width = "100%")
-                #   )
-                # )
-              )
+              )#,
+              # carousel(
+              #   width = 12,
+              #   id = "carousel_esp_5",
+              #   carouselItem(
+              #     imageOutput("image_1_esp_5", height = "100%", width = "100%")
+              #   ),
+              #   carouselItem(
+              #     imageOutput("image_2_esp_5", height = "100%", width = "100%")
+              #   )
+              # )
             )
           ),
           column(
@@ -989,10 +979,7 @@ ui <- dashboardPage(
                   )
                 )
               ),
-              div(
-                class = "graficos",
-                DTOutput("tabela_proporcao_esp_5", height = "100%")
-              ),
+              DTOutput("tabela_proporcao_esp_5", height = "100%"),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_4",
                 icon = icon("circle-info"),
@@ -1078,20 +1065,17 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              ),
-              div(
-                class = "graficos"#,
-                # carousel(
-                #   width = 12,
-                #   id = "carousel_esp_6",
-                #   carouselItem(
-                #     imageOutput("image_1_esp_6", height = "100%", width = "100%")
-                #   ),
-                #   carouselItem(
-                #     imageOutput("image_2_esp_6", height = "100%", width = "100%")
-                #   )
-                # )
-              )
+              )#,
+              # carousel(
+              #   width = 12,
+              #   id = "carousel_esp_6",
+              #   carouselItem(
+              #     imageOutput("image_1_esp_6", height = "100%", width = "100%")
+              #   ),
+              #   carouselItem(
+              #     imageOutput("image_2_esp_6", height = "100%", width = "100%")
+              #   )
+              # )
             )
           ),
           column(
@@ -1109,10 +1093,7 @@ ui <- dashboardPage(
                   )
                 )
               ),
-              div(
-                class = "graficos",
-                DTOutput("tabela_proporcao_esp_6", height = "100%")
-              ),
+              DTOutput("tabela_proporcao_esp_6", height = "100%"),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_4",
                 icon = icon("circle-info"),
@@ -1198,20 +1179,17 @@ ui <- dashboardPage(
                     i18n$t("comprimento_texto_2")
                   )
                 )
-              ),
-              div(
-                class = "graficos"#,
-                # carousel(
-                #   width = 12,
-                #   id = "carousel_esp_7",
-                #   carouselItem(
-                #     imageOutput("image_1_esp_7", height = "100%", width = "100%")
-                #   ),
-                #   carouselItem(
-                #     imageOutput("image_2_esp_7", height = "100%", width = "100%")
-                #   )
-                # )
-              )
+              )#,
+              # carousel(
+              #   width = 12,
+              #   id = "carousel_esp_7",
+              #   carouselItem(
+              #     imageOutput("image_1_esp_7", height = "100%", width = "100%")
+              #   ),
+              #   carouselItem(
+              #     imageOutput("image_2_esp_7", height = "100%", width = "100%")
+              #   )
+              # )
             )
           ),
           column(
@@ -1229,10 +1207,7 @@ ui <- dashboardPage(
                   )
                 )
               ),
-              div(
-                class = "graficos",
-                DTOutput("tabela_proporcao_esp_7", height = "100%")
-              ),
+              DTOutput("tabela_proporcao_esp_7", height = "100%"),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_4",
                 icon = icon("circle-info"),
@@ -1424,21 +1399,30 @@ server <- function(input, output, session) {
   # Distribuição de Captura Espécie 1  ----------------------------------------
   
   dados_biometria_filtro_esp_1 <- reactive({
-    dados_aux <- osseos %>% 
+    dados_aux <- osseos_alterado %>% 
       filter(
         especie == "Micropogonias furnieri" &
           sexo == input$sexo_comprimento_esp_1 &
           comprimento_total != 0 & 
-          peso_total != 0
+          peso_total_kg != 0
       )
   })
   
   output$DispersaoComprimentoXPeso_esp_1 <- renderPlotly({
     
+    biometria_sem_outliers <- remover_outliers(
+      dados_biometria_filtro_esp_1(),
+      "comprimento_total"
+      )
+    biometria_sem_outliers <- remover_outliers(
+      biometria_sem_outliers,
+      "peso_total_kg"
+      )
+    
     biometria_esp_1 <- data.frame(
-      sexo = dados_biometria_filtro_esp_1()$sexo,
-      x = dados_biometria_filtro_esp_1()$comprimento_total,
-      y = dados_biometria_filtro_esp_1()$peso_total
+      sexo = biometria_sem_outliers$sexo,
+      x = biometria_sem_outliers$comprimento_total,
+      y = biometria_sem_outliers$peso_total_kg
     )
 
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_1)
@@ -1552,6 +1536,12 @@ server <- function(input, output, session) {
       xbins = list(
         size = 5
       ),
+      marker = list(
+        line = list(
+          color = alpha('black', 0.1),
+          width = 0.5
+        )
+      ),
       customdata = ~case_when(
         sexo == "Macho" ~ i18n$t("macho"),
         sexo == "Fêmea" ~ i18n$t("femea"),
@@ -1577,12 +1567,12 @@ server <- function(input, output, session) {
         barmode = "stack",
         showlegend = FALSE
       ) %>%
-      config(displayModeBar = FALSE) 
+      config(displayModeBar = FALSE)
   })
   
   output$tabela_proporcao_esp_1 <- renderDT({
     
-    dados_tabela_esp_1 <- osseos %>% 
+    dados_tabela_esp_1 <- osseos_alterado %>% 
       filter(especie == "Micropogonias furnieri" & sexo != "Indeterminado") %>% 
       group_by(sexo) %>% 
       summarise(
@@ -1626,7 +1616,7 @@ server <- function(input, output, session) {
       src = "www/Micropogonias_furnieri_imagem_1.jpg",
       contentType = "image/jpg",
       height = "auto",
-      width = "60%"
+      width = "100%"
     )
   }, deleteFile = FALSE)
   
@@ -1642,21 +1632,30 @@ server <- function(input, output, session) {
   # Distribuição de Captura Espécie 2  ----------------------------------------
   
   dados_biometria_filtro_esp_2 <- reactive({
-    dados_aux <- osseos %>% 
+    dados_aux <- osseos_alterado %>% 
       filter(
         especie == "Pomatomus saltatrix" &
           sexo == input$sexo_comprimento_esp_2 &
           comprimento_total != 0 & 
-          peso_total != 0
+          peso_total_kg != 0
       )
   })
   
   output$DispersaoComprimentoXPeso_esp_2 <- renderPlotly({
+    
+    biometria_sem_outliers <- remover_outliers(
+      dados_biometria_filtro_esp_2(),
+      "comprimento_total"
+    )
+    biometria_sem_outliers <- remover_outliers(
+      biometria_sem_outliers,
+      "peso_total_kg"
+    )
 
     biometria_esp_2 <- data.frame(
-      sexo = dados_biometria_filtro_esp_2()$sexo,
-      x = dados_biometria_filtro_esp_2()$comprimento_total,
-      y = dados_biometria_filtro_esp_2()$peso_total
+      sexo = biometria_sem_outliers$sexo,
+      x = biometria_sem_outliers$comprimento_total,
+      y = biometria_sem_outliers$peso_total_kg
     )
 
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_2)
@@ -1770,6 +1769,12 @@ server <- function(input, output, session) {
       xbins = list(
         size = 5
       ),
+      marker = list(
+        line = list(
+          color = alpha('black', 0.1),
+          width = 0.5
+        )
+      ),
       customdata = ~case_when(
         sexo == "Macho" ~ i18n$t("macho"),
         sexo == "Fêmea" ~ i18n$t("femea"),
@@ -1800,7 +1805,7 @@ server <- function(input, output, session) {
   
   output$tabela_proporcao_esp_2 <- renderDT({
     
-    dados_tabela_esp_2 <- osseos %>% 
+    dados_tabela_esp_2 <- osseos_alterado %>% 
       filter(especie == "Pomatomus saltatrix" & sexo != "Indeterminado") %>% 
       group_by(sexo) %>% 
       summarise(
@@ -1862,21 +1867,30 @@ server <- function(input, output, session) {
   # Distribuição de Captura Espécie 3  ----------------------------------------
   
   dados_biometria_filtro_esp_3 <- reactive({
-    dados_aux <- osseos %>% 
+    dados_aux <- osseos_alterado %>% 
       filter(
         especie == "Mugil liza" &
           sexo == input$sexo_comprimento_esp_3 &
           comprimento_total != 0 & 
-          peso_total != 0
+          peso_total_kg != 0
       )
   })
   
   output$DispersaoComprimentoXPeso_esp_3 <- renderPlotly({
     
+    biometria_sem_outliers <- remover_outliers(
+      dados_biometria_filtro_esp_3(),
+      "comprimento_total"
+    )
+    biometria_sem_outliers <- remover_outliers(
+      biometria_sem_outliers,
+      "peso_total_kg"
+    )
+    
     biometria_esp_3 <- data.frame(
-      sexo = dados_biometria_filtro_esp_3()$sexo,
-      x = dados_biometria_filtro_esp_3()$comprimento_total,
-      y = dados_biometria_filtro_esp_3()$peso_total
+      sexo = biometria_sem_outliers$sexo,
+      x = biometria_sem_outliers$comprimento_total,
+      y = biometria_sem_outliers$peso_total_kg
     )
     
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_3)
@@ -1990,6 +2004,12 @@ server <- function(input, output, session) {
       xbins = list(
         size = 5
       ),
+      marker = list(
+        line = list(
+          color = alpha('black', 0.1),
+          width = 0.5
+        )
+      ),
       customdata = ~case_when(
         sexo == "Macho" ~ i18n$t("macho"),
         sexo == "Fêmea" ~ i18n$t("femea"),
@@ -2020,7 +2040,7 @@ server <- function(input, output, session) {
   
   output$tabela_proporcao_esp_3 <- renderDT({
     
-    dados_tabela_esp_3 <- osseos %>% 
+    dados_tabela_esp_3 <- osseos_alterado %>% 
       filter(especie == "Mugil liza" & sexo != "Indeterminado") %>% 
       group_by(sexo) %>% 
       summarise(
@@ -2080,21 +2100,30 @@ server <- function(input, output, session) {
   # Distribuição de Captura Espécie 4  ----------------------------------------
   
   dados_biometria_filtro_esp_4 <- reactive({
-    dados_aux <- osseos %>% 
+    dados_aux <- osseos_alterado %>% 
       filter(
         especie == "Oligoplites saliens" & 
           sexo == input$sexo_comprimento_esp_4 &
           comprimento_total != 0 & 
-          peso_total != 0
+          peso_total_kg != 0
       )
   })
   
   output$DispersaoComprimentoXPeso_esp_4 <- renderPlotly({
     
+    biometria_sem_outliers <- remover_outliers(
+      dados_biometria_filtro_esp_4(),
+      "comprimento_total"
+    )
+    biometria_sem_outliers <- remover_outliers(
+      biometria_sem_outliers,
+      "peso_total_kg"
+    )
+    
     biometria_esp_4 <- data.frame(
-      sexo = dados_biometria_filtro_esp_4()$sexo,
-      x = dados_biometria_filtro_esp_4()$comprimento_total,
-      y = dados_biometria_filtro_esp_4()$peso_total
+      sexo = biometria_sem_outliers$sexo,
+      x = biometria_sem_outliers$comprimento_total,
+      y = biometria_sem_outliers$peso_total_kg
     )
     
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_4)
@@ -2208,6 +2237,12 @@ server <- function(input, output, session) {
       xbins = list(
         size = 5
       ),
+      marker = list(
+        line = list(
+          color = alpha('black', 0.1),
+          width = 0.5
+        )
+      ),
       customdata = ~case_when(
         sexo == "Macho" ~ i18n$t("macho"),
         sexo == "Fêmea" ~ i18n$t("femea"),
@@ -2238,7 +2273,7 @@ server <- function(input, output, session) {
   
   output$tabela_proporcao_esp_4 <- renderDT({
     
-    dados_tabela_esp_4 <- osseos %>% 
+    dados_tabela_esp_4 <- osseos_alterado %>% 
       filter(especie == "Oligoplites saliens" & sexo != "Indeterminado") %>% 
       group_by(sexo) %>% 
       summarise(
@@ -2298,21 +2333,30 @@ server <- function(input, output, session) {
   # Distribuição de Captura Espécie 5  ----------------------------------------
   
   dados_biometria_filtro_esp_5 <- reactive({
-    dados_aux <- osseos %>% 
+    dados_aux <- osseos_alterado %>% 
       filter(
         especie == "Trichiurus lepturus" & 
           sexo == input$sexo_comprimento_esp_5 &
           comprimento_total != 0 & 
-          peso_total != 0
+          peso_total_kg != 0
           )
   })
   
   output$DispersaoComprimentoXPeso_esp_5 <- renderPlotly({
     
+    biometria_sem_outliers <- remover_outliers(
+      dados_biometria_filtro_esp_5(),
+      "comprimento_total"
+    )
+    biometria_sem_outliers <- remover_outliers(
+      biometria_sem_outliers,
+      "peso_total_kg"
+    )
+    
     biometria_esp_5 <- data.frame(
-      sexo = dados_biometria_filtro_esp_5()$sexo,
-      x = dados_biometria_filtro_esp_5()$comprimento_total,
-      y = dados_biometria_filtro_esp_5()$peso_total
+      sexo = biometria_sem_outliers$sexo,
+      x = biometria_sem_outliers$comprimento_total,
+      y = biometria_sem_outliers$peso_total_kg
     )
     
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_5)
@@ -2426,6 +2470,12 @@ server <- function(input, output, session) {
       xbins = list(
         size = 5
       ),
+      marker = list(
+        line = list(
+          color = alpha('black', 0.1),
+          width = 0.5
+        )
+      ),
       customdata = ~case_when(
         sexo == "Macho" ~ i18n$t("macho"),
         sexo == "Fêmea" ~ i18n$t("femea"),
@@ -2456,7 +2506,7 @@ server <- function(input, output, session) {
   
   output$tabela_proporcao_esp_5 <- renderDT({
     
-    dados_tabela_esp_5 <- osseos %>% 
+    dados_tabela_esp_5 <- osseos_alterado %>% 
       filter(especie == "Trichiurus lepturus" & sexo != "Indeterminado") %>% 
       group_by(sexo) %>% 
       summarise(
@@ -2516,21 +2566,30 @@ server <- function(input, output, session) {
   # Distribuição de Captura Espécie 6  ----------------------------------------
   
   dados_biometria_filtro_esp_6 <- reactive({
-    dados_aux <- osseos %>% 
+    dados_aux <- osseos_alterado %>% 
       filter(
         especie == "Scomberomorus brasiliensis" & 
           sexo == input$sexo_comprimento_esp_6 &
           comprimento_total != 0 & 
-          peso_total != 0
+          peso_total_kg != 0
       )
   })
   
   output$DispersaoComprimentoXPeso_esp_6 <- renderPlotly({
     
+    biometria_sem_outliers <- remover_outliers(
+      dados_biometria_filtro_esp_6(),
+      "comprimento_total"
+    )
+    biometria_sem_outliers <- remover_outliers(
+      biometria_sem_outliers,
+      "peso_total_kg"
+    )
+    
     biometria_esp_6 <- data.frame(
-      sexo = dados_biometria_filtro_esp_6()$sexo,
-      x = dados_biometria_filtro_esp_6()$comprimento_total,
-      y = dados_biometria_filtro_esp_6()$peso_total
+      sexo = biometria_sem_outliers$sexo,
+      x = biometria_sem_outliers$comprimento_total,
+      y = biometria_sem_outliers$peso_total_kg
     )
     
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_6)
@@ -2644,6 +2703,12 @@ server <- function(input, output, session) {
       xbins = list(
         size = 5
       ),
+      marker = list(
+        line = list(
+          color = alpha('black', 0.1),
+          width = 0.5
+        )
+      ),
       customdata = ~case_when(
         sexo == "Macho" ~ i18n$t("macho"),
         sexo == "Fêmea" ~ i18n$t("femea"),
@@ -2674,7 +2739,7 @@ server <- function(input, output, session) {
   
   output$tabela_proporcao_esp_6 <- renderDT({
     
-    dados_tabela_esp_6 <- osseos %>% 
+    dados_tabela_esp_6 <- osseos_alterado %>% 
       filter(especie == "Scomberomorus brasiliensis" & sexo != "Indeterminado") %>%  
       group_by(sexo) %>% 
       summarise(
@@ -2734,21 +2799,30 @@ server <- function(input, output, session) {
   # Distribuição de Captura Espécie 7  ----------------------------------------
   
   dados_biometria_filtro_esp_7 <- reactive({
-    dados_aux <- osseos %>% 
+    dados_aux <- osseos_alterado %>% 
       filter(
         especie == "Oligoplites saurus" &
           sexo == input$sexo_comprimento_esp_7 &
           comprimento_total != 0 & 
-          peso_total != 0
+          peso_total_kg != 0
       )
   })
   
   output$DispersaoComprimentoXPeso_esp_7 <- renderPlotly({
     
+    biometria_sem_outliers <- remover_outliers(
+      dados_biometria_filtro_esp_7(),
+      "comprimento_total"
+    )
+    biometria_sem_outliers <- remover_outliers(
+      biometria_sem_outliers,
+      "peso_total_kg"
+    )
+    
     biometria_esp_7 <- data.frame(
-      sexo = dados_biometria_filtro_esp_7()$sexo,
-      x = dados_biometria_filtro_esp_7()$comprimento_total,
-      y = dados_biometria_filtro_esp_7()$peso_total
+      sexo = biometria_sem_outliers$sexo,
+      x = biometria_sem_outliers$comprimento_total,
+      y = biometria_sem_outliers$peso_total_kg
     )
     
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_7)
@@ -2862,6 +2936,12 @@ server <- function(input, output, session) {
       xbins = list(
         size = 5
       ),
+      marker = list(
+        line = list(
+          color = alpha('black', 0.1),
+          width = 0.5
+        )
+      ),
       customdata = ~case_when(
         sexo == "Macho" ~ i18n$t("macho"),
         sexo == "Fêmea" ~ i18n$t("femea"),
@@ -2892,7 +2972,7 @@ server <- function(input, output, session) {
   
   output$tabela_proporcao_esp_7 <- renderDT({
     
-    dados_tabela_esp_7 <- osseos %>% 
+    dados_tabela_esp_7 <- osseos_alterado %>% 
       filter(especie == "Oligoplites saurus" & sexo != "Indeterminado") %>% 
       group_by(sexo) %>% 
       summarise(
