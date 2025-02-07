@@ -29,7 +29,7 @@ osseos_modificado <- read.csv(
   stringsAsFactors = FALSE,
   sep = ";",
   dec = ".",
-  fileEncoding = "UTF-8"  # Se UTF-8 não funcionar, tente "latin1"
+  fileEncoding = "UTF-8"
 )
 
 osseos_alterado <- osseos_modificado %>% 
@@ -204,16 +204,6 @@ ui <- dashboardPage(
             
             .box {
               overflow-x: auto; 
-            }
-            
-            #LogoPTA img {
-              width: 50%;
-              height: auto;
-            }
-            
-            #FluxogramaTubAzul img {
-              width: 70%;
-              height: auto;
             }
             
             .control-sidebar-bg {
@@ -412,7 +402,7 @@ ui <- dashboardPage(
               ),
               div(
                 class = "graficos",
-                plotlyOutput("histograma_comprimento_esp_1", height = "100%"),
+                plotlyOutput("histograma_comprimento_esp_1", height = "100%")
               ),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_2",
@@ -445,10 +435,10 @@ ui <- dashboardPage(
               #   id = "carousel_esp_1",
               #   carouselItem(
               #     imageOutput("image_1_esp_1", height = "100%", width = "100%")
-              #   )#,
-              #   # carouselItem(
-              #   #   imageOutput("image_2_esp_1", height = "100%", width = "100%")
-              #   # )
+              #   ),
+              #   carouselItem(
+              #     imageOutput("image_2_esp_1", height = "100%", width = "100%")
+              #   )
               # )
             )
           ),
@@ -526,7 +516,7 @@ ui <- dashboardPage(
               ),
               div(
                 class = "graficos",
-                plotlyOutput("histograma_comprimento_esp_2", height = "100%"),
+                plotlyOutput("histograma_comprimento_esp_2", height = "100%")
               ),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_2",
@@ -538,7 +528,6 @@ ui <- dashboardPage(
           )
         ),
         fluidRow(
-
           column(
             width = 6,
             box(
@@ -641,7 +630,7 @@ ui <- dashboardPage(
               ),
               div(
                 class = "graficos",
-                plotlyOutput("histograma_comprimento_esp_3", height = "100%"),
+                plotlyOutput("histograma_comprimento_esp_3", height = "100%")
               ),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_2",
@@ -755,7 +744,7 @@ ui <- dashboardPage(
               ),
               div(
                 class = "graficos",
-                plotlyOutput("histograma_comprimento_esp_4", height = "100%"),
+                plotlyOutput("histograma_comprimento_esp_4", height = "100%")
               ),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_2",
@@ -767,7 +756,6 @@ ui <- dashboardPage(
           )
         ),
         fluidRow(
-
           column(
             width = 6,
             box(
@@ -870,7 +858,7 @@ ui <- dashboardPage(
               ),
               div(
                 class = "graficos",
-                plotlyOutput("histograma_comprimento_esp_5", height = "100%"),
+                plotlyOutput("histograma_comprimento_esp_5", height = "100%")
               ),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_2",
@@ -882,7 +870,6 @@ ui <- dashboardPage(
           )
         ),
         fluidRow(
-
           column(
             width = 6,
             box(
@@ -985,7 +972,7 @@ ui <- dashboardPage(
               ),
               div(
                 class = "graficos",
-                plotlyOutput("histograma_comprimento_esp_6", height = "100%"),
+                plotlyOutput("histograma_comprimento_esp_6", height = "100%")
               ),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_2",
@@ -997,7 +984,6 @@ ui <- dashboardPage(
           )
         ),
         fluidRow(
-
           column(
             width = 6,
             box(
@@ -1100,7 +1086,7 @@ ui <- dashboardPage(
               ),
               div(
                 class = "graficos",
-                plotlyOutput("histograma_comprimento_esp_7", height = "100%"),
+                plotlyOutput("histograma_comprimento_esp_7", height = "100%")
               ),
               sidebar = boxSidebar(
                 id = "boxsidebarComprimento_2",
@@ -1112,7 +1098,6 @@ ui <- dashboardPage(
           )
         ),
         fluidRow(
-
           column(
             width = 6,
             box(
@@ -1407,7 +1392,8 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_1$fit <- coef(biometria.nls_esp_1)["a"] * new_data_esp_1$x^coef(biometria.nls_esp_1)["b"]
+    # new_data_esp_1$fit <- coef(biometria.nls_esp_1)["a"] * 
+    # new_data_esp_1$x^coef(biometria.nls_esp_1)["b"]
     # new_data_esp_1$lwr <- a_lower * new_data_esp_1$x^b_lower
     # new_data_esp_1$upr <- a_upper * new_data_esp_1$x^b_upper
     # 
@@ -1539,7 +1525,11 @@ server <- function(input, output, session) {
         )
       )
     
-    colnames(dados_tabela_esp_1) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    colnames(dados_tabela_esp_1) <- c(
+      i18n$t("sexo"), 
+      "Total",
+      i18n$t("porcentagem")
+      )
     
     datatable(
       data = dados_tabela_esp_1,
@@ -1569,14 +1559,7 @@ server <- function(input, output, session) {
     )
   }, deleteFile = FALSE)
   
-  output$image_2_esp_1 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
-  }, deleteFile = FALSE)
+  output$image_2_esp_1 <- renderImage({}, deleteFile = FALSE)
   
   # Distribuição de Captura Espécie 2  ----------------------------------------
   
@@ -1640,7 +1623,8 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_2$fit <- coef(biometria.nls_esp_2)["a"] * new_data_esp_2$x^coef(biometria.nls_esp_2)["b"]
+    # new_data_esp_2$fit <- coef(biometria.nls_esp_2)["a"] * 
+    # new_data_esp_2$x^coef(biometria.nls_esp_2)["b"]
     # new_data_esp_2$lwr <- a_lower * new_data_esp_2$x^b_lower
     # new_data_esp_2$upr <- a_upper * new_data_esp_2$x^b_upper
     #
@@ -1772,7 +1756,11 @@ server <- function(input, output, session) {
         )
       )
     
-    colnames(dados_tabela_esp_2) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    colnames(dados_tabela_esp_2) <- c(
+      i18n$t("sexo"), 
+      "Total",
+      i18n$t("porcentagem")
+      )
     
     datatable(
       data = dados_tabela_esp_2,
@@ -1802,14 +1790,7 @@ server <- function(input, output, session) {
     )
   }, deleteFile = FALSE)
   
-  output$image_2_esp_2 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
-  }, deleteFile = FALSE)
+  output$image_2_esp_2 <- renderImage({}, deleteFile = FALSE)
   
   # Distribuição de Captura Espécie 3  ----------------------------------------
   
@@ -1873,7 +1854,8 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_3$fit <- coef(biometria.nls_esp_3)["a"] * new_data_esp_3$x^coef(biometria.nls_esp_3)["b"]
+    # new_data_esp_3$fit <- coef(biometria.nls_esp_3)["a"] * 
+    # new_data_esp_3$x^coef(biometria.nls_esp_3)["b"]
     # new_data_esp_3$lwr <- a_lower * new_data_esp_3$x^b_lower
     # new_data_esp_3$upr <- a_upper * new_data_esp_3$x^b_upper
     # 
@@ -2005,7 +1987,11 @@ server <- function(input, output, session) {
         )
       )
     
-    colnames(dados_tabela_esp_3) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    colnames(dados_tabela_esp_3) <- c(
+      i18n$t("sexo"),
+      "Total",
+      i18n$t("porcentagem")
+      )
     
     datatable(
       data = dados_tabela_esp_3,
@@ -2035,14 +2021,7 @@ server <- function(input, output, session) {
     )
   }, deleteFile = FALSE)
   
-  output$image_2_esp_3 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
-  }, deleteFile = FALSE)
+  output$image_2_esp_3 <- renderImage({}, deleteFile = FALSE)
   
   # Distribuição de Captura Espécie 4  ----------------------------------------
   
@@ -2106,7 +2085,8 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_4$fit <- coef(biometria.nls_esp_4)["a"] * new_data_esp_4$x^coef(biometria.nls_esp_4)["b"]
+    # new_data_esp_4$fit <- coef(biometria.nls_esp_4)["a"] * 
+    # new_data_esp_4$x^coef(biometria.nls_esp_4)["b"]
     # new_data_esp_4$lwr <- a_lower * new_data_esp_4$x^b_lower
     # new_data_esp_4$upr <- a_upper * new_data_esp_4$x^b_upper
     # 
@@ -2238,7 +2218,11 @@ server <- function(input, output, session) {
         )
       )
     
-    colnames(dados_tabela_esp_4) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    colnames(dados_tabela_esp_4) <- c(
+      i18n$t("sexo"),
+      "Total",
+      i18n$t("porcentagem")
+      )
     
     datatable(
       data = dados_tabela_esp_4,
@@ -2268,14 +2252,7 @@ server <- function(input, output, session) {
     )
   }, deleteFile = FALSE)
   
-  output$image_2_esp_4 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
-  }, deleteFile = FALSE)
+  output$image_2_esp_4 <- renderImage({}, deleteFile = FALSE)
   
   # Distribuição de Captura Espécie 5  ----------------------------------------
   
@@ -2339,7 +2316,8 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_5$fit <- coef(biometria.nls_esp_5)["a"] * new_data_esp_5$x^coef(biometria.nls_esp_5)["b"]
+    # new_data_esp_5$fit <- coef(biometria.nls_esp_5)["a"] * 
+    # new_data_esp_5$x^coef(biometria.nls_esp_5)["b"]
     # new_data_esp_5$lwr <- a_lower * new_data_esp_5$x^b_lower
     # new_data_esp_5$upr <- a_upper * new_data_esp_5$x^b_upper
     # 
@@ -2471,7 +2449,11 @@ server <- function(input, output, session) {
         )
       )
     
-    colnames(dados_tabela_esp_5) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    colnames(dados_tabela_esp_5) <- c(
+      i18n$t("sexo"),
+      "Total",
+      i18n$t("porcentagem")
+      )
     
     datatable(
       data = dados_tabela_esp_5,
@@ -2572,7 +2554,8 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_6$fit <- coef(biometria.nls_esp_6)["a"] * new_data_esp_6$x^coef(biometria.nls_esp_6)["b"]
+    # new_data_esp_6$fit <- coef(biometria.nls_esp_6)["a"] * 
+    # new_data_esp_6$x^coef(biometria.nls_esp_6)["b"]
     # new_data_esp_6$lwr <- a_lower * new_data_esp_6$x^b_lower
     # new_data_esp_6$upr <- a_upper * new_data_esp_6$x^b_upper
     # 
@@ -2687,7 +2670,9 @@ server <- function(input, output, session) {
   output$tabela_proporcao_esp_6 <- renderDT({
     
     dados_tabela_esp_6 <- osseos_alterado %>% 
-      filter(especie == "Scomberomorus brasiliensis" & sexo != "Indeterminado") %>%  
+      filter(
+        especie == "Scomberomorus brasiliensis" & sexo != "Indeterminado"
+        ) %>%  
       group_by(sexo) %>% 
       summarise(
         n = n()
@@ -2704,7 +2689,11 @@ server <- function(input, output, session) {
         )
       )
     
-    colnames(dados_tabela_esp_6) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    colnames(dados_tabela_esp_6) <- c(
+      i18n$t("sexo"), 
+      "Total", 
+      i18n$t("porcentagem")
+      )
     
     datatable(
       data = dados_tabela_esp_6,
@@ -2730,18 +2719,11 @@ server <- function(input, output, session) {
       src = "www/Scomberomorus_brasiliensis_imagem_1.png",
       contentType = "image/png",
       height = "auto",
-      width = "70%"
+      width = "100%"
     )
   }, deleteFile = FALSE)
   
-  output$image_2_esp_6 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
-  }, deleteFile = FALSE)
+  output$image_2_esp_6 <- renderImage({}, deleteFile = FALSE)
   
   # Distribuição de Captura Espécie 7  ----------------------------------------
   
@@ -2805,7 +2787,8 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_7$fit <- coef(biometria.nls_esp_7)["a"] * new_data_esp_7$x^coef(biometria.nls_esp_7)["b"]
+    # new_data_esp_7$fit <- coef(biometria.nls_esp_7)["a"] *
+    # new_data_esp_7$x^coef(biometria.nls_esp_7)["b"]
     # new_data_esp_7$lwr <- a_lower * new_data_esp_7$x^b_lower
     # new_data_esp_7$upr <- a_upper * new_data_esp_7$x^b_upper
     # 
@@ -2937,7 +2920,11 @@ server <- function(input, output, session) {
         )
       )
     
-    colnames(dados_tabela_esp_7) <- c(i18n$t("sexo"), "Total", i18n$t("porcentagem"))
+    colnames(dados_tabela_esp_7) <- c(
+      i18n$t("sexo"),
+      "Total",
+      i18n$t("porcentagem")
+      )
     
     datatable(
       data = dados_tabela_esp_7,
@@ -2963,18 +2950,11 @@ server <- function(input, output, session) {
       src = "www/Oligoplites_saurus_imagem_1.png",
       contentType = "image/png",
       height = "auto",
-      width = "70%"
+      width = "100%"
     )
   }, deleteFile = FALSE)
   
-  output$image_2_esp_7 <- renderImage({
-    # list(
-    #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
-    #   contentType = "image/jpg",
-    #   height = "auto",
-    #   width = "70%"
-    # )
-  }, deleteFile = FALSE)
+  output$image_2_esp_7 <- renderImage({}, deleteFile = FALSE)
   
   # ControlBar --------------------------------------------------------------
   
