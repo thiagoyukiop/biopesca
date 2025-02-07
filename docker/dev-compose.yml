@@ -1,0 +1,23 @@
+name: lema-biopesca
+services:
+  shiny-biopesca:
+    image: lema/shiny-biopesca-${LEMA_BIOPESCA_VERSION:-alpha}
+    build:
+      context: ../
+      dockerfile: ./docker/shiny/Dockerfile
+      # tag: lema/shiny-biopesca:beta
+      args:
+        - LEMA_BIOPESCA_VERSION=${LEMA_BIOPESCA_VERSION:-alpha}
+    container_name: shiny-biopesca
+    restart: always
+    environment:
+     - APPLICATION_LOGS_TO_STDOUT=true    
+     - LEMA_BIOPESCA_VERSION=${LEMA_BIOPESCA_VERSION:-alpha}
+    volumes:
+      - ../src:/srv/shiny-server
+    ports:
+      - 3838:3838
+    # networks:
+    # - shiny-biopesca-public
+    network_mode: host
+
