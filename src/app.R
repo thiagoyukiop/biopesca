@@ -225,205 +225,147 @@ ui <- dashboardPage(
     ),
     tabItems(
       tabItem(
-        tabName = "projeto"
-        # ADICIONAR TEXTOS COM LORE IPSUM EM TODOS OS ARQUIVOS
+        tabName = "projeto",
+        # fluidRow(
+        #   column(
+        #     width = 8,
+        #     offset = 2,
+        #     div(
+        #       style = "text-align: center;",
+        #       imageOutput("LogoPTA", height = "100%")
+        #     )
+        #   )
+        # ),
+        fluidRow(
+          column(
+            width = 8,
+            offset = 2,
+            tags$div(
+              h3("Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                 Donec aliquam ac lacus dapibus malesuada. Aliquam vitae 
+                 quam nisl. Class aptent taciti sociosqu ad litora torquent."),
+              style = "text-align:center;"
+            ),
+            br(),
+            tags$div(
+              style = "text-align:center;",
+              h4("Lorem ipsum dolor sit amet.")
+            ),
+            tags$div(
+              style = "text-align:justify;",
+              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Suspendisse laoreet, justo quis posuere ultricies, libero 
+                justo interdum risus, eget interdum tellus quam a augue."),
+              p(" Vestibulum porta, augue suscipit bibendum tincidunt, sem sem 
+                ultrices mauris, vel semper nisi leo a dolor. Pellentesque 
+                mattis felis ac nisi rhoncus rhoncus. Fusce congue non orci 
+                sed rutrum."),
+              p("Ut ultrices vehicula enim, sit amet interdum magna malesuada 
+                nec. Etiam cursus cursus tincidunt. Aliquam cursus velit id 
+                urna scelerisque, in scelerisque justo finibus."),
+              p(strong("Suspendisse tempor ipsum ex, sed euismod ligula 
+                       convallis sit amet. Vivamus interdum ultrices metus 
+                       pulvinar convallis.")),
+              p(strong("Aliquam lobortis magna et eros interdum, in aliquet diam
+                       hendrerit. Maecenas mollis consectetur purus, ac accumsan
+                       nunc rhoncus nec.")),
+              p(strong("Sed viverra nunc libero, eget porta nisl elementum sit 
+                       amet. Aenean porta aliquam metus non eleifend.")),
+              p(strong("Praesent sit amet maximus risus. Proin hendrerit sem 
+                       vitae libero pulvinar facilisis. Proin in consectetur
+                       nisi.")),
+              p("Nunc consectetur nunc et finibus porttitor. Nulla facilisi. In
+                facilisis commodo luctus. Fusce accumsan fringilla odio, pretium
+                convallis metus. In finibus mi a ante maximus porta. Nullam sed
+                tellus porttitor, sagittis diam nec, imperdiet erat. Proin sed 
+                justo sem. Integer ac cursus sem. Pellentesque porta imperdiet
+                tellus, vel interdum turpis mollis euismod."),
+              br()
+            ),
+            tags$div(
+              style = "text-align:center;",
+              h4("Maecenas nec faucibus lacus.")
+            ),
+            tags$div(
+              style = "text-align:justify;",
+              p("Duis at scelerisque metus, finibus tincidunt lorem. Phasellus 
+                ac quam eu justo aliquam volutpat. Aliquam feugiat condimentum 
+                lectus in consequat. Maecenas aliquet, nulla ut blandit iaculis,
+                ante nisi tempor sapien, nec bibendum risus mauris id nulla.
+                Donec non nunc sit amet diam tristique venenatis.")
+            ),
+            tags$div(
+              style = "text-align:justify;",
+              p("Curabitur sit amet magna sit amet quam elementum venenatis quis
+                ut metus. Mauris sollicitudin viverra odio quis auctor. Integer
+                dui mauris, sollicitudin porta tristique nec, cursus eu ex.
+                Integer venenatis finibus vestibulum."),
+              br()
+            ),
+            tags$div(
+              style = "text-align:center;",
+              h4("Aliquam convallis blandit est, id posuere leo faucibus in. 
+                 Etiam malesuada mollis pulvinar. Nullam blandit volutpat ante 
+                 sed faucibus. Nulla tristique blandit dapibus.")
+            )#,
+            # div(
+            #   style = "text-align: center;",
+            #   imageOutput("FluxogramaTubAzul", height = "100%")
+            # )
+          )
+        )
       ),
       tabItem(
-        tabName = "leia_me"
+        tabName = "leia_me",
+        fluidRow(
+          column(
+            width = 10,
+            offset = 1,
+            tags$head(
+              tags$style(
+                HTML("
+                  #boxWithoutHeader .box-header {
+                    display: none;
+                  }
+                ")
+              )
+            ),
+            box(
+              id = "boxWithoutHeader",
+              title = NULL,
+              width = 12,
+              headerBorder = FALSE,
+              background = "gray",
+              uiOutput("leiameMarkdown")
+            )
+          )
+        )
       ),
       tabItem(
-        tabName = "sobre"
+        tabName = "sobre",
+        fluidRow(
+          column(
+            width = 10,
+            offset = 1,
+            box(
+              id = "boxWithoutHeader",
+              title = NULL,
+              width = 12,
+              headerBorder = FALSE,
+              background = "gray",
+              uiOutput("sobreMarkdown")
+            )
+          )
+        )
       ),
-      # tabItem(
-      #   tabName = "projeto",
-      #   fluidRow(
-      #     column(
-      #       offset = 1,
-      #       width = 5,
-      #       infoBox(
-      #         title = tags$div(
-      #           h6(i18n$t("tubaroes_medidos")),
-      #           style = "display: block; text-align: center;"
-      #         ),
-      #         fill = TRUE,
-      #         width = 12,
-      #         color = "light-blue",
-      #         value = tags$div(
-      #           style = "display: block; text-align: center;",
-      #           h1(strong("28954"), style = "margin: 0px;")
-      #         ),
-      #         icon = icon("fish")
-      #       )
-      #     ),
-      #     column(
-      #       width = 5,
-      #       infoBox(
-      #         title = tags$div(
-      #           h6(i18n$t("entrevista_desembarque")),
-      #           style = "display: block; text-align: center;"
-      #         ),
-      #         fill = TRUE,
-      #         width = 12,
-      #         color = "light-blue",
-      #         value = tags$div(
-      #           style = "display: block; text-align: center;",
-      #           h1(strong("731"), style = "margin: 0px;")
-      #         ),
-      #         icon = icon("paste")
-      #       )
-      #     )
-      #   ),
-      #   fluidRow(
-      #     column(
-      #       offset = 1,
-      #       width = 5,
-      #       infoBox(
-      #         title = tags$div(
-      #           h6(i18n$t("cadernos_bordo")),
-      #           style = "display: block; text-align: center;"
-      #         ),
-      #         fill = TRUE,
-      #         width = 12,
-      #         color = "light-blue",
-      #         value = tags$div(
-      #           style = "display: block; text-align: center;",
-      #           h1(strong("465"), style = "margin: 0px;")
-      #         ),
-      #         icon = icon("book-open")
-      #       )
-      #     ),
-      #     column(
-      #       width = 5,
-      #       infoBox(
-      #         title = tags$div(
-      #           h6(i18n$t("embarcacoes_monitoradas")),
-      #           style = "display: block; text-align: center;"
-      #         ),
-      #         fill = TRUE,
-      #         width = 12,
-      #         color = "light-blue",
-      #         value = tags$div(
-      #           style = "display: block; text-align: center;",
-      #           h1(strong("92"), style = "margin: 0px;")
-      #         ),
-      #         icon = icon("ship")
-      #       )
-      #     )
-      #   ),
-      #   # fluidRow(
-      #   #   column(
-      #   #     width = 8,
-      #   #     offset = 2,
-      #   #     div(
-      #   #       style = "text-align: center;",
-      #   #       imageOutput("LogoPTA", height = "100%")
-      #   #     )
-      #   #   )
-      #   # ),
-      #   fluidRow(
-      #     column(
-      #       width = 8,
-      #       offset = 2,
-      #       tags$div(
-      #         h3(tagList(i18n$t("projeto_texto_1"))),
-      #         style = "text-align:center;"
-      #       ),
-      #       br(),
-      #       tags$div(
-      #         style = "text-align:center;",
-      #         h4(tagList(i18n$t("projeto_texto_2")))
-      #       ),
-      #       tags$div(
-      #         style = "text-align:justify;",
-      #         p(
-      #           tagList(i18n$t("projeto_texto_3")),
-      #           tags$em("Prionace glauca", .noWS = "after"),
-      #           tagList(i18n$t("projeto_texto_4"))
-      #         ),
-      #         p(tagList(i18n$t("projeto_texto_5"))),
-      #         p(tagList(i18n$t("projeto_texto_6"))),
-      #         p(strong(tagList(i18n$t("projeto_texto_7")))),
-      #         p(strong(tagList(i18n$t("projeto_texto_8")))),
-      #         p(strong(tagList(i18n$t("projeto_texto_9")))),
-      #         p(strong(tagList(i18n$t("projeto_texto_10")))),
-      #         p(tagList(i18n$t("projeto_texto_11"))),
-      #         br()
-      #       ),
-      #       tags$div(
-      #         style = "text-align:center;",
-      #         h4(tagList(i18n$t("projeto_texto_12")))
-      #       ),
-      #       tags$div(
-      #         style = "text-align:justify;",
-      #         p(tagList(i18n$t("projeto_texto_13")))
-      #       ),
-      #       tags$div(
-      #         style = "text-align:justify;",
-      #         p(tagList(i18n$t("projeto_texto_14"))),
-      #         br()
-      #       ),
-      #       tags$div(
-      #         style = "text-align:center;",
-      #         h4(tagList(i18n$t("projeto_texto_15")))
-      #       )#,
-      #       # div(
-      #       #   style = "text-align: center;",
-      #       #   imageOutput("FluxogramaTubAzul", height = "100%")
-      #       # )
-      #     )
-      #   )
-      # ),
-      # tabItem(
-      #   tabName = "leia_me",
-      #   fluidRow(
-      #     column(
-      #       width = 10,
-      #       offset = 1,
-      #       tags$head(
-      #         tags$style(
-      #           HTML("
-      #             #boxWithoutHeader .box-header {
-      #               display: none;
-      #             }
-      #           ")
-      #         )
-      #       ),
-      #       box(
-      #         id = "boxWithoutHeader",
-      #         title = NULL,
-      #         width = 12,
-      #         headerBorder = FALSE,
-      #         background = "gray",
-      #         uiOutput("leiameMarkdown")
-      #       )
-      #     )
-      #   )
-      # ),
-      # tabItem(
-      #   tabName = "sobre",
-      #   fluidRow(
-      #     column(
-      #       width = 10,
-      #       offset = 1,
-      #       box(
-      #         id = "boxWithoutHeader",
-      #         title = NULL,
-      #         width = 12,
-      #         headerBorder = FALSE,
-      #         background = "gray",
-      #         uiOutput("sobreMarkdown")
-      #       )
-      #     )
-      #   )
-      # ),
       tabItem(
         tabName = "comprimento_especie_1",
-        fluidRow(
-          div(
-            style = "text-align: center; margin-bottom:30px;",
-            h1("Micropogonias furnieri")
-          )
-        ),
+        # fluidRow(
+        #   div(
+        #     style = "text-align: center; margin-bottom:30px;",
+        #     h1("Micropogonias furnieri")
+        #   )
+        # ),
         fluidRow(
           column(
             width = 6,
@@ -1376,31 +1318,31 @@ server <- function(input, output, session) {
   # Leia-me -----------------------------------------------------------------
   
   output$leiameMarkdown <- renderUI({
-    # idioma <- input$selected_language
-    # arquivo <- switch(
-    #   idioma,
-    #   "pt" = "dados_brutos/README_pt.md",
-    #   "en" = "dados_brutos/README_en.md",
-    #   "es" = "dados_brutos/README_es.md",
-    #   "dados_brutos/README.md"
-    # )
-    # 
-    # shiny::includeMarkdown(arquivo)
+    idioma <- input$selected_language
+    arquivo <- switch(
+      idioma,
+      "pt" = "dados_brutos/README_pt.md",
+      "en" = "dados_brutos/README_en.md",
+      "es" = "dados_brutos/README_es.md",
+      "dados_brutos/README.md"
+    )
+
+    shiny::includeMarkdown(arquivo)
   })
   
   # Sobre -------------------------------------------------------------------
   
   output$sobreMarkdown <- renderUI({
-    # idioma <- input$selected_language
-    # arquivo <- switch(
-    #   idioma,
-    #   "pt" = "dados_brutos/ABOUT_pt.md",
-    #   "en" = "dados_brutos/ABOUT_en.md",
-    #   "es" = "dados_brutos/ABOUT_es.md",
-    #   "dados_brutos/ABOUT_pt.md"
-    # )
-    # 
-    # shiny::includeMarkdown(arquivo)
+    idioma <- input$selected_language
+    arquivo <- switch(
+      idioma,
+      "pt" = "dados_brutos/ABOUT_pt.md",
+      "en" = "dados_brutos/ABOUT_en.md",
+      "es" = "dados_brutos/ABOUT_es.md",
+      "dados_brutos/ABOUT_pt.md"
+    )
+
+    shiny::includeMarkdown(arquivo)
   })
   
   # Distribuição de Captura Espécie 1  ----------------------------------------
@@ -3063,7 +3005,9 @@ server <- function(input, output, session) {
       # imageOutput("LABORATORIO_RESPONSAVEL", height = "100%"),
       h2(i18n$t("intro_texto_1")),
       h2(strong(i18n$t("intro_texto_2"))),
-      tags$small(i18n$t("intro_texto_3"))
+      tags$small("Lorem ipsum dolor sit amet, consectetur adipiscing elit. In 
+                 dictum neque eget facilisis fringilla. Sed at.")
+      # tags$small(i18n$t("intro_texto_3"))
     )
   })
 
@@ -3071,42 +3015,46 @@ server <- function(input, output, session) {
     tagList(
       h5(strong(i18n$t("intro_texto_4"))),
       tags$ul(
-        tags$li(i18n$t("intro_texto_5")),
-        tags$li(i18n$t("intro_texto_6")),
-        tags$li(i18n$t("intro_texto_7")),
-        tags$li((i18n$t("intro_texto_8")))
+        tags$li("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                In a."),
+        tags$li("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Donec tempor odio."),
+        tags$li("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Aenean dapibus nisi nec."),
+        tags$li("Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Etiam scelerisque nibh diam, vel.")
       )
     )
   })
 
-  # showModal(
-  #   modalDialog(
-  #     title = uiOutput("TituloModal"),
-  #     fade = TRUE,
-  #     easyClose = TRUE,
-  #     uiOutput("ConteudoModal"),
-  #     footer = tagList(
-  #       div(
-  #         class = "pull-left",
-  #         style = "text-align: left",
-  #         selectInput(
-  #           inputId = "selected_language",
-  #           label = NULL,
-  #           width = "135px",
-  #           choices = setNames(
-  #             i18n$get_languages()[-1],
-  #             c("🇧🇷 - Português","🇬🇧 - English", "🇪🇸 - Español")
-  #           ),
-  #           selected = i18n$get_key_translation()
-  #         )
-  #       ),
-  #       modalButton(
-  #         "Fechar",
-  #         icon = icon("times")
-  #       )
-  #     )
-  #   )
-  # )
+  showModal(
+    modalDialog(
+      title = uiOutput("TituloModal"),
+      fade = TRUE,
+      easyClose = TRUE,
+      uiOutput("ConteudoModal"),
+      footer = tagList(
+        div(
+          class = "pull-left",
+          style = "text-align: left",
+          selectInput(
+            inputId = "selected_language",
+            label = NULL,
+            width = "135px",
+            choices = setNames(
+              i18n$get_languages()[-1],
+              c("🇧🇷 - Português","🇬🇧 - English", "🇪🇸 - Español")
+            ),
+            selected = i18n$get_key_translation()
+          )
+        ),
+        modalButton(
+          "Fechar",
+          icon = icon("times")
+        )
+      )
+    )
+  )
 
 
   # Rintrojs ----------------------------------------------------------------
