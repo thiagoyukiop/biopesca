@@ -1,4 +1,4 @@
-name: lema-biopesca
+name: shiny-biopesca
 services:
   shiny-biopesca:
     image: lema/shiny-biopesca-${LEMA_BIOPESCA_VERSION:-alpha}
