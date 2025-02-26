@@ -50,20 +50,20 @@ i18n$use_js()
 ui <- dashboardPage(
   freshTheme = create_theme(
     adminlte_color(
-      light_blue = "#5E81AC"
+      light_blue = "#FF6961"
     ),
     adminlte_sidebar(
       width = "280px",
       dark_bg = "#D8DEE9",
-      dark_hover_bg = "#81A1C1",
+      dark_hover_bg = "#FF6F61",
       dark_color = "#2E3440",
-      dark_hover_color = "#1B1E28",
+      dark_hover_color = "#FFFFFF",
       dark_submenu_color = "#A9A9A9",
-      dark_submenu_hover_color = "#1B1E28"
+      dark_submenu_hover_color = "#FF6F61"
     ),
     adminlte_global(
       content_bg = "#FFFFFF",
-      info_box_bg = "#D8DEE9"
+      info_box_bg = "#FF6F61"
     )
   ),
   scrollToTop = TRUE,
