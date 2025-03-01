@@ -210,6 +210,11 @@ ui <- dashboardPage(
               box-shadow: 10px 10px 10px 10px;
             }
             
+            .content {
+              overflow: auto;
+              height: 70vh;
+            }
+            
              ')
       )
     ),
@@ -231,77 +236,16 @@ ui <- dashboardPage(
             width = 8,
             offset = 2,
             tags$div(
-              h3("Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 Donec aliquam ac lacus dapibus malesuada. Aliquam vitae 
-                 quam nisl. Class aptent taciti sociosqu ad litora torquent."),
-              style = "text-align:center;"
-            ),
-            br(),
-            tags$div(
               style = "text-align:center;",
-              h4("Lorem ipsum dolor sit amet.")
+              h4("Projeto BIOPESCA SC")
             ),
             tags$div(
               style = "text-align:justify;",
-              p("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Suspendisse laoreet, justo quis posuere ultricies, libero 
-                justo interdum risus, eget interdum tellus quam a augue."),
-              p(" Vestibulum porta, augue suscipit bibendum tincidunt, sem sem 
-                ultrices mauris, vel semper nisi leo a dolor. Pellentesque 
-                mattis felis ac nisi rhoncus rhoncus. Fusce congue non orci 
-                sed rutrum."),
-              p("Ut ultrices vehicula enim, sit amet interdum magna malesuada 
-                nec. Etiam cursus cursus tincidunt. Aliquam cursus velit id 
-                urna scelerisque, in scelerisque justo finibus."),
-              p(strong("Suspendisse tempor ipsum ex, sed euismod ligula 
-                       convallis sit amet. Vivamus interdum ultrices metus 
-                       pulvinar convallis.")),
-              p(strong("Aliquam lobortis magna et eros interdum, in aliquet diam
-                       hendrerit. Maecenas mollis consectetur purus, ac accumsan
-                       nunc rhoncus nec.")),
-              p(strong("Sed viverra nunc libero, eget porta nisl elementum sit 
-                       amet. Aenean porta aliquam metus non eleifend.")),
-              p(strong("Praesent sit amet maximus risus. Proin hendrerit sem 
-                       vitae libero pulvinar facilisis. Proin in consectetur
-                       nisi.")),
-              p("Nunc consectetur nunc et finibus porttitor. Nulla facilisi. In
-                facilisis commodo luctus. Fusce accumsan fringilla odio, pretium
-                convallis metus. In finibus mi a ante maximus porta. Nullam sed
-                tellus porttitor, sagittis diam nec, imperdiet erat. Proin sed 
-                justo sem. Integer ac cursus sem. Pellentesque porta imperdiet
-                tellus, vel interdum turpis mollis euismod."),
-              br()
-            ),
-            tags$div(
-              style = "text-align:center;",
-              h4("Maecenas nec faucibus lacus.")
-            ),
-            tags$div(
-              style = "text-align:justify;",
-              p("Duis at scelerisque metus, finibus tincidunt lorem. Phasellus 
-                ac quam eu justo aliquam volutpat. Aliquam feugiat condimentum 
-                lectus in consequat. Maecenas aliquet, nulla ut blandit iaculis,
-                ante nisi tempor sapien, nec bibendum risus mauris id nulla.
-                Donec non nunc sit amet diam tristique venenatis.")
-            ),
-            tags$div(
-              style = "text-align:justify;",
-              p("Curabitur sit amet magna sit amet quam elementum venenatis quis
-                ut metus. Mauris sollicitudin viverra odio quis auctor. Integer
-                dui mauris, sollicitudin porta tristique nec, cursus eu ex.
-                Integer venenatis finibus vestibulum."),
-              br()
-            ),
-            tags$div(
-              style = "text-align:center;",
-              h4("Aliquam convallis blandit est, id posuere leo faucibus in. 
-                 Etiam malesuada mollis pulvinar. Nullam blandit volutpat ante 
-                 sed faucibus. Nulla tristique blandit dapibus.")
-            )#,
-            # div(
-            #   style = "text-align: center;",
-            #   imageOutput("FluxogramaTubAzul", height = "100%")
-            # )
+              p(i18n$t("projeto_texto_1")),
+              p(i18n$t("projeto_texto_2")),
+              p(i18n$t("projeto_texto_3")),
+              p(i18n$t("projeto_texto_4"))
+            )
           )
         )
       ),
@@ -350,12 +294,6 @@ ui <- dashboardPage(
       ),
       tabItem(
         tabName = "comprimento_especie_1",
-        # fluidRow(
-        #   div(
-        #     style = "text-align: center; margin-bottom:30px;",
-        #     h1("Micropogonias furnieri")
-        #   )
-        # ),
         fluidRow(
           column(
             width = 6,
@@ -1152,7 +1090,41 @@ ui <- dashboardPage(
           )
         )
       )
-# fim_teste ---------------------------------------------------------------
+    )
+  ),
+  
+  # Footer ------------------------------------------------------------------
+  
+  # Definindo o Footer do Painel
+  footer = dashboardFooter(
+    left = list(
+      fluidRow(
+        tags$div(
+          style = "margin-left: 20px;
+          margin-top: -15px;
+          margin-bottom: -20px;",
+          h4(tagList(i18n$t("apoio")))
+        ),
+        column(
+          width = 4,
+          tags$img(
+            # Renderizando a Imagem com a Logo das Instituições de Apoio
+            imageOutput("Logo_apoio", height = "100%", width = "100%")
+          )
+        ),
+        column(
+          offset = 1,
+          width = 7,
+          tags$div(
+            style = "margin-left: 20px; margin-top: -15px;
+            margin-bottom: -30px; padding-right: 0px;", 
+            h4(tagList(i18n$t("instituicoes_executoras"))),
+            br()
+          ),
+          # Renderizando a Imagem com as Logos das Instituições Executoras
+          imageOutput("Logo_instituicoes", height = "100%", width = "100%")
+        )
+      )
     )
   ),
   
@@ -1292,7 +1264,6 @@ server <- function(input, output, session) {
       output$textoHeader <- renderUI({NULL})
     } else {
       output$textoHeader <- renderUI({
-        # tags$span(i18n$t("projeto_tubarao_azul"))
         tags$span("Biopesca")
       })
     }
@@ -1330,6 +1301,27 @@ server <- function(input, output, session) {
     shiny::includeMarkdown(arquivo)
   })
   
+
+# Imagens -----------------------------------------------------------------
+
+  output$Logo_apoio <- renderImage({
+    list(
+      src = "dados_brutos/Biopesca/Biopesca/apoio.jpg",
+      height = "auto",
+      width = "100%",
+      contentType = "image/jpg"
+    )
+  }, deleteFile = FALSE)
+  
+  output$Logo_instituicoes <- renderImage({
+    list(
+      src = "dados_brutos/Biopesca/Biopesca/instituicoes_executoras.jpg",
+      height = "auto",
+      width = "100%",
+      contentType = "image/pg"
+    )
+  }, deleteFile = FALSE)
+
   # Distribuição de Captura Espécie 1  ----------------------------------------
   
   dados_biometria_filtro_esp_1 <- reactive({
