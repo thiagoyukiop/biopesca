@@ -1244,8 +1244,8 @@ server <- function(input, output, session) {
   # Variáveis ---------------------------------------------------------------
   
   cores_sexo <- c(
-    "Macho" = "#053061",
-    "Fêmea" = "#92c5de"
+    "Macho" = "#80CFFF",
+    "Fêmea" = "#FFD580"
   )
   
   TabsControlbarFiltro <- c(
@@ -1410,12 +1410,12 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_1,
-        aes(x = x, y = y),
-        colour = "blue",
-        fill = "lightblue",
-        size = 0.5,
+        aes(x = x, y = y, fill = sexo),
+        stroke = 0,
+        size = 1,
         shape = 21
       ) +
+      scale_fill_manual(values = cores_sexo) +
       # geom_ribbon(
       #   data = new_data_esp_1,
       #   aes(x = x, ymin = lwr, ymax = upr),
@@ -1426,7 +1426,8 @@ server <- function(input, output, session) {
         x = i18n$t("legenda_comprimento"),
         y = i18n$t("legenda_peso")
       ) +
-      theme_minimal()
+      theme_minimal() +
+      theme(legend.position = "none")
     
     # Tornar o gráfico interativo
     ggplotly(p) %>% 
@@ -1641,12 +1642,12 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_2,
-        aes(x = x, y = y),
-        colour = "blue",
-        fill = "lightblue",
-        size = 0.5,
+        aes(x = x, y = y, fill = sexo),
+        stroke = 0,
+        size = 1,
         shape = 21
       ) +
+      scale_fill_manual(values = cores_sexo) +
       # geom_ribbon(
       #   data = new_data_esp_2,
       #   aes(x = x, ymin = lwr, ymax = upr),
@@ -1657,7 +1658,8 @@ server <- function(input, output, session) {
         x = i18n$t("legenda_comprimento"),
         y = i18n$t("legenda_peso")
       ) +
-      theme_minimal()
+      theme_minimal() +
+      theme(legend.position = "none")
 
     # Tornar o gráfico interativo
     ggplotly(p) %>%
@@ -1872,12 +1874,12 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_3,
-        aes(x = x, y = y),
-        colour = "blue",
-        fill = "lightblue",
-        size = 0.5,
+        aes(x = x, y = y, fill = sexo),
+        stroke = 0,
+        size = 1,
         shape = 21
       ) +
+      scale_fill_manual(values = cores_sexo) +
       # geom_ribbon(
       #   data = new_data_esp_3,
       #   aes(x = x, ymin = lwr, ymax = upr),
@@ -1888,7 +1890,8 @@ server <- function(input, output, session) {
         x = i18n$t("legenda_comprimento"),
         y = i18n$t("legenda_peso")
       ) +
-      theme_minimal()
+      theme_minimal() +
+      theme(legend.position = "none")
     
     # Tornar o gráfico interativo
     ggplotly(p) %>% 
@@ -2103,12 +2106,12 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_4,
-        aes(x = x, y = y),
-        colour = "blue",
-        fill = "lightblue",
-        size = 0.5,
+        aes(x = x, y = y, fill = sexo),
+        stroke = 0,
+        size = 1,
         shape = 21
       ) +
+      scale_fill_manual(values = cores_sexo) +
       # geom_ribbon(
       #   data = new_data_esp_4,
       #   aes(x = x, ymin = lwr, ymax = upr),
@@ -2119,7 +2122,8 @@ server <- function(input, output, session) {
         x = i18n$t("legenda_comprimento"),
         y = i18n$t("legenda_peso")
       ) +
-      theme_minimal()
+      theme_minimal() +
+      theme(legend.position = "none")
     
     # Tornar o gráfico interativo
     ggplotly(p) %>% 
@@ -2334,12 +2338,12 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_5,
-        aes(x = x, y = y),
-        colour = "blue",
-        fill = "lightblue",
-        size = 0.5,
+        aes(x = x, y = y, fill = sexo),
+        stroke = 0,
+        size = 1,
         shape = 21
       ) +
+      scale_fill_manual(values = cores_sexo) +
       # geom_ribbon(
       #   data = new_data_esp_5,
       #   aes(x = x, ymin = lwr, ymax = upr),
@@ -2350,7 +2354,8 @@ server <- function(input, output, session) {
         x = i18n$t("legenda_comprimento"),
         y = i18n$t("legenda_peso")
       ) +
-      theme_minimal()
+      theme_minimal() +
+      theme(legend.position = "none")
     
     # Tornar o gráfico interativo
     ggplotly(p) %>% 
@@ -2572,12 +2577,12 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_6,
-        aes(x = x, y = y),
-        colour = "blue",
-        fill = "lightblue",
-        size = 0.5,
+        aes(x = x, y = y, fill = sexo),
+        stroke = 0,
+        size = 1,
         shape = 21
       ) +
+      scale_fill_manual(values = cores_sexo) +
       # geom_ribbon(
       #   data = new_data_esp_6,
       #   aes(x = x, ymin = lwr, ymax = upr),
@@ -2588,7 +2593,8 @@ server <- function(input, output, session) {
         x = i18n$t("legenda_comprimento"),
         y = i18n$t("legenda_peso")
       ) +
-      theme_minimal()
+      theme_minimal() +
+      theme(legend.position = "none")
     
     # Tornar o gráfico interativo
     ggplotly(p) %>% 
@@ -2805,12 +2811,12 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_7,
-        aes(x = x, y = y),
-        colour = "blue",
-        fill = "lightblue",
-        size = 0.5,
+        aes(x = x, y = y, fill = sexo),
+        stroke = 0,
+        size = 1,
         shape = 21
       ) +
+      scale_fill_manual(values = cores_sexo) +
       # geom_ribbon(
       #   data = new_data_esp_7,
       #   aes(x = x, ymin = lwr, ymax = upr),
@@ -2821,7 +2827,8 @@ server <- function(input, output, session) {
         x = i18n$t("legenda_comprimento"),
         y = i18n$t("legenda_peso")
       ) +
-      theme_minimal()
+      theme_minimal() +
+      theme(legend.position = "none")
     
     # Tornar o gráfico interativo
     ggplotly(p) %>% 
