@@ -212,7 +212,7 @@ ui <- dashboardPage(
             
             .content {
               overflow: auto;
-              height: 70vh;
+              height: 100%;
             }
             
              ')
