@@ -14,6 +14,8 @@ Accede al repositorio del proyecto en GitHub.
 
 Thiago Yukio Horita Pacheco | thiago_pacheco@edu.univali.br
 
+Marcos Vinícius Barros da Silva | barrosmv@univali.br
+
 Rodrigo Sant'Ana | rsantana@univali.br
 
 Un producto desarrollado e de uso exclusivo de
