@@ -104,42 +104,119 @@ ui <- dashboardPage(
         )
       ),
       menuItem(
-        text = i18n$t("distribuicao_comprimento"),
-        icon = icon("chart-bar"),
-        menuSubItem(
-          text = "Micropogonias furnieri",
-          tabName = "comprimento_especie_1",
-          icon = icon("chart-simple")
+        text = "Categorias de peixe",
+        icon = icon("list"),
+        menuItem(
+          text = "Peixes Ósseos",
+          icon = icon("fish"),
+          menuItem(
+            text = tags$i("Micropogonias furnieri"),
+            icon = icon("fish"),
+            menuSubItem(
+              text = i18n$t("distribuicao_comprimento"),
+              tabName = "comp_micropogonias_furnieri",
+              icon = icon("chart-simple")
+            ),
+            menuSubItem(
+              text = "Reprodução",
+              tabName = "rep_micropogonias_furnieri",
+              icon = icon("fish-fins")
+            )
+          ),
+          menuItem(
+            text = tags$i("Mugil liza"),
+            icon = icon("fish"),
+            menuSubItem(
+              text = i18n$t("distribuicao_comprimento"),
+              tabName = "comp_mugil_liza",
+              icon = icon("chart-simple")
+            ),
+            menuSubItem(
+              text = "Reprodução",
+              tabName = "rep_mugil_liza",
+              icon = icon("fish-fins")
+            )
+          ),
+          menuItem(
+            text = tags$i("Oligoplites saliens"),
+            icon = icon("fish"),
+            menuSubItem(
+              text = i18n$t("distribuicao_comprimento"),
+              tabName = "comp_oligoplites_saliens",
+              icon = icon("chart-simple")
+            ),
+            menuSubItem(
+              text = "Reprodução",
+              tabName = "rep_oligoplites_saliens",
+              icon = icon("fish-fins")
+            )
+          ),
+          menuItem(
+            text = tags$i("Oligoplites saurus"),
+            icon = icon("fish"),
+            menuSubItem(
+              text = i18n$t("distribuicao_comprimento"),
+              tabName = "comp_oligoplites_saurus",
+              icon = icon("chart-simple")
+            ),
+            menuSubItem(
+              text = "Reprodução",
+              tabName = "rep_oligoplites_saurus"
+              
+            )
+          ),
+          menuItem(
+            text = tags$i("Pomatomus saltatrix"),
+            icon = icon("fish"),
+            menuSubItem(
+              text = i18n$t("distribuicao_comprimento"),
+              tabName = "comp_pomatomus_saltatrix",
+              icon = icon("chart-simple")
+            ),
+            menuSubItem(
+              text = "Reprodução",
+              tabName = "rep_pomatomus_saltatrix",
+              icon = icon("fish-fins")
+            )
+          ),
+          menuItem(
+            text = tags$i("Scomberomorus brasiliensis"),
+            icon = icon("fish"),
+            menuSubItem(
+              text = i18n$t("distribuicao_comprimento"),
+              tabName = "comp_scomberomorus_brasiliensis",
+              icon = icon("chart-simple")
+            ),
+            menuSubItem(
+              text = "Reprodução",
+              tabName = "rep_scomberomorus_brasiliensis",
+              icon = icon("fish-fins")
+            )
+          ),
+          menuItem(
+            text = tags$i("Trichiurus lepturus"),
+            icon = icon("fish"),
+            menuSubItem(
+              text = i18n$t("distribuicao_comprimento"),
+              tabName = "comp_trichiurus_lepturus",
+              icon = icon("chart-simple")
+            ),
+            menuSubItem(
+              text = "Reprodução",
+              tabName = "rep_trichiurus_lepturus",
+              icon = icon("fish-fins")
+            )
+          )
         ),
-        menuSubItem(
-          text = "Pomatomus saltatrix",
-          tabName = "comprimento_especie_2",
-          icon = icon("chart-simple")
+        menuItem(
+          text = "Peixes Cartilaginosos",
+          tabName = "teste1"
+          
         ),
-        menuSubItem(
-          text = "Mugil liza",
-          tabName = "comprimento_especie_3",
-          icon = icon("chart-simple")
-        ),
-        menuSubItem(
-          text = "Oligoplites saliens",
-          tabName = "comprimento_especie_4",
-          icon = icon("chart-simple")
-        ),
-        menuSubItem(
-          text = "Trichiurus lepturus",
-          tabName = "comprimento_especie_5",
-          icon = icon("chart-simple")
-        ),
-        menuSubItem(
-          text = "Scomberomorus brasiliensis",
-          tabName = "comprimento_especie_6",
-          icon = icon("chart-simple")
-        ),
-        menuSubItem(
-          text = "Oligoplites saurus",
-          tabName = "comprimento_especie_7",
-          icon = icon("chart-simple")
+        menuItem(
+          text = "Custáceos",
+          tabName = "teste2"
+          
         )
       )
     )
@@ -159,6 +236,10 @@ ui <- dashboardPage(
     tags$head(
       tags$style(
         HTML('
+            
+            body {
+              overflow-y: hidden;
+            }
             
             .graficos {
             display: flex;
@@ -212,7 +293,7 @@ ui <- dashboardPage(
             
             .content {
               overflow: auto;
-              height: 100%;
+              height: 76vh;
             }
             
              ')
@@ -293,7 +374,7 @@ ui <- dashboardPage(
         )
       ),
       tabItem(
-        tabName = "comprimento_especie_1",
+        tabName = "comp_micropogonias_furnieri",
         fluidRow(
           column(
             width = 6,
@@ -407,7 +488,7 @@ ui <- dashboardPage(
         )
       ),
       tabItem(
-        tabName = "comprimento_especie_2",
+        tabName = "comp_pomatomus_saltatrix",
         fluidRow(
           column(
             width = 6,
@@ -521,7 +602,7 @@ ui <- dashboardPage(
         )
       ),
       tabItem(
-        tabName = "comprimento_especie_3",
+        tabName = "comp_mugil_liza",
         fluidRow(
           column(
             width = 6,
@@ -635,7 +716,7 @@ ui <- dashboardPage(
         )
       ),
       tabItem(
-        tabName = "comprimento_especie_4",
+        tabName = "comp_oligoplites_saliens",
         fluidRow(
           column(
             width = 6,
@@ -749,7 +830,7 @@ ui <- dashboardPage(
         )
       ),
       tabItem(
-        tabName = "comprimento_especie_5",
+        tabName = "comp_trichiurus_lepturus",
         fluidRow(
           column(
             width = 6,
@@ -863,7 +944,7 @@ ui <- dashboardPage(
         )
       ),
       tabItem(
-        tabName = "comprimento_especie_6",
+        tabName = "comp_scomberomorus_brasiliensis",
         fluidRow(
           column(
             width = 6,
@@ -977,7 +1058,7 @@ ui <- dashboardPage(
         )
       ),
       tabItem(
-        tabName = "comprimento_especie_7",
+        tabName = "comp_oligoplites_saurus",
         fluidRow(
           column(
             width = 6,
@@ -1142,7 +1223,7 @@ ui <- dashboardPage(
         title = tagList(i18n$t("filtros")),
         icon = icon("filter"),
         conditionalPanel(
-          condition = "input.sidebarMenu == 'comprimento_especie_1'",
+          condition = "input.sidebarMenu == 'comp_micropogonias_furnieri'",
           radioButtons(
             inputId = "sexo_comprimento_esp_1",
             label = tagList(i18n$t("seletor_sexo")),
@@ -1155,7 +1236,7 @@ ui <- dashboardPage(
           )
         ),
         conditionalPanel(
-          condition = "input.sidebarMenu == 'comprimento_especie_2'",
+          condition = "input.sidebarMenu == 'comp_pomatomus_saltatrix'",
           radioButtons(
             inputId = "sexo_comprimento_esp_2",
             label = tagList(i18n$t("seletor_sexo")),
@@ -1168,7 +1249,7 @@ ui <- dashboardPage(
           )
         ),
         conditionalPanel(
-          condition = "input.sidebarMenu == 'comprimento_especie_3'",
+          condition = "input.sidebarMenu == 'comp_mugil_liza'",
           radioButtons(
             inputId = "sexo_comprimento_esp_3",
             label = tagList(i18n$t("seletor_sexo")),
@@ -1181,7 +1262,7 @@ ui <- dashboardPage(
           )
         ),
         conditionalPanel(
-          condition = "input.sidebarMenu == 'comprimento_especie_4'",
+          condition = "input.sidebarMenu == 'comp_oligoplites_saliens'",
           radioButtons(
             inputId = "sexo_comprimento_esp_4",
             label = tagList(i18n$t("seletor_sexo")),
@@ -1194,7 +1275,7 @@ ui <- dashboardPage(
           )
         ),
         conditionalPanel(
-          condition = "input.sidebarMenu == 'comprimento_especie_5'",
+          condition = "input.sidebarMenu == 'comp_trichiurus_lepturus'",
           radioButtons(
             inputId = "sexo_comprimento_esp_5",
             label = tagList(i18n$t("seletor_sexo")),
@@ -1207,7 +1288,7 @@ ui <- dashboardPage(
           )
         ),
         conditionalPanel(
-          condition = "input.sidebarMenu == 'comprimento_especie_6'",
+          condition = "input.sidebarMenu == 'comp_scomberomorus_brasiliensis'",
           radioButtons(
             inputId = "sexo_comprimento_esp_6",
             label = tagList(i18n$t("seletor_sexo")),
@@ -1220,7 +1301,7 @@ ui <- dashboardPage(
           )
         ),
         conditionalPanel(
-          condition = "input.sidebarMenu == 'comprimento_especie_7'",
+          condition = "input.sidebarMenu == 'comp_oligoplites_saurus'",
           radioButtons(
             inputId = "sexo_comprimento_esp_7",
             label = tagList(i18n$t("seletor_sexo")),
@@ -1249,9 +1330,9 @@ server <- function(input, output, session) {
   )
   
   TabsControlbarFiltro <- c(
-    "comprimento_especie_1", "comprimento_especie_2", "comprimento_especie_3",
-    "comprimento_especie_4", "comprimento_especie_5", "comprimento_especie_6",
-    "comprimento_especie_7"
+    "comp_micropogonias_furnieri", "comp_pomatomus_saltatrix", "comp_mugil_liza",
+    "comp_oligoplites_saliens", "comp_trichiurus_lepturus", "comp_scomberomorus_brasiliensis",
+    "comp_oligoplites_saurus"
     )
   
   TabsControlbarSemFiltro <- c("projeto", "leia_me", "sobre")
@@ -1322,7 +1403,7 @@ server <- function(input, output, session) {
     )
   }, deleteFile = FALSE)
 
-  # Distribuição de Captura Espécie 1  ----------------------------------------
+  # Distribuição de Captura Micropogonias furnieri  ----------------------------------------
   
   dados_biometria_filtro_esp_1 <- reactive({
     dados_aux <- osseos_alterado %>% 
@@ -1410,9 +1491,9 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_1,
-        aes(x = x, y = y, fill = sexo),
+        aes(x = x, y = y, fill = sexo, alpha = 0.7),
         stroke = 0,
-        size = 1,
+        size = 2,
         shape = 21
       ) +
       scale_fill_manual(values = cores_sexo) +
@@ -1554,20 +1635,20 @@ server <- function(input, output, session) {
   
   output$image_2_esp_1 <- renderImage({}, deleteFile = FALSE)
   
-  # Distribuição de Captura Espécie 2  ----------------------------------------
-  
+  # Distribuição de Captura Pomatomus saltatrix  ----------------------------------------
+
   dados_biometria_filtro_esp_2 <- reactive({
-    dados_aux <- osseos_alterado %>% 
+    dados_aux <- osseos_alterado %>%
       filter(
         especie == "Pomatomus saltatrix" &
           sexo == input$sexo_comprimento_esp_2 &
-          comprimento_total != 0 & 
+          comprimento_total != 0 &
           peso_total_kg != 0
       )
   })
-  
+
   output$DispersaoComprimentoXPeso_esp_2 <- renderPlotly({
-    
+
     biometria_sem_outliers <- remover_outliers(
       dados_biometria_filtro_esp_2(),
       "comprimento_total"
@@ -1616,7 +1697,7 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_2$fit <- coef(biometria.nls_esp_2)["a"] * 
+    # new_data_esp_2$fit <- coef(biometria.nls_esp_2)["a"] *
     # new_data_esp_2$x^coef(biometria.nls_esp_2)["b"]
     # new_data_esp_2$lwr <- a_lower * new_data_esp_2$x^b_lower
     # new_data_esp_2$upr <- a_upper * new_data_esp_2$x^b_upper
@@ -1642,9 +1723,9 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_2,
-        aes(x = x, y = y, fill = sexo),
+        aes(x = x, y = y, fill = sexo, alpha = 0.7),
         stroke = 0,
-        size = 1,
+        size = 2,
         shape = 21
       ) +
       scale_fill_manual(values = cores_sexo) +
@@ -1686,7 +1767,7 @@ server <- function(input, output, session) {
         )
       )
   })
-  
+
   output$histograma_comprimento_esp_2 <- renderPlotly({
     plot_ly(
       data = dados_biometria_filtro_esp_2(),
@@ -1727,21 +1808,21 @@ server <- function(input, output, session) {
         barmode = "stack",
         showlegend = FALSE
       ) %>%
-      config(displayModeBar = FALSE) 
+      config(displayModeBar = FALSE)
   })
-  
+
   output$tabela_proporcao_esp_2 <- renderDT({
-    
-    dados_tabela_esp_2 <- osseos_alterado %>% 
-      filter(especie == "Pomatomus saltatrix" & sexo != "Indeterminado") %>% 
-      group_by(sexo) %>% 
+
+    dados_tabela_esp_2 <- osseos_alterado %>%
+      filter(especie == "Pomatomus saltatrix" & sexo != "Indeterminado") %>%
+      group_by(sexo) %>%
       summarise(
         n = n()
-      ) %>% 
+      ) %>%
       mutate(
         prop = round((n / sum(n)) * 100, 2)
-      ) %>% 
-      ungroup() %>% 
+      ) %>%
+      ungroup() %>%
       mutate(
         sexo = case_when(
           sexo == "Macho" ~ i18n$t("macho"),
@@ -1749,13 +1830,13 @@ server <- function(input, output, session) {
           TRUE ~ sexo
         )
       )
-    
+
     colnames(dados_tabela_esp_2) <- c(
-      i18n$t("sexo"), 
+      i18n$t("sexo"),
       "Total",
       i18n$t("porcentagem")
       )
-    
+
     datatable(
       data = dados_tabela_esp_2,
       rownames = FALSE,
@@ -1774,7 +1855,7 @@ server <- function(input, output, session) {
       )
     )
   })
-  
+
   output$image_1_esp_2 <- renderImage({
     list(
       src = "www/Pomatomus_saltatrix_imagem_1.jpg",
@@ -1783,23 +1864,23 @@ server <- function(input, output, session) {
       width = "100%"
     )
   }, deleteFile = FALSE)
-  
+
   output$image_2_esp_2 <- renderImage({}, deleteFile = FALSE)
-  
-  # Distribuição de Captura Espécie 3  ----------------------------------------
-  
+
+  # Distribuição de Captura Mugil liza  ----------------------------------------
+
   dados_biometria_filtro_esp_3 <- reactive({
-    dados_aux <- osseos_alterado %>% 
+    dados_aux <- osseos_alterado %>%
       filter(
         especie == "Mugil liza" &
           sexo == input$sexo_comprimento_esp_3 &
-          comprimento_total != 0 & 
+          comprimento_total != 0 &
           peso_total_kg != 0
       )
   })
-  
+
   output$DispersaoComprimentoXPeso_esp_3 <- renderPlotly({
-    
+
     biometria_sem_outliers <- remover_outliers(
       dados_biometria_filtro_esp_3(),
       "comprimento_total"
@@ -1808,24 +1889,24 @@ server <- function(input, output, session) {
       biometria_sem_outliers,
       "peso_total_kg"
     )
-    
+
     biometria_esp_3 <- data.frame(
       sexo = biometria_sem_outliers$sexo,
       x = biometria_sem_outliers$comprimento_total,
       y = biometria_sem_outliers$peso_total_kg
     )
-    
+
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_3)
-    # 
+    #
     # a <- coef(mod0)[[1]]
-    # 
+    #
     # b <- coef(mod0)[[2]]
-    # 
+    #
     # cat("a = ", a, "\n")
     # cat("b = ", b, "\n")
-    # 
+    #
     # biometria.nls_esp_3 <- nls (
-    #   formula = y ~ a*x^b, 
+    #   formula = y ~ a*x^b,
     #   data = biometria_esp_3,
     #   start = list(
     #     a = a,
@@ -1833,14 +1914,14 @@ server <- function(input, output, session) {
     #   ),
     #   control = nls.control(maxiter = 200)
     # )
-    # 
+    #
     # # Valores do confint
     # conf <- confint(biometria.nls_esp_3)
     # a_lower <- conf["a", "2.5%"]
     # a_upper <- conf["a", "97.5%"]
     # b_lower <- conf["b", "2.5%"]
     # b_upper <- conf["b", "97.5%"]
-    # 
+    #
     # new_data_esp_3 <- data.frame(
     #   x = seq(
     #     min(biometria_esp_3$x),
@@ -1848,23 +1929,23 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_3$fit <- coef(biometria.nls_esp_3)["a"] * 
+    # new_data_esp_3$fit <- coef(biometria.nls_esp_3)["a"] *
     # new_data_esp_3$x^coef(biometria.nls_esp_3)["b"]
     # new_data_esp_3$lwr <- a_lower * new_data_esp_3$x^b_lower
     # new_data_esp_3$upr <- a_upper * new_data_esp_3$x^b_upper
-    # 
+    #
     # new_data_esp_3$curva <- paste0(
     #   i18n$t("comprimento_legenda"), round(new_data_esp_3$x, 2 ), " cm<br>",
     #   i18n$t("lim_sup_legenda"), round(new_data_esp_3$upr, 2), " kg<br>",
     #   i18n$t("curva_legenda"), round(new_data_esp_3$fit, 2), " kg<br>",
     #   i18n$t("lim_inf_legenda"), round(new_data_esp_3$lwr, 2), " kg"
     # )
-    
+
     biometria_esp_3$XvsY <- paste0(
       i18n$t("comprimento_legenda"), round(biometria_esp_3$x, 2 ), " cm<br>",
       i18n$t("peso_legenda"), round(biometria_esp_3$y, 2), " kg"
     )
-    
+
     p <- ggplot() +
       # geom_line(
       #   data = new_data_esp_3,
@@ -1874,9 +1955,9 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_3,
-        aes(x = x, y = y, fill = sexo),
+        aes(x = x, y = y, fill = sexo, alpha = 0.7),
         stroke = 0,
-        size = 1,
+        size = 2,
         shape = 21
       ) +
       scale_fill_manual(values = cores_sexo) +
@@ -1892,20 +1973,20 @@ server <- function(input, output, session) {
       ) +
       theme_minimal() +
       theme(legend.position = "none")
-    
+
     # Tornar o gráfico interativo
-    ggplotly(p) %>% 
+    ggplotly(p) %>%
       plotly::style(
         hoverinfo = "text",
-        text = biometria_esp_3$XvsY, 
+        text = biometria_esp_3$XvsY,
         # traces = 2
         traces = 1
-      ) %>% 
+      ) %>%
       # plotly::style(
       #   hoverinfo = "text",
       #   text = new_data_esp_3$curva,
       #   traces = 1
-      # ) %>% 
+      # ) %>%
       # plotly::style(
       #   hoverinfo = "none",
       #   traces = 3
@@ -1918,7 +1999,7 @@ server <- function(input, output, session) {
         )
       )
   })
-  
+
   output$histograma_comprimento_esp_3 <- renderPlotly({
     plot_ly(
       data = dados_biometria_filtro_esp_3(),
@@ -1959,21 +2040,21 @@ server <- function(input, output, session) {
         barmode = "stack",
         showlegend = FALSE
       ) %>%
-      config(displayModeBar = FALSE) 
+      config(displayModeBar = FALSE)
   })
-  
+
   output$tabela_proporcao_esp_3 <- renderDT({
-    
-    dados_tabela_esp_3 <- osseos_alterado %>% 
-      filter(especie == "Mugil liza" & sexo != "Indeterminado") %>% 
-      group_by(sexo) %>% 
+
+    dados_tabela_esp_3 <- osseos_alterado %>%
+      filter(especie == "Mugil liza" & sexo != "Indeterminado") %>%
+      group_by(sexo) %>%
       summarise(
         n = n()
-      ) %>% 
+      ) %>%
       mutate(
         prop = round((n / sum(n)) * 100, 2)
-      ) %>% 
-      ungroup() %>% 
+      ) %>%
+      ungroup() %>%
       mutate(
         sexo = case_when(
           sexo == "Macho" ~ i18n$t("macho"),
@@ -1981,13 +2062,13 @@ server <- function(input, output, session) {
           TRUE ~ sexo
         )
       )
-    
+
     colnames(dados_tabela_esp_3) <- c(
       i18n$t("sexo"),
       "Total",
       i18n$t("porcentagem")
       )
-    
+
     datatable(
       data = dados_tabela_esp_3,
       rownames = FALSE,
@@ -2006,7 +2087,7 @@ server <- function(input, output, session) {
       )
     )
   })
-  
+
   output$image_1_esp_3 <- renderImage({
     list(
       src = "www/Mugil_liza_imagem_1.png",
@@ -2015,23 +2096,23 @@ server <- function(input, output, session) {
       width = "100%"
     )
   }, deleteFile = FALSE)
-  
+
   output$image_2_esp_3 <- renderImage({}, deleteFile = FALSE)
-  
-  # Distribuição de Captura Espécie 4  ----------------------------------------
-  
+
+  # Distribuição de Captura Oligoplites saliens  ----------------------------------------
+
   dados_biometria_filtro_esp_4 <- reactive({
-    dados_aux <- osseos_alterado %>% 
+    dados_aux <- osseos_alterado %>%
       filter(
-        especie == "Oligoplites saliens" & 
+        especie == "Oligoplites saliens" &
           sexo == input$sexo_comprimento_esp_4 &
-          comprimento_total != 0 & 
+          comprimento_total != 0 &
           peso_total_kg != 0
       )
   })
-  
+
   output$DispersaoComprimentoXPeso_esp_4 <- renderPlotly({
-    
+
     biometria_sem_outliers <- remover_outliers(
       dados_biometria_filtro_esp_4(),
       "comprimento_total"
@@ -2040,24 +2121,24 @@ server <- function(input, output, session) {
       biometria_sem_outliers,
       "peso_total_kg"
     )
-    
+
     biometria_esp_4 <- data.frame(
       sexo = biometria_sem_outliers$sexo,
       x = biometria_sem_outliers$comprimento_total,
       y = biometria_sem_outliers$peso_total_kg
     )
-    
+
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_4)
-    # 
+    #
     # a <- coef(mod0)[[1]]
-    # 
+    #
     # b <- coef(mod0)[[2]]
-    # 
+    #
     # cat("a = ", a, "\n")
     # cat("b = ", b, "\n")
-    # 
+    #
     # biometria.nls_esp_4 <- nls (
-    #   formula = y ~ a*x^b, 
+    #   formula = y ~ a*x^b,
     #   data = biometria_esp_4,
     #   start = list(
     #     a = a,
@@ -2065,14 +2146,14 @@ server <- function(input, output, session) {
     #   ),
     #   control = nls.control(maxiter = 200)
     # )
-    # 
+    #
     # # Valores do confint
     # conf <- confint(biometria.nls_esp_4)
     # a_lower <- conf["a", "2.5%"]
     # a_upper <- conf["a", "97.5%"]
     # b_lower <- conf["b", "2.5%"]
     # b_upper <- conf["b", "97.5%"]
-    # 
+    #
     # new_data_esp_4 <- data.frame(
     #   x = seq(
     #     min(biometria_esp_4$x),
@@ -2080,23 +2161,23 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_4$fit <- coef(biometria.nls_esp_4)["a"] * 
+    # new_data_esp_4$fit <- coef(biometria.nls_esp_4)["a"] *
     # new_data_esp_4$x^coef(biometria.nls_esp_4)["b"]
     # new_data_esp_4$lwr <- a_lower * new_data_esp_4$x^b_lower
     # new_data_esp_4$upr <- a_upper * new_data_esp_4$x^b_upper
-    # 
+    #
     # new_data_esp_4$curva <- paste0(
     #   i18n$t("comprimento_legenda"), round(new_data_esp_4$x, 2 ), " cm<br>",
     #   i18n$t("lim_sup_legenda"), round(new_data_esp_4$upr, 2), " kg<br>",
     #   i18n$t("curva_legenda"), round(new_data_esp_4$fit, 2), " kg<br>",
     #   i18n$t("lim_inf_legenda"), round(new_data_esp_4$lwr, 2), " kg"
     # )
-    
+
     biometria_esp_4$XvsY <- paste0(
       i18n$t("comprimento_legenda"), round(biometria_esp_4$x, 2 ), " cm<br>",
       i18n$t("peso_legenda"), round(biometria_esp_4$y, 2), " kg"
     )
-    
+
     p <- ggplot() +
       # geom_line(
       #   data = new_data_esp_4,
@@ -2106,9 +2187,9 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_4,
-        aes(x = x, y = y, fill = sexo),
+        aes(x = x, y = y, fill = sexo, alpha = 0.7),
         stroke = 0,
-        size = 1,
+        size = 2,
         shape = 21
       ) +
       scale_fill_manual(values = cores_sexo) +
@@ -2124,20 +2205,20 @@ server <- function(input, output, session) {
       ) +
       theme_minimal() +
       theme(legend.position = "none")
-    
+
     # Tornar o gráfico interativo
-    ggplotly(p) %>% 
+    ggplotly(p) %>%
       plotly::style(
         hoverinfo = "text",
-        text = biometria_esp_4$XvsY, 
+        text = biometria_esp_4$XvsY,
         # traces = 2
         traces = 1
-      ) %>% 
+      ) %>%
       # plotly::style(
       #   hoverinfo = "text",
       #   text = new_data_esp_4$curva,
       #   traces = 1
-      # ) %>% 
+      # ) %>%
       # plotly::style(
       #   hoverinfo = "none",
       #   traces = 3
@@ -2150,7 +2231,7 @@ server <- function(input, output, session) {
         )
       )
   })
-  
+
   output$histograma_comprimento_esp_4 <- renderPlotly({
     plot_ly(
       data = dados_biometria_filtro_esp_4(),
@@ -2191,21 +2272,21 @@ server <- function(input, output, session) {
         barmode = "stack",
         showlegend = FALSE
       ) %>%
-      config(displayModeBar = FALSE) 
+      config(displayModeBar = FALSE)
   })
-  
+
   output$tabela_proporcao_esp_4 <- renderDT({
-    
-    dados_tabela_esp_4 <- osseos_alterado %>% 
-      filter(especie == "Oligoplites saliens" & sexo != "Indeterminado") %>% 
-      group_by(sexo) %>% 
+
+    dados_tabela_esp_4 <- osseos_alterado %>%
+      filter(especie == "Oligoplites saliens" & sexo != "Indeterminado") %>%
+      group_by(sexo) %>%
       summarise(
         n = n()
-      ) %>% 
+      ) %>%
       mutate(
         prop = round((n / sum(n)) * 100, 2)
-      ) %>% 
-      ungroup() %>% 
+      ) %>%
+      ungroup() %>%
       mutate(
         sexo = case_when(
           sexo == "Macho" ~ i18n$t("macho"),
@@ -2213,13 +2294,13 @@ server <- function(input, output, session) {
           TRUE ~ sexo
         )
       )
-    
+
     colnames(dados_tabela_esp_4) <- c(
       i18n$t("sexo"),
       "Total",
       i18n$t("porcentagem")
       )
-    
+
     datatable(
       data = dados_tabela_esp_4,
       rownames = FALSE,
@@ -2238,7 +2319,7 @@ server <- function(input, output, session) {
       )
     )
   })
-  
+
   output$image_1_esp_4 <- renderImage({
     list(
       src = "www/Oligoplites_saliens_imagem_1.png",
@@ -2247,23 +2328,23 @@ server <- function(input, output, session) {
       width = "100%"
     )
   }, deleteFile = FALSE)
-  
+
   output$image_2_esp_4 <- renderImage({}, deleteFile = FALSE)
-  
-  # Distribuição de Captura Espécie 5  ----------------------------------------
-  
+
+  # Distribuição de Captura Trichiurus lepturus  ----------------------------------------
+
   dados_biometria_filtro_esp_5 <- reactive({
-    dados_aux <- osseos_alterado %>% 
+    dados_aux <- osseos_alterado %>%
       filter(
-        especie == "Trichiurus lepturus" & 
+        especie == "Trichiurus lepturus" &
           sexo == input$sexo_comprimento_esp_5 &
-          comprimento_total != 0 & 
+          comprimento_total != 0 &
           peso_total_kg != 0
           )
   })
-  
+
   output$DispersaoComprimentoXPeso_esp_5 <- renderPlotly({
-    
+
     biometria_sem_outliers <- remover_outliers(
       dados_biometria_filtro_esp_5(),
       "comprimento_total"
@@ -2272,24 +2353,24 @@ server <- function(input, output, session) {
       biometria_sem_outliers,
       "peso_total_kg"
     )
-    
+
     biometria_esp_5 <- data.frame(
       sexo = biometria_sem_outliers$sexo,
       x = biometria_sem_outliers$comprimento_total,
       y = biometria_sem_outliers$peso_total_kg
     )
-    
+
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_5)
-    # 
+    #
     # a <- coef(mod0)[[1]]
-    # 
+    #
     # b <- coef(mod0)[[2]]
-    # 
+    #
     # cat("a = ", a, "\n")
     # cat("b = ", b, "\n")
-    # 
+    #
     # biometria.nls_esp_5 <- nls (
-    #   formula = y ~ a*x^b, 
+    #   formula = y ~ a*x^b,
     #   data = biometria_esp_5,
     #   start = list(
     #     a = a,
@@ -2297,14 +2378,14 @@ server <- function(input, output, session) {
     #   ),
     #   control = nls.control(maxiter = 200)
     # )
-    # 
+    #
     # # Valores do confint
     # conf <- confint(biometria.nls_esp_5)
     # a_lower <- conf["a", "2.5%"]
     # a_upper <- conf["a", "97.5%"]
     # b_lower <- conf["b", "2.5%"]
     # b_upper <- conf["b", "97.5%"]
-    # 
+    #
     # new_data_esp_5 <- data.frame(
     #   x = seq(
     #     min(biometria_esp_5$x),
@@ -2312,23 +2393,23 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_5$fit <- coef(biometria.nls_esp_5)["a"] * 
+    # new_data_esp_5$fit <- coef(biometria.nls_esp_5)["a"] *
     # new_data_esp_5$x^coef(biometria.nls_esp_5)["b"]
     # new_data_esp_5$lwr <- a_lower * new_data_esp_5$x^b_lower
     # new_data_esp_5$upr <- a_upper * new_data_esp_5$x^b_upper
-    # 
+    #
     # new_data_esp_5$curva <- paste0(
     #   i18n$t("comprimento_legenda"), round(new_data_esp_5$x, 2 ), " cm<br>",
     #   i18n$t("lim_sup_legenda"), round(new_data_esp_5$upr, 2), " kg<br>",
     #   i18n$t("curva_legenda"), round(new_data_esp_5$fit, 2), " kg<br>",
     #   i18n$t("lim_inf_legenda"), round(new_data_esp_5$lwr, 2), " kg"
     # )
-    
+
     biometria_esp_5$XvsY <- paste0(
       i18n$t("comprimento_legenda"), round(biometria_esp_5$x, 2 ), " cm<br>",
       i18n$t("peso_legenda"), round(biometria_esp_5$y, 2), " kg"
     )
-    
+
     p <- ggplot() +
       # geom_line(
       #   data = new_data_esp_5,
@@ -2338,9 +2419,9 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_5,
-        aes(x = x, y = y, fill = sexo),
+        aes(x = x, y = y, fill = sexo, alpha = 0.7),
         stroke = 0,
-        size = 1,
+        size = 2,
         shape = 21
       ) +
       scale_fill_manual(values = cores_sexo) +
@@ -2356,20 +2437,20 @@ server <- function(input, output, session) {
       ) +
       theme_minimal() +
       theme(legend.position = "none")
-    
+
     # Tornar o gráfico interativo
-    ggplotly(p) %>% 
+    ggplotly(p) %>%
       plotly::style(
         hoverinfo = "text",
-        text = biometria_esp_5$XvsY, 
+        text = biometria_esp_5$XvsY,
         # traces = 2
         traces = 1
-      ) %>% 
+      ) %>%
       # plotly::style(
       #   hoverinfo = "text",
       #   text = new_data_esp_5$curva,
       #   traces = 1
-      # ) %>% 
+      # ) %>%
       # plotly::style(
       #   hoverinfo = "none",
       #   traces = 3
@@ -2382,7 +2463,7 @@ server <- function(input, output, session) {
         )
       )
   })
-  
+
   output$histograma_comprimento_esp_5 <- renderPlotly({
     plot_ly(
       data = dados_biometria_filtro_esp_5(),
@@ -2423,21 +2504,21 @@ server <- function(input, output, session) {
         barmode = "stack",
         showlegend = FALSE
       ) %>%
-      config(displayModeBar = FALSE) 
+      config(displayModeBar = FALSE)
   })
-  
+
   output$tabela_proporcao_esp_5 <- renderDT({
-    
-    dados_tabela_esp_5 <- osseos_alterado %>% 
-      filter(especie == "Trichiurus lepturus" & sexo != "Indeterminado") %>% 
-      group_by(sexo) %>% 
+
+    dados_tabela_esp_5 <- osseos_alterado %>%
+      filter(especie == "Trichiurus lepturus" & sexo != "Indeterminado") %>%
+      group_by(sexo) %>%
       summarise(
         n = n()
-      ) %>% 
+      ) %>%
       mutate(
         prop = round((n / sum(n)) * 100, 2)
-      ) %>% 
-      ungroup() %>% 
+      ) %>%
+      ungroup() %>%
       mutate(
         sexo = case_when(
           sexo == "Macho" ~ i18n$t("macho"),
@@ -2445,13 +2526,13 @@ server <- function(input, output, session) {
           TRUE ~ sexo
         )
       )
-    
+
     colnames(dados_tabela_esp_5) <- c(
       i18n$t("sexo"),
       "Total",
       i18n$t("porcentagem")
       )
-    
+
     datatable(
       data = dados_tabela_esp_5,
       rownames = FALSE,
@@ -2470,7 +2551,7 @@ server <- function(input, output, session) {
       )
     )
   })
-  
+
   output$image_1_esp_5 <- renderImage({
     list(
       src = "www/Trichiurus_lepturus_imagem_1.png",
@@ -2479,7 +2560,7 @@ server <- function(input, output, session) {
       width = "100%"
     )
   }, deleteFile = FALSE)
-  
+
   output$image_2_esp_5 <- renderImage({
     # list(
     #   src = "www/Micropogonias_furnieri_imagem_2.jpg",
@@ -2488,21 +2569,21 @@ server <- function(input, output, session) {
     #   width = "70%"
     # )
   }, deleteFile = FALSE)
-  
-  # Distribuição de Captura Espécie 6  ----------------------------------------
-  
+
+  # Distribuição de Captura Scomberomorus brasiliensis  ----------------------------------------
+
   dados_biometria_filtro_esp_6 <- reactive({
-    dados_aux <- osseos_alterado %>% 
+    dados_aux <- osseos_alterado %>%
       filter(
-        especie == "Scomberomorus brasiliensis" & 
+        especie == "Scomberomorus brasiliensis" &
           sexo == input$sexo_comprimento_esp_6 &
-          comprimento_total != 0 & 
+          comprimento_total != 0 &
           peso_total_kg != 0
       )
   })
-  
+
   output$DispersaoComprimentoXPeso_esp_6 <- renderPlotly({
-    
+
     biometria_sem_outliers <- remover_outliers(
       dados_biometria_filtro_esp_6(),
       "comprimento_total"
@@ -2511,24 +2592,24 @@ server <- function(input, output, session) {
       biometria_sem_outliers,
       "peso_total_kg"
     )
-    
+
     biometria_esp_6 <- data.frame(
       sexo = biometria_sem_outliers$sexo,
       x = biometria_sem_outliers$comprimento_total,
       y = biometria_sem_outliers$peso_total_kg
     )
-    
+
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_6)
-    # 
+    #
     # a <- coef(mod0)[[1]]
-    # 
+    #
     # b <- coef(mod0)[[2]]
-    # 
+    #
     # cat("a = ", a, "\n")
     # cat("b = ", b, "\n")
-    # 
+    #
     # biometria.nls_esp_6 <- nls (
-    #   formula = y ~ a*x^b, 
+    #   formula = y ~ a*x^b,
     #   data = biometria_esp_6,
     #   start = list(
     #     a = a,
@@ -2536,14 +2617,14 @@ server <- function(input, output, session) {
     #   ),
     #   control = nls.control(maxiter = 200)
     # )
-    # 
+    #
     # # Valores do confint
     # conf <- confint(biometria.nls_esp_6)
     # a_lower <- conf["a", "2.5%"]
     # a_upper <- conf["a", "97.5%"]
     # b_lower <- conf["b", "2.5%"]
     # b_upper <- conf["b", "97.5%"]
-    # 
+    #
     # new_data_esp_6 <- data.frame(
     #   x = seq(
     #     min(biometria_esp_6$x),
@@ -2551,23 +2632,23 @@ server <- function(input, output, session) {
     #     length.out = 100)
     # )
     # # Calcular as curvas ajustadas
-    # new_data_esp_6$fit <- coef(biometria.nls_esp_6)["a"] * 
+    # new_data_esp_6$fit <- coef(biometria.nls_esp_6)["a"] *
     # new_data_esp_6$x^coef(biometria.nls_esp_6)["b"]
     # new_data_esp_6$lwr <- a_lower * new_data_esp_6$x^b_lower
     # new_data_esp_6$upr <- a_upper * new_data_esp_6$x^b_upper
-    # 
+    #
     # new_data_esp_6$curva <- paste0(
     #   i18n$t("comprimento_legenda"), round(new_data_esp_6$x, 2 ), " cm<br>",
     #   i18n$t("lim_sup_legenda"), round(new_data_esp_6$upr, 2), " kg<br>",
     #   i18n$t("curva_legenda"), round(new_data_esp_6$fit, 2), " kg<br>",
     #   i18n$t("lim_inf_legenda"), round(new_data_esp_6$lwr, 2), " kg"
     # )
-    
+
     biometria_esp_6$XvsY <- paste0(
       i18n$t("comprimento_legenda"), round(biometria_esp_6$x, 2 ), " cm<br>",
       i18n$t("peso_legenda"), round(biometria_esp_6$y, 2), " kg"
     )
-    
+
     p <- ggplot() +
       # geom_line(
       #   data = new_data_esp_6,
@@ -2577,9 +2658,9 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_6,
-        aes(x = x, y = y, fill = sexo),
+        aes(x = x, y = y, fill = sexo, alpha = 0.7),
         stroke = 0,
-        size = 1,
+        size = 2,
         shape = 21
       ) +
       scale_fill_manual(values = cores_sexo) +
@@ -2595,20 +2676,20 @@ server <- function(input, output, session) {
       ) +
       theme_minimal() +
       theme(legend.position = "none")
-    
+
     # Tornar o gráfico interativo
-    ggplotly(p) %>% 
+    ggplotly(p) %>%
       plotly::style(
         hoverinfo = "text",
-        text = biometria_esp_6$XvsY, 
+        text = biometria_esp_6$XvsY,
         # traces = 2
         traces = 1
-      ) %>% 
+      ) %>%
       # plotly::style(
       #   hoverinfo = "text",
       #   text = new_data_esp_6$curva,
       #   traces = 1
-      # ) %>% 
+      # ) %>%
       # plotly::style(
       #   hoverinfo = "none",
       #   traces = 3
@@ -2621,7 +2702,7 @@ server <- function(input, output, session) {
         )
       )
   })
-  
+
   output$histograma_comprimento_esp_6 <- renderPlotly({
     plot_ly(
       data = dados_biometria_filtro_esp_6(),
@@ -2662,23 +2743,23 @@ server <- function(input, output, session) {
         barmode = "stack",
         showlegend = FALSE
       ) %>%
-      config(displayModeBar = FALSE) 
+      config(displayModeBar = FALSE)
   })
-  
+
   output$tabela_proporcao_esp_6 <- renderDT({
-    
-    dados_tabela_esp_6 <- osseos_alterado %>% 
+
+    dados_tabela_esp_6 <- osseos_alterado %>%
       filter(
         especie == "Scomberomorus brasiliensis" & sexo != "Indeterminado"
-        ) %>%  
-      group_by(sexo) %>% 
+        ) %>%
+      group_by(sexo) %>%
       summarise(
         n = n()
-      ) %>% 
+      ) %>%
       mutate(
         prop = round((n / sum(n)) * 100, 2)
-      ) %>% 
-      ungroup() %>% 
+      ) %>%
+      ungroup() %>%
       mutate(
         sexo = case_when(
           sexo == "Macho" ~ i18n$t("macho"),
@@ -2686,13 +2767,13 @@ server <- function(input, output, session) {
           TRUE ~ sexo
         )
       )
-    
+
     colnames(dados_tabela_esp_6) <- c(
-      i18n$t("sexo"), 
-      "Total", 
+      i18n$t("sexo"),
+      "Total",
       i18n$t("porcentagem")
       )
-    
+
     datatable(
       data = dados_tabela_esp_6,
       rownames = FALSE,
@@ -2711,7 +2792,7 @@ server <- function(input, output, session) {
       )
     )
   })
-  
+
   output$image_1_esp_6 <- renderImage({
     list(
       src = "www/Scomberomorus_brasiliensis_imagem_1.png",
@@ -2720,23 +2801,23 @@ server <- function(input, output, session) {
       width = "100%"
     )
   }, deleteFile = FALSE)
-  
+
   output$image_2_esp_6 <- renderImage({}, deleteFile = FALSE)
-  
-  # Distribuição de Captura Espécie 7  ----------------------------------------
-  
+
+  # Distribuição de Captura Oligoplites saurus  ----------------------------------------
+
   dados_biometria_filtro_esp_7 <- reactive({
-    dados_aux <- osseos_alterado %>% 
+    dados_aux <- osseos_alterado %>%
       filter(
         especie == "Oligoplites saurus" &
           sexo == input$sexo_comprimento_esp_7 &
-          comprimento_total != 0 & 
+          comprimento_total != 0 &
           peso_total_kg != 0
       )
   })
-  
+
   output$DispersaoComprimentoXPeso_esp_7 <- renderPlotly({
-    
+
     biometria_sem_outliers <- remover_outliers(
       dados_biometria_filtro_esp_7(),
       "comprimento_total"
@@ -2745,24 +2826,24 @@ server <- function(input, output, session) {
       biometria_sem_outliers,
       "peso_total_kg"
     )
-    
+
     biometria_esp_7 <- data.frame(
       sexo = biometria_sem_outliers$sexo,
       x = biometria_sem_outliers$comprimento_total,
       y = biometria_sem_outliers$peso_total_kg
     )
-    
+
     # mod0 <- glm(log(y) ~ x, data = biometria_esp_7)
-    # 
+    #
     # a <- coef(mod0)[[1]]
-    # 
+    #
     # b <- coef(mod0)[[2]]
-    # 
+    #
     # cat("a = ", a, "\n")
     # cat("b = ", b, "\n")
-    # 
+    #
     # biometria.nls_esp_7 <- nls (
-    #   formula = y ~ a*x^b, 
+    #   formula = y ~ a*x^b,
     #   data = biometria_esp_7,
     #   start = list(
     #     a = a,
@@ -2770,14 +2851,14 @@ server <- function(input, output, session) {
     #   ),
     #   control = nls.control(maxiter = 200)
     # )
-    # 
+    #
     # # Valores do confint
     # conf <- confint(biometria.nls_esp_7)
     # a_lower <- conf["a", "2.5%"]
     # a_upper <- conf["a", "97.5%"]
     # b_lower <- conf["b", "2.5%"]
     # b_upper <- conf["b", "97.5%"]
-    # 
+    #
     # new_data_esp_7 <- data.frame(
     #   x = seq(
     #     min(biometria_esp_7$x),
@@ -2789,19 +2870,19 @@ server <- function(input, output, session) {
     # new_data_esp_7$x^coef(biometria.nls_esp_7)["b"]
     # new_data_esp_7$lwr <- a_lower * new_data_esp_7$x^b_lower
     # new_data_esp_7$upr <- a_upper * new_data_esp_7$x^b_upper
-    # 
+    #
     # new_data_esp_7$curva <- paste0(
     #   i18n$t("comprimento_legenda"), round(new_data_esp_7$x, 2 ), " cm<br>",
     #   i18n$t("lim_sup_legenda"), round(new_data_esp_7$upr, 2), " kg<br>",
     #   i18n$t("curva_legenda"), round(new_data_esp_7$fit, 2), " kg<br>",
     #   i18n$t("lim_inf_legenda"), round(new_data_esp_7$lwr, 2), " kg"
     # )
-    
+
     biometria_esp_7$XvsY <- paste0(
       i18n$t("comprimento_legenda"), round(biometria_esp_7$x, 2 ), " cm<br>",
       i18n$t("peso_legenda"), round(biometria_esp_7$y, 2), " kg"
     )
-    
+
     p <- ggplot() +
       # geom_line(
       #   data = new_data_esp_7,
@@ -2811,9 +2892,9 @@ server <- function(input, output, session) {
       # ) +  # Linha ajustada
       geom_point(
         data = biometria_esp_7,
-        aes(x = x, y = y, fill = sexo),
+        aes(x = x, y = y, fill = sexo, alpha = 0.7),
         stroke = 0,
-        size = 1,
+        size = 2,
         shape = 21
       ) +
       scale_fill_manual(values = cores_sexo) +
@@ -2829,20 +2910,20 @@ server <- function(input, output, session) {
       ) +
       theme_minimal() +
       theme(legend.position = "none")
-    
+
     # Tornar o gráfico interativo
-    ggplotly(p) %>% 
+    ggplotly(p) %>%
       plotly::style(
         hoverinfo = "text",
-        text = biometria_esp_7$XvsY, 
+        text = biometria_esp_7$XvsY,
         # traces = 2
         traces = 1
-      ) %>% 
+      ) %>%
       # plotly::style(
       #   hoverinfo = "text",
       #   text = new_data_esp_7$curva,
       #   traces = 1
-      # ) %>% 
+      # ) %>%
       # plotly::style(
       #   hoverinfo = "none",
       #   traces = 3
@@ -2855,7 +2936,7 @@ server <- function(input, output, session) {
         )
       )
   })
-  
+
   output$histograma_comprimento_esp_7 <- renderPlotly({
     plot_ly(
       data = dados_biometria_filtro_esp_7(),
@@ -2896,21 +2977,21 @@ server <- function(input, output, session) {
         barmode = "stack",
         showlegend = FALSE
       ) %>%
-      config(displayModeBar = FALSE) 
+      config(displayModeBar = FALSE)
   })
-  
+
   output$tabela_proporcao_esp_7 <- renderDT({
-    
-    dados_tabela_esp_7 <- osseos_alterado %>% 
-      filter(especie == "Oligoplites saurus" & sexo != "Indeterminado") %>% 
-      group_by(sexo) %>% 
+
+    dados_tabela_esp_7 <- osseos_alterado %>%
+      filter(especie == "Oligoplites saurus" & sexo != "Indeterminado") %>%
+      group_by(sexo) %>%
       summarise(
         n = n()
-      ) %>% 
+      ) %>%
       mutate(
         prop = round((n / sum(n)) * 100, 2)
-      ) %>% 
-      ungroup() %>% 
+      ) %>%
+      ungroup() %>%
       mutate(
         sexo = case_when(
           sexo == "Macho" ~ i18n$t("macho"),
@@ -2918,13 +2999,13 @@ server <- function(input, output, session) {
           TRUE ~ sexo
         )
       )
-    
+
     colnames(dados_tabela_esp_7) <- c(
       i18n$t("sexo"),
       "Total",
       i18n$t("porcentagem")
       )
-    
+
     datatable(
       data = dados_tabela_esp_7,
       rownames = FALSE,
@@ -2943,7 +3024,7 @@ server <- function(input, output, session) {
       )
     )
   })
-  
+
   output$image_1_esp_7 <- renderImage({
     list(
       src = "www/Oligoplites_saurus_imagem_1.png",
@@ -2952,9 +3033,9 @@ server <- function(input, output, session) {
       width = "100%"
     )
   }, deleteFile = FALSE)
-  
+
   output$image_2_esp_7 <- renderImage({}, deleteFile = FALSE)
-  
+
   # ControlBar --------------------------------------------------------------
   
   observeEvent(input$selected_language, {
