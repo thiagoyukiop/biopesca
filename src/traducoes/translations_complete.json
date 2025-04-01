@@ -104,6 +104,18 @@
             "es": "Distribución de Longitud"
         },
         {
+            "tag": "reproducao",
+            "pt": "Reprodução",
+            "en": "Reproduction",
+            "es": "Reproducción"
+        },
+        {
+            "tag": "grupos_especies",
+            "pt": "Grupos de Espécies",
+            "en": "Species Groups",
+            "es": "Grupos de Especies"
+        },
+        {
             "tag": "comprimento_texto_1",
             "pt": "Histograma do Comprimento Total",
             "en": "Total Length Histogram",
@@ -312,6 +324,24 @@
             "pt": "As informações geradas serão sistematizadas e apresentadas para distintos atores da atividade pesqueira, buscando aliar o saber científico com o ecológico de pescadores e reduzir conflitos sobre a efetividade das medidas de gestão pesqueira atual. Por fim, os resultados contribuirão com o arcabouço teórico e prático necessário à consolidação de sistemas e processos de tomada de decisão que equilibram o bem-estar ecológico com o bem-estar humano em pescarias catarinenses.",
             "en": "The information generated will be systematized and presented to various stakeholders in the fishing industry, aiming to integrate scientific knowledge with the ecological knowledge of fishers and reduce conflicts regarding the effectiveness of current fishery management measures. Finally, the results will contribute to the theoretical and practical framework necessary for consolidating decision-making systems and processes that balance ecological well-being with human well-being in Santa Catarina’s fisheries.",
             "es": "La información generada será sistematizada y presentada a distintos actores de la actividad pesquera, con el objetivo de integrar el conocimiento científico con el conocimiento ecológico de los pescadores y reducir los conflictos sobre la efectividad de las medidas de gestión pesquera actuales. Finalmente, los resultados contribuirán al marco teórico y práctico necesario para la consolidación de sistemas y procesos de toma de decisiones que equilibren el bienestar ecológico con el bienestar humano en las pesquerías de Santa Catarina."
+        },
+        {
+          "tag": "peixes_osseos",
+          "pt": "Peixes Ósseos",
+          "en": "Bony Fishes",
+          "es": "Peces Óseos"
+        },
+        {
+          "tag": "peixes_cartilaginosos",
+          "pt": "Peixes Cartilaginosos",
+          "en": "Cartilaginous Fishes",
+          "es": "Peces cartilaginosos"
+        },
+        {
+          "tag": "crustaceos",
+          "pt": "Crustáceos",
+          "en": "Crustaceans",
+          "es": "Crustáceos"
         }
     ]
 }
