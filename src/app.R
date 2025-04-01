@@ -104,10 +104,10 @@ ui <- dashboardPage(
         )
       ),
       menuItem(
-        text = "Categorias de peixe",
+        text = i18n$t("grupos_especies"),
         icon = icon("list"),
         menuItem(
-          text = "Peixes Ósseos",
+          text = i18n$t("peixes_osseos"),
           icon = icon("fish"),
           menuItem(
             text = tags$i("Micropogonias furnieri"),
@@ -118,7 +118,7 @@ ui <- dashboardPage(
               icon = icon("chart-simple")
             ),
             menuSubItem(
-              text = "Reprodução",
+              text = i18n$t("reproducao"),
               tabName = "rep_micropogonias_furnieri",
               icon = icon("fish-fins")
             )
@@ -132,7 +132,7 @@ ui <- dashboardPage(
               icon = icon("chart-simple")
             ),
             menuSubItem(
-              text = "Reprodução",
+              text = i18n$t("reproducao"),
               tabName = "rep_mugil_liza",
               icon = icon("fish-fins")
             )
@@ -146,7 +146,7 @@ ui <- dashboardPage(
               icon = icon("chart-simple")
             ),
             menuSubItem(
-              text = "Reprodução",
+              text = i18n$t("reproducao"),
               tabName = "rep_oligoplites_saliens",
               icon = icon("fish-fins")
             )
@@ -160,7 +160,7 @@ ui <- dashboardPage(
               icon = icon("chart-simple")
             ),
             menuSubItem(
-              text = "Reprodução",
+              text = i18n$t("reproducao"),
               tabName = "rep_oligoplites_saurus"
               
             )
@@ -174,7 +174,7 @@ ui <- dashboardPage(
               icon = icon("chart-simple")
             ),
             menuSubItem(
-              text = "Reprodução",
+              text = i18n$t("reproducao"),
               tabName = "rep_pomatomus_saltatrix",
               icon = icon("fish-fins")
             )
@@ -188,7 +188,7 @@ ui <- dashboardPage(
               icon = icon("chart-simple")
             ),
             menuSubItem(
-              text = "Reprodução",
+              text = i18n$t("reproducao"),
               tabName = "rep_scomberomorus_brasiliensis",
               icon = icon("fish-fins")
             )
@@ -202,19 +202,19 @@ ui <- dashboardPage(
               icon = icon("chart-simple")
             ),
             menuSubItem(
-              text = "Reprodução",
+              text = i18n$t("reproducao"),
               tabName = "rep_trichiurus_lepturus",
               icon = icon("fish-fins")
             )
           )
         ),
         menuItem(
-          text = "Peixes Cartilaginosos",
+          text = i18n$t("peixes_cartilaginosos"),
           tabName = "teste1"
           
         ),
         menuItem(
-          text = "Custáceos",
+          text = i18n$t("crustaceos"),
           tabName = "teste2"
           
         )
