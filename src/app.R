@@ -1329,6 +1329,11 @@ server <- function(input, output, session) {
     "Fêmea" = "#FFD580"
   )
   
+  cores_sexo_linha <- c(
+    "Macho" = "#006BB3",
+    "Fêmea" = "#CC7A00"
+  )
+  
   TabsControlbarFiltro <- c(
     "comp_micropogonias_furnieri", "comp_pomatomus_saltatrix", "comp_mugil_liza",
     "comp_oligoplites_saliens", "comp_trichiurus_lepturus", "comp_scomberomorus_brasiliensis",
@@ -1518,6 +1523,10 @@ server <- function(input, output, session) {
         # traces = 2
         traces = 1
       ) %>% 
+      layout(
+        xaxis = list(showgrid = FALSE),
+        yaxis = list(showgrid = FALSE)
+      ) %>% 
       # plotly::style(
       #   hoverinfo = "text",
       #   text = new_data_esp_1$curva,
@@ -1537,47 +1546,96 @@ server <- function(input, output, session) {
   })
   
   output$histograma_comprimento_esp_1 <- renderPlotly({
+    dados <- dados_biometria_filtro_esp_1()
+    
     plot_ly(
-      data = dados_biometria_filtro_esp_1(),
+      data = dados,
       x = ~comprimento_total,
       type = 'histogram',
       color = ~sexo,
-      xbins = list(
-        size = 5
-      ),
+      colors = cores_sexo,
+      histnorm = "probability density",
       marker = list(
         line = list(
           color = alpha('black', 0.1),
           width = 0.5
         )
       ),
-      customdata = ~case_when(
-        sexo == "Macho" ~ i18n$t("macho"),
-        sexo == "Fêmea" ~ i18n$t("femea"),
-        TRUE ~ sexo
-      ),
-      colors = cores_sexo,
       hoverinfo = "none",
-      hovertemplate = paste(
-        " ", i18n$t("sexo"), ": %{customdata} <br>",
-        i18n$t("legenda_intervalo"), ": %{x}<br>",
-        i18n$t("frequencia"), ": %{y}<extra></extra>"
-      )
+      xbins = list(size = 5)
     ) %>%
+      add_trace(
+        x = density(dados$comprimento_total)$x,
+        y = density(dados$comprimento_total)$y,
+        type = "scatter",
+        mode = "lines",
+        hoverinfo = "none",
+        name = "Densidade",
+        line = list(
+          color = cores_sexo_linha[dados$sexo],
+          width = 3
+          ),
+        inherit = FALSE,
+        marker = NULL
+      ) %>%
       layout(
         title = NULL,
-        yaxis = list(
-          title = i18n$t("frequencia"),
-          showgrid = FALSE
-        ),
-        xaxis = list(
-          title = i18n$t("legenda_comprimento")
-        ),
-        barmode = "stack",
+        yaxis = list(title = "Densidade", showgrid = FALSE),
+        xaxis = list(title = "Comprimento total", showgrid = FALSE),
         showlegend = FALSE
-      ) %>%
-      config(displayModeBar = FALSE)
+      )
   })
+  
+  # output$histograma_comprimento_esp_1 <- renderPlotly({
+  #   dados <- dados_biometria_filtro_esp_1()
+  #   
+  #   plot_ly(
+  #     data = dados,
+  #     x = ~comprimento_total,
+  #     type = 'histogram',
+  #     color = ~sexo,
+  #     xbins = list(
+  #       size = 5
+  #     ),
+  #     marker = list(
+  #       line = list(
+  #         color = alpha('black', 0.1),
+  #         width = 0.5
+  #       )
+  #     ),
+  #     customdata = ~case_when(
+  #       sexo == "Macho" ~ i18n$t("macho"),
+  #       sexo == "Fêmea" ~ i18n$t("femea"),
+  #       TRUE ~ sexo
+  #     ),
+  #     colors = cores_sexo,
+  #     hoverinfo = "none",
+  #     hovertemplate = paste(
+  #       " ", i18n$t("sexo"), ": %{customdata} <br>",
+  #       i18n$t("legenda_intervalo"), ": %{x}<br>",
+  #       i18n$t("frequencia"), ": %{y}<extra></extra>"
+  #     )
+  #   ) %>%
+  #     add_trace(x = density(dados$comprimento_total)$x, 
+  #               y = density(dados$comprimento_total)$y, 
+  #               type = "scatter", 
+  #               mode = "lines", 
+  #               name = "Densidade",
+  #               line = list(color = 'red', width = 2)) %>%
+  #     layout(
+  #       title = NULL,
+  #       yaxis = list(
+  #         title = i18n$t("frequencia"),
+  #         showgrid = FALSE
+  #       ),
+  #       xaxis = list(
+  #         title = i18n$t("legenda_comprimento")
+  #       ),
+  #       barmode = "stack",
+  #       showlegend = FALSE
+  #     ) %>%
+  #     config(displayModeBar = FALSE)
+  # })
   
   output$tabela_proporcao_esp_1 <- renderDT({
     
