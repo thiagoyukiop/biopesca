@@ -117,9 +117,9 @@
         },
         {
             "tag": "comprimento_texto_1",
-            "pt": "Histograma do Comprimento Total",
-            "en": "Total Length Histogram",
-            "es": "Histograma de Longitud Total"
+            "pt": "Histograma com Curva de Densidade do Comprimento Total",
+            "en": "Total Length Histogram with Density Curve",
+            "es": "Histograma con Densidad de la Longitud Total"
         },
         {
             "tag": "comprimento_texto_2",
@@ -138,6 +138,12 @@
             "pt": "Frequência",
             "en": "Frequency",
             "es": "Frecuencia"
+        },
+        {
+            "tag": "densidade",
+            "pt": "Densidade",
+            "en": "Density",
+            "es": "Densidad"
         },
         {
             "tag": "proporcao_sexo",
